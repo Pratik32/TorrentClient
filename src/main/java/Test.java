@@ -1,6 +1,8 @@
 import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Date;
 import java.util.Map;
 import java.util.Scanner;
@@ -16,6 +18,8 @@ public class Test {
         TorrentMeta meta=parser.parseTorrentFile(filename);
         TrackerConnection connection=new TrackerConnection(meta);
         URI uri=connection.getAnnounceURI();
+        connection.getPeerUrls(uri);
+        System.out.println();
         //printTorrentMeta(meta);
 
     }

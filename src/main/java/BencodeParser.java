@@ -39,6 +39,10 @@ public class BencodeParser {
         return meta;
     }
 
+    public void decode(String str){
+        decode(str,0);
+        System.out.println(decodedStrings);
+    }
     private int decode(String s,int idx){
         char c=s.charAt(idx);
         switch(c){
