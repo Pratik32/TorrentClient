@@ -31,9 +31,10 @@ public class Element implements Serializable{
         String str="";
         try {
             str=new String(getBytes(),"UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+        }catch (UnsupportedEncodingException e){
+
         }
+
         return str;
     }
 

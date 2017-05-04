@@ -32,11 +32,20 @@ public  abstract class TrackerSession {
         this.tracker_url=this.meta.getAnnounce();
     }
 
+    /*
+        This function extracts IP:port pair and peer_id(if compact=0) and returns.
+        Problem is, if compact flag is set the response does not contain peer_id field.
+        hence I have to handle it programmatically. Thanks to decoding scheme nothing much
+        had to be done.Tracker server behaves in a weird way,Sometimes it accepts compact=0
+        and sometimes it does not.hence be carefull while sending tracker request.if 400 is
+        returned by server,next time send request with compact flag set.
+     */
     private Map<InetSocketAddress,byte[]> getPeerInfo(Element response){
         List<InetSocketAddress> peers=new ArrayList<InetSocketAddress>();
         Map<InetSocketAddress,byte[]> peers_info=new HashMap<InetSocketAddress,byte[]>();
         Element element=response.getMap().get("peers");
         if(element.getValue() instanceof byte[]){
+            COMPACT_RESPONSE=1;
             System.out.println("in");
             byte ip[]=element.getBytes();
             System.out.println(ip.length);
@@ -44,7 +53,7 @@ public  abstract class TrackerSession {
             InetSocketAddress address;
             for(int offset=0;offset<byteBuffer.capacity();offset+=6){
                 address=getInetSocketAddress(byteBuffer,offset,4);
-                peers.add(address);
+                peers_info.put(address,null);
             }
         }
         else if(element.getValue() instanceof List) {
@@ -104,7 +113,8 @@ public  abstract class TrackerSession {
                 +UPLOADED+packet.getUploaded()
                 +DOWNLOADED+packet.getDownloaded()
                 +LEFT+packet.getLeft()
-                +EVENT+event_type;
+                +EVENT+event_type
+                +COMPACT+1;
         System.out.println(url);
         return url;
 
@@ -113,7 +123,8 @@ public  abstract class TrackerSession {
         String encoded_string="";
         String temp= null;
         try {
-            temp = new String(data,"ISO_8859-1");
+            temp = new String(data,"ISO-8859-1");
+
             encoded_string= URLEncoder.encode(temp,"ISO-8859-1");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
