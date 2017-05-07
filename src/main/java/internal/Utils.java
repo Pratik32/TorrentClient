@@ -13,13 +13,11 @@ import java.util.Map;
  * Created by ps on 6/4/17.
  * This class has been created with an intention that,it will contain general
  * purpose methods like crafting different packets(Tracker:request,response)
- * parsing bencoded responses.new functionalities will be added as needed.
+ * parsing bencoded responses,writing bytes to files..new functionalities will be added as needed.
  */
 public class Utils {
 
-    public static TrackerRequestPacket craftPacket(TorrentMeta meta){
-        //TrackerRequestPacket.Event event = TrackerRequestPacket.Event.STARTED;
-
+    public static TrackerRequestPacket craftPacket(TorrentMeta meta,int uploaded,int downloaded,int left){
         Constants.logger.debug("Crafting tracker request packet");
         TrackerRequestPacket packet=new TrackerRequestPacket(TrackerRequestPacket.Event.STARTED,1028128768,0,0);
         return packet;
@@ -37,6 +35,15 @@ public class Utils {
                 peerList.add(peer);
             }
         return peerList;
+    }
+
+
+    /*
+        This method will accept a piece(basically a byte array) and will write it
+         to the destination file.Function parameters are yet to be decided.
+     */
+    public static void writeToFile(){
+
     }
 
 }

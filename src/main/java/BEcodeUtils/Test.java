@@ -2,6 +2,7 @@ package BEcodeUtils;
 
 import Peers.Peer;
 import Peers.PeerConnection;
+import Peers.PeerController;
 import Tracker.*;
 import internal.Constants;
 import internal.TorrentMeta;
@@ -22,7 +23,7 @@ import java.util.Set;
  * Created by ps on 24/3/17.
  */
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         initialize();
         File file=new File("ubuntu.torrent");
         byte[] data;
@@ -33,38 +34,17 @@ public class Test {
             data = FileUtils.readFileToByteArray(file);
             Constants.logger.debug("Reading torrent file.");
             TorrentMeta meta=TorrentMeta.createTorrentMeta(data);
-            /*
-                Create a tracker session check it's type(http/udp).
-             */
             Constants.logger.debug("TorrentMeta successfully created.");
-            TrackerSession session=null;
-            System.out.println(meta.getAnnounce());
-            if(meta.getAnnounce().startsWith("http")){
-                session=new HttpTrackerSession(meta);
-            }
-            else if(meta.getAnnounce().startsWith("udp")){
-                session=new UdpTrackerSession(meta);
-            }
-            /*
-                Create a request packet and and obtain a response packet.
-             */
-            TrackerRequestPacket packet= Utils.craftPacket(meta);
-            TrakcerResponsePacket response=session.sendRequest(packet);
 
-            //byte[] in below map represents peer id which does not have any encoding(hence byte[]).
-            //peer id may be null ,if compact response is sent by the server.handle that too.
-            Map<InetSocketAddress,byte[]> peer_info=response.getPeer_info();//not used for now.
-            printPeerInfo(peer_info.keySet());
-            List<Peer> peerList=Utils.getPeerList(response);
-            /*
-               Connect to one of the peers for testing.
-             */
-            PeerConnection connection=new PeerConnection(peerList.get(0),meta);
-            connection.connect();
+            //While testing individual peer uncomment below line and comment controller code.
+
+            //individualPeerTest(meta);
+
+            List<Peer> peerList=getInitialPeerList(meta);
+            PeerController controller=new PeerController(meta,peerList);
+            controller.start();
 
         } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
@@ -88,5 +68,37 @@ public class Test {
         //PropertyConfigurator.configure("log4j.properties");
         Constants.logger= Logger.getLogger(PeerConnection.class);
 
+    }
+    /*
+     Method for testing individual peers.
+
+     */
+    public  static void individualPeerTest(TorrentMeta meta) throws IOException, InterruptedException {
+       List<Peer> peerList=getInitialPeerList(meta);
+        PeerConnection connection=new PeerConnection(peerList.get(0),meta,null,null);
+        connection.connect();
+    }
+
+    public static List<Peer> getInitialPeerList(TorrentMeta meta){
+        TrackerSession session=null;
+        System.out.println(meta.getAnnounce());
+        if(meta.getAnnounce().startsWith("http")){
+            session=new HttpTrackerSession(meta);
+        }
+        else if(meta.getAnnounce().startsWith("udp")){
+            session=new UdpTrackerSession(meta);
+        }
+            /*
+                Create a request packet and and obtain a response packet.
+             */
+        TrackerRequestPacket packet= Utils.craftPacket(meta,0,0,0);
+        TrakcerResponsePacket response=session.sendRequest(packet);
+
+        //byte[] in below map represents peer id which does not have any encoding(hence byte[]).
+        //peer id may be null ,if compact response is sent by the server.handle that too.
+        Map<InetSocketAddress,byte[]> peer_info=response.getPeer_info();//not used for now.
+        printPeerInfo(peer_info.keySet());
+        List<Peer> peerList=Utils.getPeerList(response);
+        return peerList;
     }
 }

@@ -47,7 +47,6 @@ public  abstract class TrackerSession {
         Element element=response.getMap().get("peers");
         if(element.getValue() instanceof byte[]){
             COMPACT_RESPONSE=1;
-            System.out.println("in");
             byte ip[]=element.getBytes();
             System.out.println(ip.length);
             ByteBuffer byteBuffer=ByteBuffer.wrap(ip);
@@ -100,17 +99,17 @@ public  abstract class TrackerSession {
         String event_type="";
         switch (packet.getEvent()){
             case COMPLETED:
-                    event_type="completed";
+                    event_type=EVEN_COMPLETED;
                     break;
             case STARTED:
-                    event_type="started";
+                    event_type=EVEN_STARTED;
                     break;
             case STOPPED:
-                   event_type="stopped";
+                   event_type=EVEN_STOPPED;
         }
         String url=tracker_url+"?"+INFO_HASH+getEncodedString(info)
                 +PEER_ID+ID
-                +PORT+"6881"
+                +PORT+PORT_PEER
                 +UPLOADED+packet.getUploaded()
                 +DOWNLOADED+packet.getDownloaded()
                 +LEFT+packet.getLeft()
@@ -133,7 +132,7 @@ public  abstract class TrackerSession {
         }
         return encoded_string;
     }
-    public  TrakcerResponsePacket craftPacket(Element element){
+    private  TrakcerResponsePacket craftPacket(Element element){
         Constants.logger.debug("Crafting the response packet.");
         Map<InetSocketAddress,byte[]> peer_info=getPeerInfo(element);
         TrakcerResponsePacket packet=new TrakcerResponsePacket();

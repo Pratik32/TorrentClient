@@ -2,35 +2,47 @@ package Peers;
 
 import internal.Constants;
 import internal.TorrentMeta;
-import org.apache.commons.io.IOUtils;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.net.Socket;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
+
+import static internal.Constants.*;
+
+
 /**
  * Created by ps on 6/4/17.
  *
  * This class represents an interface for connecting a peer
  * Right now Peer class is just a POJO for storing peer related information.
  * The actual handling of message flow is done by this class.
- * In future I may delete this class if I come up with better model.
  * For now this class has different methods for sending different types of messages to peer.
  * Ideally it should extend Thread/Runnable and run independently.
  *
  */
-public class PeerConnection {
+public class PeerConnection extends Thread{
     private  Peer peer;
     private TorrentMeta meta;
-
-    public static final byte[] interested={0,0,0,1,2};
-    public static final byte[] request={0,0,0,13,6};
-    public PeerConnection(Peer peer,TorrentMeta meta){
+    private byte[] piece_data;
+    private DataInputStream inputStream;
+    private DataOutputStream outputStream;
+    private Socket socket;
+    private Logger logger;
+    private int choke=1;
+    private int notInterested=1;
+    private int unchoke=0;
+    private int interested=0;
+    private PeerController peerController;
+    public PeerConnection(Peer peer,TorrentMeta meta,byte[] data,PeerController c){
         this.peer=peer;
         this.meta=meta;
+        this.logger=Constants.logger;
+        this.peerController=c;
     }
+
+    //Keeping the testing method for quick testing purpose.
     public void connect() throws IOException, InterruptedException {
         System.out.println("In connect()");
         Constants.logger.debug("Connecting peer :"+peer.getAddress().toString());
@@ -74,7 +86,7 @@ public class PeerConnection {
         Constants.logger.debug("Length :"+len+"Type is :"+code);
         stream1.skipBytes(len-1);
         //sending interested message to peer.
-        stream.write(interested,0,interested.length);
+        stream.write(interestedMessage,0,interestedMessage.length);
         len=stream1.readInt();
         code=stream1.readByte();
         System.out.println("Length :"+len+"Type is :"+code);
@@ -84,7 +96,7 @@ public class PeerConnection {
 
         //create a request for a piece.
         ByteBuffer byteBuffer=ByteBuffer.allocate(17);
-        byteBuffer.put(request);
+        byteBuffer.put(requestMessage);
         byteBuffer.putInt(0);
         byteBuffer.putInt(0);
         byteBuffer.putInt(16384);
@@ -98,6 +110,68 @@ public class PeerConnection {
         Constants.logger.debug("Length :"+len+"Type is :"+code);
     }
 
+
+    public void run() {
+        //setup a connection with remote peer.
+        byte[] block = new byte[BLOCK_LENGTH];
+        try {
+            socket = new Socket(peer.getAddress().getAddress(), peer.getAddress().getPort());
+            inputStream = new DataInputStream(socket.getInputStream());
+            outputStream = new DataOutputStream(socket.getOutputStream());
+            //send handshake.
+            handshake();
+
+            //verify the handshake.else drop the peer.
+            int len=0;
+            int code=0;
+            if (verifyHandshake()) {
+                System.out.println("Peer id verified.");
+                logger.debug("Peer id verified.");
+                while (true) {
+                    len=inputStream.readInt();
+                    code=inputStream.readByte();
+
+                    switch (code){
+                        case CHOKE:
+                            break;
+                        case UNCHOKE:
+                            receiveUnchoke();
+                            sendRequest();
+                            break;
+                        case INTERESTED:
+                            break;
+                        case NOT_INTERESTED:
+                            break;
+                        case HAVE:
+                            break;
+                        case BIT_FIELD:
+                            receiveBitfield(len);
+                            sendInterested();
+                            break;
+                        case REQUEST:
+                            break;
+                        case PIECE:
+                            receivePiece(block);
+                            break;
+                        case EXTENDED:
+                            receiveExtended(len);
+                            break;
+                        default:
+
+                    }
+
+                }
+            }
+            else{
+                logger.debug("Peer id did not match dropping the peer.");
+                teardown();
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+
+
     /*
      creates a handshake message for transmission.
      returns a byte array containing - 19+"BitTorrent Protocol"+info_hash+peer_id.
@@ -105,7 +179,7 @@ public class PeerConnection {
      ke message) hence create complete message and then write it to outstream.
      */
     private byte[] createHandshakeMessage(byte[] info_hash,String client_id){
-        String pstr = "BitTorrent protocol";		//String identifier of the current BitTorrent protocol
+        String pstr = HANDSHAKE_STRING;		//String identifier of the current BitTorrent protocol
         byte[] msg = new byte[49 + pstr.length()];
         //byte[] response = new byte[msg.length];
 
@@ -134,7 +208,31 @@ public class PeerConnection {
         return msg;
     }
 
-
+    private void handshake(){
+        byte[] handshake=createHandshakeMessage(meta.getInfo_hash(),Constants.ID);
+        try {
+            outputStream.write(handshake,0,handshake.length);
+            outputStream.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        logger.debug("Successful sent handshake to :"+peer.getAddress());
+    }
+    private boolean verifyHandshake(){
+        byte[] response=new byte[49+HANDSHAKE_STRING.length()];
+        try {
+            inputStream.readFully(response);
+            if (COMPACT_RESPONSE==1){
+                return true;
+            }
+            if(checkPeerID(response)){
+                return true;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return true;//wtf? see comments on method below.
+    }
     /*
        Check if peer id received after sending handshake is same as peer_id in Peer class.
        for now method is not working but I have cross checked using wireshark,the peers are valid.
@@ -157,5 +255,106 @@ public class PeerConnection {
             }
         }
         return true;
+    }
+    private void  receiveUnchoke(){
+        choke=0;
+        unchoke=1;
+        System.out.println("Unchoke received");
+        logger.debug("Uchoke received from "+peer.getAddress());
+    }
+
+
+    /*
+        Ideally bitfield must be stored.And based on that requests should be made.
+        Will come back to that soon.Now just consuming bitfield.
+     */
+    private void receiveBitfield(int len){
+        logger.debug("Bitfield received");
+        System.out.println("Bitfield received");
+        try {
+            inputStream.skipBytes(len-1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    /*
+        Not able to figure out what this message represents.Sometimes it is received sometimes
+        it is not.Anyway we have to consume it.
+     */
+    private void receiveExtended(int len){
+        logger.debug("extended received");
+        System.out.println("extended received");
+        try {
+            inputStream.skipBytes(len-1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void sendInterested(){
+        System.out.println("Sending interested to "+peer.getAddress());
+        logger.debug("Sending interested to "+peer.getAddress());
+        try {
+            outputStream.write(interestedMessage);
+            outputStream.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        interested=1;
+    }
+    private void sendRequest(){
+        int params[]=peerController.getBlockParams();
+        if(params[0]==-1){
+            logger.debug("Nothing to download");
+            System.out.println("Nothing to download");
+            return;
+        }
+        ByteBuffer buffer=ByteBuffer.allocate(17);
+        logger.debug("Requesting Piece"+params[0]+" Block "+params[1]);
+        System.out.println("Requesting Piece"+params[0]+" Block "+params[1]);
+        buffer.put(requestMessage);
+        buffer.putInt(params[0]);
+        buffer.putInt(params[1]);
+        buffer.putInt(params[2]);
+        byte[] request=buffer.array();
+        try {
+            outputStream.write(request);
+            outputStream.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void receivePiece(byte[] data){
+        try {
+            int pieceIndex=inputStream.readInt();
+            int offset=inputStream.readInt();
+            System.out.println("pieceIndex: "+pieceIndex+"offset :"+offset);
+            ByteArrayOutputStream stream=new ByteArrayOutputStream();
+            int pos=0;
+            byte[] buff=new byte[4096];
+            while(true){
+                pos=inputStream.read(buff);
+                if(pos==-1){
+                    break;
+                }
+                stream.write(buff,0,pos);
+            }
+            data=stream.toByteArray();
+            System.arraycopy(piece_data,offset,data,0,data.length);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    /*
+        A method to drop the given peer and stop the thread.
+     */
+    private void teardown(){
+        try {
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

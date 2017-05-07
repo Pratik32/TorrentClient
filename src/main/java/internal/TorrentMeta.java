@@ -10,10 +10,7 @@ import org.apache.commons.io.output.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by ps on 17/3/17.
@@ -182,5 +179,13 @@ public class TorrentMeta {
         System.out.println(info_hash_hex);
         sha1_hashes[1]=info_hash_hex;
         return sha1_hashes;
+    }
+    public long getTotalFilesize(){
+        Set<Long> sizeSet=(Set<Long>) files.values();
+        long totalSize=0;
+        for(Long l:sizeSet){
+            totalSize+=l;
+        }
+        return totalSize;
     }
 }
