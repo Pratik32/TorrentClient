@@ -8,8 +8,8 @@ import java.io.*;
 import java.net.Socket;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
+import java.nio.ByteBuffer;
 import java.util.Arrays;
-
 /**
  * Created by ps on 6/4/17.
  *
@@ -26,12 +26,14 @@ public class PeerConnection {
     private TorrentMeta meta;
 
     public static final byte[] interested={0,0,0,1,2};
+    public static final byte[] request={0,0,0,13,6};
     public PeerConnection(Peer peer,TorrentMeta meta){
         this.peer=peer;
         this.meta=meta;
     }
-    public void connect() throws IOException {
+    public void connect() throws IOException, InterruptedException {
         System.out.println("In connect()");
+        Constants.logger.debug("Connecting peer :"+peer.getAddress().toString());
         System.out.println(peer.getAddress().toString());
         Socket socket=new Socket(peer.getAddress().getAddress(),peer.getAddress().getPort());
         byte[] messsage=createHandshakeMessage(meta.getInfo_hash(),Constants.ID);
@@ -56,23 +58,44 @@ public class PeerConnection {
         else{
             System.out.println("Drop the peer.");
         }
-        byte[] bitfield=new byte[5];
-        stream1.read(bitfield,0,bitfield.length);
-        for(byte b:bitfield)
-            System.out.println(b);
-        if(bitfield[4]==5){
-            System.out.println("Bitfield received");
-        }
-        //sending interested message to peer.
 
+
+        int len=0;
+        int code=0;
+        len=stream1.readInt();
+        code=stream1.readByte();
+
+        System.out.println("Length :"+len+"Type is :"+code);
+        Constants.logger.debug("Length :"+len+"Type is :"+code);
+        stream1.skipBytes(len-1);
+        len=stream1.readInt();
+        code=stream1.readByte();
+        System.out.println("Length :"+len+"Type is :"+code);
+        Constants.logger.debug("Length :"+len+"Type is :"+code);
+        stream1.skipBytes(len-1);
+        //sending interested message to peer.
         stream.write(interested,0,interested.length);
+        len=stream1.readInt();
+        code=stream1.readByte();
+        System.out.println("Length :"+len+"Type is :"+code);
+        Constants.logger.debug("Length :"+len+"Type is :"+code);
+        stream1.skipBytes(len-1);
         stream.flush();
-        /*byte[] unchoke=new byte[5];
-        stream1.read(unchoke,0,unchoke.length);
-        System.out.println(unchoke[4]);
-        if(unchoke[4]==1){
-            System.out.println("Unchoke received");
-        }*/
+
+        //create a request for a piece.
+        ByteBuffer byteBuffer=ByteBuffer.allocate(17);
+        byteBuffer.put(request);
+        byteBuffer.putInt(0);
+        byteBuffer.putInt(0);
+        byteBuffer.putInt(16384);
+        byte[] request_message=byteBuffer.array();
+        stream.write(request_message);
+        stream.flush();
+        int pos=0;
+        len=stream1.readInt();
+        code=stream1.readByte();
+        System.out.println("Length :"+len+"Type is :"+code);
+        Constants.logger.debug("Length :"+len+"Type is :"+code);
     }
 
     /*

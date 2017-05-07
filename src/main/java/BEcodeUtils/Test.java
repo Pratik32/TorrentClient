@@ -3,9 +3,12 @@ package BEcodeUtils;
 import Peers.Peer;
 import Peers.PeerConnection;
 import Tracker.*;
+import internal.Constants;
 import internal.TorrentMeta;
 import internal.Utils;
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,6 +23,7 @@ import java.util.Set;
  */
 public class Test {
     public static void main(String[] args) {
+        initialize();
         File file=new File("ubuntu.torrent");
         byte[] data;
         try {
@@ -27,10 +31,12 @@ public class Test {
                 Read the torrent file and create TorrentMeta Object from it.
              */
             data = FileUtils.readFileToByteArray(file);
+            Constants.logger.debug("Reading torrent file.");
             TorrentMeta meta=TorrentMeta.createTorrentMeta(data);
             /*
                 Create a tracker session check it's type(http/udp).
              */
+            Constants.logger.debug("TorrentMeta successfully created.");
             TrackerSession session=null;
             System.out.println(meta.getAnnounce());
             if(meta.getAnnounce().startsWith("http")){
@@ -58,13 +64,29 @@ public class Test {
 
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
     //temporary method for printing the peer data.(ip,port,peer_id).
     private static void printPeerInfo(Set<InetSocketAddress> addresses){
         System.out.println("Found Peers :");
+        Constants.logger.debug("Found following peers.");
        for(InetSocketAddress ip:addresses ){
+           Constants.logger.debug(ip.toString());
            System.out.println(ip.toString());
        }
+    }
+    /*
+        This method will is intended to setup environment for
+        client.e.g logging service.User interface.
+     */
+    public static  void initialize(){
+        intializeLogger();
+    }
+    public static void intializeLogger(){
+        //PropertyConfigurator.configure("log4j.properties");
+        Constants.logger= Logger.getLogger(PeerConnection.class);
+
     }
 }

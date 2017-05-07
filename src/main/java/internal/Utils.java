@@ -20,6 +20,7 @@ public class Utils {
     public static TrackerRequestPacket craftPacket(TorrentMeta meta){
         //TrackerRequestPacket.Event event = TrackerRequestPacket.Event.STARTED;
 
+        Constants.logger.debug("Crafting tracker request packet");
         TrackerRequestPacket packet=new TrackerRequestPacket(TrackerRequestPacket.Event.STARTED,1028128768,0,0);
         return packet;
     }

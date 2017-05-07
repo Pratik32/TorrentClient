@@ -1,6 +1,7 @@
 package Tracker;
 
 import BEcodeUtils.Element;
+import internal.Constants;
 import internal.TorrentMeta;
 import javafx.scene.control.TableColumn;
 
@@ -116,6 +117,7 @@ public  abstract class TrackerSession {
                 +EVENT+event_type
                 +COMPACT+1;
         System.out.println(url);
+        Constants.logger.debug("Trakcer url is :"+url);
         return url;
 
     }
@@ -132,6 +134,7 @@ public  abstract class TrackerSession {
         return encoded_string;
     }
     public  TrakcerResponsePacket craftPacket(Element element){
+        Constants.logger.debug("Crafting the response packet.");
         Map<InetSocketAddress,byte[]> peer_info=getPeerInfo(element);
         TrakcerResponsePacket packet=new TrakcerResponsePacket();
         packet.setPeer_info(peer_info);

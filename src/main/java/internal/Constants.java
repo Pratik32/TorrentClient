@@ -1,5 +1,7 @@
 package internal;
 
+import org.apache.log4j.Logger;
+
 /**
  * Created by ps on 26/3/17.
  */
@@ -33,4 +35,8 @@ public class Constants {
     //Also,it is used while decrafting the response packet.
     public static  int COMPACT_RESPONSE=0;
 
+
+    //Logger.
+
+    public static Logger logger;
 }

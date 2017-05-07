@@ -2,6 +2,7 @@ package Tracker;
 
 import BEcodeUtils.BencodeUtils;
 import BEcodeUtils.Element;
+import internal.Constants;
 import internal.TorrentMeta;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.output.ByteArrayOutputStream;
@@ -29,8 +30,10 @@ public class HttpTrackerSession extends TrackerSession{
             connection = (HttpURLConnection) url.openConnection();
             InputStream stream=connection.getInputStream();
             System.out.println(connection.getResponseCode());
+            Constants.logger.debug("Received tracker response with response code :"+connection.getResponseCode());
             byte data[]= IOUtils.toByteArray(stream);
             element= BencodeUtils.decode(data);
+            Constants.logger.debug("Successfully decoded tracker responses.");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {

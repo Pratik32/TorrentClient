@@ -1,0 +1,21 @@
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=1028128768&left=0&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Connecting peer :/10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - Length :100Type is :20
+[main] DEBUG Peers.PeerConnection  - Length :265Type is :5
+[main] DEBUG Peers.PeerConnection  - Length :1Type is :1
+[main] DEBUG Peers.PeerConnection  - Length :16393Type is :7
