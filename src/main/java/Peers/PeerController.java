@@ -35,6 +35,7 @@ public class PeerController {
     private List<Peer> peerList;
     private int blockNo=0;
     private int pieceNo=0;
+    private long trackerParams[]=new long[3];//downloaded,left,uploaded.
 
     /*
         There is a proper strategy for selecting active-peer list.(Choke/Unchoke algorithm.)
@@ -46,6 +47,7 @@ public class PeerController {
     public PeerController(TorrentMeta meta,List<Peer> list){
         this.meta=meta;
         this.peerList=list;
+        trackerParams[2]=meta.getTotalFilesize();
         initParams();
     }
 
@@ -101,7 +103,7 @@ public class PeerController {
         this method must be called after "interval" amount of time has passed.
 
      */
-     private List<Peer> updatePeerList(int downloaded,int uploaded,int left){
+     private List<Peer> updatePeerList(long downloaded,long uploaded,long left){
          TrackerRequestPacket packet= Utils.craftPacket(meta,downloaded,uploaded,left);
          TrackerSession session=new HttpTrackerSession(meta);
          TrakcerResponsePacket responsePacket=session.sendRequest(packet);

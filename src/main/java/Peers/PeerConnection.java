@@ -34,6 +34,7 @@ public class PeerConnection extends Thread{
     private int notInterested=1;
     private int unchoke=0;
     private int interested=0;
+    private boolean keepRunning=true;
     private PeerController peerController;
     public PeerConnection(Peer peer,TorrentMeta meta,byte[] data,PeerController c){
         this.peer=peer;
@@ -42,7 +43,7 @@ public class PeerConnection extends Thread{
         this.peerController=c;
     }
 
-    //Keeping the testing method for quick testing purpose.
+    //Keeping this method  for quick testing purpose.
     public void connect() throws IOException, InterruptedException {
         System.out.println("In connect()");
         Constants.logger.debug("Connecting peer :"+peer.getAddress().toString());
@@ -111,6 +112,7 @@ public class PeerConnection extends Thread{
     }
 
 
+
     public void run() {
         //setup a connection with remote peer.
         byte[] block = new byte[BLOCK_LENGTH];
@@ -127,12 +129,13 @@ public class PeerConnection extends Thread{
             if (verifyHandshake()) {
                 System.out.println("Peer id verified.");
                 logger.debug("Peer id verified.");
-                while (true) {
+                while (keepRunning) {
                     len=inputStream.readInt();
                     code=inputStream.readByte();
 
                     switch (code){
                         case CHOKE:
+                            receivChoke();
                             break;
                         case UNCHOKE:
                             receiveUnchoke();
@@ -152,12 +155,14 @@ public class PeerConnection extends Thread{
                             break;
                         case PIECE:
                             receivePiece(block);
+                            keepRunning=sendRequest();//if nothing to request shutdown the connection.
                             break;
                         case EXTENDED:
                             receiveExtended(len);
                             break;
                         default:
-
+                            System.out.println("Len :"+len+"Code :"+code);
+                            keepRunning=false;
                     }
 
                 }
@@ -169,6 +174,7 @@ public class PeerConnection extends Thread{
         }catch(IOException e){
             e.printStackTrace();
         }
+        teardown();
     }
 
 
@@ -303,12 +309,12 @@ public class PeerConnection extends Thread{
         }
         interested=1;
     }
-    private void sendRequest(){
+    private boolean sendRequest(){
         int params[]=peerController.getBlockParams();
         if(params[0]==-1){
             logger.debug("Nothing to download");
             System.out.println("Nothing to download");
-            return;
+            return false;
         }
         ByteBuffer buffer=ByteBuffer.allocate(17);
         logger.debug("Requesting Piece"+params[0]+" Block "+params[1]);
@@ -324,7 +330,13 @@ public class PeerConnection extends Thread{
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return true;
     }
+    /*
+        This method will download a block(of size BLOCK_LENGTH).
+        data will be copied to piece_data at offset.
+
+     */
     private void receivePiece(byte[] data){
         try {
             int pieceIndex=inputStream.readInt();
@@ -346,6 +358,18 @@ public class PeerConnection extends Thread{
             e.printStackTrace();
         }
 
+    }
+    private void receivChoke(){
+        System.out.println("Received choke from remote peer"+peer.getAddress());
+        logger.debug("Received choke from remote peer"+peer.getAddress());
+        choke=1;
+    }
+    private  void sendChoke(){
+        try {
+            outputStream.write(chokeMessage);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     /*
         A method to drop the given peer and stop the thread.

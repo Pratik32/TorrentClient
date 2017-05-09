@@ -57,6 +57,10 @@ public class Constants {
     public static final int EXTENDED=20;
     public static final byte[] interestedMessage={0,0,0,1,2};
     public static final byte[] requestMessage={0,0,0,13,6};
+    public static final byte[] chokeMessage={0,0,0,1,0};
+    public static final byte[] notinterestedMessage={0,0,0,1,3};
+    public static final byte[] keepAliveMessage={0,0,0,0};
+
 
 
 

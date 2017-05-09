@@ -10,12 +10,12 @@ public class TrackerRequestPacket {
         COMPLETED
     }
     Event event;
-    int downloaded;
-    int uploaded;
-    int left;
+    long downloaded;
+    long uploaded;
+    long left;
 
 
-    public TrackerRequestPacket(Event event, int downloaded, int uploaded, int left){
+    public TrackerRequestPacket(Event event,long downloaded, long uploaded, long left){
         this.event=event;
         this.downloaded=downloaded;
         this.uploaded=uploaded;
@@ -30,7 +30,7 @@ public class TrackerRequestPacket {
         this.event = event;
     }
 
-    public int getDownloaded() {
+    public long getDownloaded() {
         return downloaded;
     }
 
@@ -38,7 +38,7 @@ public class TrackerRequestPacket {
         this.downloaded = downloaded;
     }
 
-    public int getUploaded() {
+    public long getUploaded() {
         return uploaded;
     }
 
@@ -46,7 +46,7 @@ public class TrackerRequestPacket {
         this.uploaded = uploaded;
     }
 
-    public int getLeft() {
+    public long getLeft() {
         return left;
     }
 
