@@ -181,9 +181,8 @@ public class TorrentMeta {
         return sha1_hashes;
     }
     public long getTotalFilesize(){
-        Set<Long> sizeSet=(Set<Long>) files.values();
         long totalSize=0;
-        for(Long l:sizeSet){
+        for(Long l:files.values()){
             totalSize+=l;
         }
         return totalSize;

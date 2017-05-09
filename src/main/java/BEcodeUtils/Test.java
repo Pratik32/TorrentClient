@@ -42,7 +42,7 @@ public class Test {
 
             List<Peer> peerList=getInitialPeerList(meta);
             PeerController controller=new PeerController(meta,peerList);
-            controller.start();
+            //controller.start();
 
         } catch (IOException e) {
             e.printStackTrace();
