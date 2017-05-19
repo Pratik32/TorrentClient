@@ -26,6 +26,7 @@ public class TorrentMeta {
     byte[] pieces;
     String info_hash_hex;
     byte[] info_hash;
+    int totalPieces;
 
 
 
@@ -102,6 +103,12 @@ public class TorrentMeta {
         this.piecelength = piecelength;
     }
 
+    public int getTotalPieces(){
+        return totalPieces;
+    }
+    public void setTotalPieces(int n){
+        totalPieces=n;
+    }
     public List<String> getFileSize(){
         List<String> file_sizes=null;
         return file_sizes;
@@ -142,6 +149,7 @@ public class TorrentMeta {
         //set pieces
         byte[] pieces=info.get("pieces").getBytes();
         meta.setPieces(pieces);
+        meta.setTotalPieces(pieces.length/20);
 
         //set info_hashes.
         byte[] info_value={0};
@@ -180,11 +188,25 @@ public class TorrentMeta {
         sha1_hashes[1]=info_hash_hex;
         return sha1_hashes;
     }
+
+    /*
+        returns addition of all file size.
+     */
     public long getTotalFilesize(){
         long totalSize=0;
         for(Long l:files.values()){
             totalSize+=l;
         }
         return totalSize;
+    }
+    /*
+        returns filenames in the torrent file.
+     */
+    public List<String> getFileNames(){
+        List<String> fileList=new ArrayList<String>();
+        for(String name:files.keySet()){
+            fileList.add(name);
+        }
+        return fileList;
     }
 }

@@ -2,7 +2,97 @@
 [main] DEBUG Peers.PeerConnection  - Reading torrent file.
 [main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
 [main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=1028128768&left=0&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Sending interested to /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Uchoke received from /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  1
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  2
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  3
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  4
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  5
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  6
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  7
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  8
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  9
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  10
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  11
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  12
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  13
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  14
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  15
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  16
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  17
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  18
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  19
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  20
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  21
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  22
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  23
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  24
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  25
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  26
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  27
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  28
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  29
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  30
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  31
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Closing the connection
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :udp://tracker.opentrackr.org:1337/announce?info_hash=%97%EC%83%09%5Ds%B7%B1%0F6%A3%8D%01z%F0%0AQqRG&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=365456263&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
 [main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
 [main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
 [main] DEBUG Peers.PeerConnection  - Crafting the response packet.
@@ -18,7 +108,7 @@
 [main] DEBUG Peers.PeerConnection  - Reading torrent file.
 [main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
 [main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=1028128768&left=0&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
 [main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
 [main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
 [main] DEBUG Peers.PeerConnection  - Crafting the response packet.
@@ -32,3 +122,333 @@
 [main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
 [main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
 [main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Closing the connection
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Closing the connection
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - PeerController started
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /194.226.19.74:21366
+[main] DEBUG Peers.PeerConnection  - /37.187.102.234:51413
+[main] DEBUG Peers.PeerConnection  - /108.173.140.231:6881
+[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
+[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
+[main] DEBUG Peers.PeerConnection  - /117.203.220.35:40982
+[main] DEBUG Peers.PeerConnection  - /176.77.87.163:51413
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.196:55501
+[main] DEBUG Peers.PeerConnection  - /10.240.254.195:55501
+[main] DEBUG Peers.PeerConnection  - /10.240.254.198:55501
+[main] DEBUG Peers.PeerConnection  - /10.240.254.197:55501
+[main] DEBUG Peers.PeerConnection  - /10.240.254.192:55501
+[main] DEBUG Peers.PeerConnection  - /10.240.254.191:55501
+[main] DEBUG Peers.PeerConnection  - /10.240.254.194:55501
+[main] DEBUG Peers.PeerConnection  - /10.240.254.193:55501

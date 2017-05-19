@@ -62,6 +62,27 @@ public  abstract class TrackerSession {
         }
         return peers_info;
     }
+
+    /*
+        getPeerInfo is overloaded so that it can decode both ByteBuffer
+        and Element.Handling everything in one getPeerInfo method would
+        have been problematic.
+     */
+    private Map<InetSocketAddress,byte[]> getPeerInfo(ByteBuffer buffer){
+        COMPACT_RESPONSE=1;
+        Map<InetSocketAddress,byte[]> peers_info=new HashMap<InetSocketAddress,byte[]>();
+        for(int offset=20;offset<buffer.limit();offset+=6){
+            InetSocketAddress address=getInetSocketAddress(buffer,offset,4);
+            peers_info.put(address,null);
+        }
+        return peers_info;
+
+    }
+    /*
+        returns InetSocketAddress.
+        structure of IP address in bytebuffer response:
+        6 bytes= 4 bytes ip(integer)+2 bytes port(short).
+     */
     private InetSocketAddress getInetSocketAddress(ByteBuffer buffer,int offset,int size){
         byte ip_address[]=ByteBuffer.allocate(size).putInt(buffer.getInt(offset)).array();
         int port= buffer.getShort(offset+size) & 0xFFFF;
@@ -74,6 +95,10 @@ public  abstract class TrackerSession {
         return address;
     }
 
+    /*
+         When compact response=0 We get extra information about given
+         peer i.e it's peer_id which is extracted in below method.
+     */
     private Map<InetSocketAddress,byte[]> getPeers(List<Map<String,Element>> map){
         List<InetSocketAddress> peers=new ArrayList<InetSocketAddress>();
         Map<InetSocketAddress,byte[]> peers_info=new HashMap<InetSocketAddress,byte[]>();
@@ -88,12 +113,19 @@ public  abstract class TrackerSession {
         return peers_info;
     }
 
+
     public TrakcerResponsePacket sendRequest(TrackerRequestPacket packet ){
-        Element element=connect(packet);
-        TrakcerResponsePacket responsePacket=craftPacket(element);
+        Object obj=connect(packet);
+        TrakcerResponsePacket responsePacket=craftPacket(obj);
         return responsePacket;
     }
-    public abstract Element connect(TrackerRequestPacket packet);
+
+    /*
+        The contract for connect method had to be changed.
+        Because UDP tracker cannot return an Element(because response is not bencoded.)
+        But I wanted to keep the tracker model same.hence returning a Object.
+     */
+    public abstract Object connect(TrackerRequestPacket packet);
 
     protected String getTrackerUrl(TrackerRequestPacket packet){
         String event_type="";
@@ -124,17 +156,31 @@ public  abstract class TrackerSession {
         String encoded_string="";
         String temp= null;
         try {
-            temp = new String(data,"ISO-8859-1");
-
+            System.out.println("Info hash "+temp);
             encoded_string= URLEncoder.encode(temp,"ISO-8859-1");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
         return encoded_string;
     }
-    private  TrakcerResponsePacket craftPacket(Element element){
+    /*
+        This method is checks if given response is of which type.
+        case Element:
+            It will call getPeerInfo with Element as param(morph 1)
+        case ByteBuffer:
+            It will call getPeerInfo with ByteBuffer as param(morph 2)
+     */
+    private  TrakcerResponsePacket craftPacket(Object obj){
         Constants.logger.debug("Crafting the response packet.");
-        Map<InetSocketAddress,byte[]> peer_info=getPeerInfo(element);
+        Map<InetSocketAddress,byte[]> peer_info=null;
+        if(obj instanceof Element) {
+            Element element=(Element)obj;
+            peer_info = getPeerInfo(element);
+        }
+        else{
+            ByteBuffer buffer=(ByteBuffer)obj;
+            peer_info=getPeerInfo(buffer);
+        }
         TrakcerResponsePacket packet=new TrakcerResponsePacket();
         packet.setPeer_info(peer_info);
         return  packet;

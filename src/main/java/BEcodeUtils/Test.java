@@ -25,7 +25,7 @@ import java.util.Set;
 public class Test {
     public static void main(String[] args) throws InterruptedException {
         initialize();
-        File file=new File("ubuntu.torrent");
+        File file=new File("arrow.torrent");
         byte[] data;
         try {
             /*
@@ -41,7 +41,7 @@ public class Test {
             //individualPeerTest(meta);
 
             List<Peer> peerList=getInitialPeerList(meta);
-            PeerController controller=new PeerController(meta,peerList);
+            //PeerController controller=new PeerController(meta,peerList);
             //controller.start();
 
         } catch (IOException e) {
@@ -75,7 +75,7 @@ public class Test {
      */
     public  static void individualPeerTest(TorrentMeta meta) throws IOException, InterruptedException {
        List<Peer> peerList=getInitialPeerList(meta);
-        PeerConnection connection=new PeerConnection(peerList.get(0),meta,null,null);
+        PeerConnection connection=new PeerConnection(peerList.get(1),meta,null,null);
         connection.connect();
     }
 
@@ -86,12 +86,13 @@ public class Test {
             session=new HttpTrackerSession(meta);
         }
         else if(meta.getAnnounce().startsWith("udp")){
+            System.out.println("Tracker is Udp type.");
             session=new UdpTrackerSession(meta);
         }
             /*
                 Create a request packet and and obtain a response packet.
              */
-        TrackerRequestPacket packet= Utils.craftPacket(meta,0,0,0);
+        TrackerRequestPacket packet= Utils.craftPacket(meta,0,0,meta.getTotalFilesize());
         TrakcerResponsePacket response=session.sendRequest(packet);
 
         //byte[] in below map represents peer id which does not have any encoding(hence byte[]).

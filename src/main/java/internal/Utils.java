@@ -4,10 +4,12 @@ import Peers.Peer;
 import Tracker.TrackerRequestPacket;
 import Tracker.TrakcerResponsePacket;
 
+import java.io.*;
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 /**
  * Created by ps on 6/4/17.
@@ -17,9 +19,9 @@ import java.util.Map;
  */
 public class Utils {
 
-    public static TrackerRequestPacket craftPacket(TorrentMeta meta,int uploaded,int downloaded,int left){
+    public static TrackerRequestPacket craftPacket(TorrentMeta meta,long uploaded,long downloaded,long left){
         Constants.logger.debug("Crafting tracker request packet");
-        TrackerRequestPacket packet=new TrackerRequestPacket(TrackerRequestPacket.Event.STARTED,1028128768,0,0);
+        TrackerRequestPacket packet=new TrackerRequestPacket(TrackerRequestPacket.Event.STARTED,downloaded,uploaded,left);
         return packet;
     }
 
@@ -42,8 +44,24 @@ public class Utils {
         This method will accept a piece(basically a byte array) and will write it
          to the destination file.Function parameters are yet to be decided.
      */
-    public static void writeToFile(){
+    public static void writeToFile(String filename,byte data[],int pieceNumber,int pieceLength){
+        File file=new File(filename);
+        System.out.println("Writing to file :"+filename+"piece number :"+pieceNumber);
+        try {
+            DataOutputStream stream=new DataOutputStream(new FileOutputStream(file));
+            stream.write(data,pieceNumber*pieceLength,pieceLength);
+            stream.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Done writing to file.");
+    }
 
+    public static int generateRandomNumber(){
+        Random random=new Random();
+        return random.nextInt();
     }
 
 }

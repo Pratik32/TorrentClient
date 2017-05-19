@@ -22,7 +22,7 @@ public class HttpTrackerSession extends TrackerSession{
     public HttpTrackerSession(TorrentMeta meta){
         super(meta);
     }
-    public Element connect(TrackerRequestPacket packet) {
+    public Object connect(TrackerRequestPacket packet) {
         URL url=null;
         Element element=null;
         try {

@@ -7,6 +7,8 @@ import org.apache.log4j.Logger;
  */
 public class Constants {
 
+
+    //Trakcer Constants.
     public static String INFO_HASH="info_hash=";
 
     public static final String PEER_ID="&peer_id=";
@@ -36,6 +38,7 @@ public class Constants {
     public static final String EVEN_STOPPED="stopped";
 
     public static final String PORT_PEER="6881";
+
     //This is used to check if server is sending a compact response or not.
     //Also,it is used while decrafting the response packet.
     public static  int COMPACT_RESPONSE=0;
@@ -57,8 +60,15 @@ public class Constants {
     public static final int EXTENDED=20;
     public static final byte[] interestedMessage={0,0,0,1,2};
     public static final byte[] requestMessage={0,0,0,13,6};
+    public static final byte[] chokeMessage={0,0,0,1,0};
+    public static final byte[] notinterestedMessage={0,0,0,1,3};
+    public static final byte[] keepAliveMessage={0,0,0,0};
 
-
+    //Udp tracker constants.
+    public static final int UDP_CONNECTION_MESSAGE_LEN=16;
+    public static final long UDP_CONNECT_REQUEST_MAGIC = 0x41727101980L;
+    public static final int UDP_PACKET_LENGTH=512;
+    public static final int UDP_ANNOUNCE_MESSAGE_LEN=98;
 
     //Logger.
 
