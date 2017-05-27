@@ -10,6 +10,7 @@ import org.apache.commons.io.output.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
+import java.nio.ByteBuffer;
 import java.util.*;
 
 /**
@@ -27,6 +28,7 @@ public class TorrentMeta {
     String info_hash_hex;
     byte[] info_hash;
     int totalPieces;
+    ByteBuffer[] pieceHashes;
 
 
 
@@ -108,6 +110,7 @@ public class TorrentMeta {
     }
     public void setTotalPieces(int n){
         totalPieces=n;
+        pieceHashes=new ByteBuffer[totalPieces];
     }
     public List<String> getFileSize(){
         List<String> file_sizes=null;
@@ -151,7 +154,15 @@ public class TorrentMeta {
         meta.setPieces(pieces);
         meta.setTotalPieces(pieces.length/20);
 
-        //set info_hashes.
+        //create pieceHash array.
+
+        byte[] temp=new byte[20];
+        int tempCount=0;
+        for(int i=0;i<pieces.length;i+=20){
+            System.arraycopy(pieces,i,temp,0,temp.length);
+            meta.setPieceHashes(temp,tempCount++);
+        }
+        //set info_hash.
         byte[] info_value={0};
         ByteArrayOutputStream stream=new ByteArrayOutputStream();
         BencodeUtils.encode(dictionary.get("info").getValue(),stream);
@@ -208,5 +219,16 @@ public class TorrentMeta {
             fileList.add(name);
         }
         return fileList;
+    }
+    public void setPieceHashes(byte data[],int pos){
+        if(data.length!=20){
+            System.out.println("Wrong length of sha1 hash.");
+            return;
+        }
+        pieceHashes[pos]=ByteBuffer.allocate(data.length);
+        pieceHashes[pos].put(data);
+    }
+    public byte[] getPieceHash(int pieceIndex){
+        return pieceHashes[pieceIndex].array();
     }
 }

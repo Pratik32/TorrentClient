@@ -5,9 +5,17 @@ package Tracker;
  */
 public class TrackerRequestPacket {
     public enum Event{
-        STARTED,
-        STOPPED,
-        COMPLETED
+        STARTED(2),
+        STOPPED(3),
+        COMPLETED(1);
+
+        private final int value;
+        Event(final int value){
+            this.value=value;
+        }
+        public int getValue(){
+            return value;
+        }
     }
     Event event;
     long downloaded;

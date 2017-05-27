@@ -25,7 +25,7 @@ import java.util.Set;
 public class Test {
     public static void main(String[] args) throws InterruptedException {
         initialize();
-        File file=new File("arrow.torrent");
+        File file=new File("music.torrent");
         byte[] data;
         try {
             /*
@@ -41,8 +41,8 @@ public class Test {
             //individualPeerTest(meta);
 
             List<Peer> peerList=getInitialPeerList(meta);
-            //PeerController controller=new PeerController(meta,peerList);
-            //controller.start();
+            PeerController controller=new PeerController(meta,peerList);
+            controller.start();
 
         } catch (IOException e) {
             e.printStackTrace();

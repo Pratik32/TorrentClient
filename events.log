@@ -2,453 +2,1372 @@
 [main] DEBUG Peers.PeerConnection  - Reading torrent file.
 [main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
 [main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://tracker.nwps.ws:6969/announce?info_hash=%2B%12%CE%09%23e%26%A7%28%C6%97L%0D%89%D5%28%60%E8-%AA&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=7160689&event=started&compact=1
 [main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
 [main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
 [main] DEBUG Peers.PeerConnection  - Crafting the response packet.
 [main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
+[main] DEBUG Peers.PeerConnection  - /10.240.254.182:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.181:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.184:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.183:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.186:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.185:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.188:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.187:55505
+[main] DEBUG Peers.PeerConnection  - Init Params: piece length :16384blockLength :16384TotalSize :7160689pieces:438blocks per piece1
 [main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.182:55505
+[Thread-1] DEBUG Peers.PeerConnection  - Thread :[Thread-1]Started communicating with /10.240.254.181:55505
+[Thread-3] DEBUG Peers.PeerConnection  - Thread :[Thread-3]Started communicating with /10.240.254.183:55505
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.182:55505
+[Thread-2] DEBUG Peers.PeerConnection  - Thread :[Thread-2]Started communicating with /10.240.254.184:55505
 [Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
 [Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
 [Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Sending interested to /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Uchoke received from /10.240.254.115:55502
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Sending interested to /10.240.254.182:55505
+[Thread-4] DEBUG Peers.PeerConnection  - Thread :[Thread-4]Started communicating with /10.240.254.186:55505
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Uchoke received from /10.240.254.182:55505
 [Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  0
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  1
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  2
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  3
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  4
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  5
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  6
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  7
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  8
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  9
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  10
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  11
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  12
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  13
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  14
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  15
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  16
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  17
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  18
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  19
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  20
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  21
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  22
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  23
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  24
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  25
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  26
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  27
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  28
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  29
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  30
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 0 Block  31
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Successful sent handshake to :/10.240.254.184:55505
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Successful sent handshake to :/10.240.254.186:55505
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Peer id verified.
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] extended received
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Bitfield received
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Sending interested to /10.240.254.184:55505
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Uchoke received from /10.240.254.184:55505
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 1 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :1
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 2 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :2
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 3 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :3
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 4 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :4
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 5 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :5
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 6 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Peer id verified.
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] extended received
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Bitfield received
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Sending interested to /10.240.254.186:55505
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Uchoke received from /10.240.254.186:55505
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 7 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Successful sent handshake to :/10.240.254.183:55505
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Successful sent handshake to :/10.240.254.181:55505
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :6
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 8 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :8
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 9 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Peer id verified.
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] extended received
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Bitfield received
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Sending interested to /10.240.254.181:55505
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Uchoke received from /10.240.254.181:55505
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 10 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Peer id verified.
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] extended received
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Bitfield received
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Sending interested to /10.240.254.183:55505
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Uchoke received from /10.240.254.183:55505
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 11 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :9
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 12 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :7
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 13 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :13
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 14 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :14
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 15 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :11
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 16 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :12
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 17 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :15
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 18 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :10
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 19 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :17
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 20 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 21 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :20
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 22 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :21
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 23 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :23
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 24 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :24
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 25 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :18
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 26 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :26
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 27 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :25
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 28 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :22
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 29 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :28
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 30 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :29
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 31 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :19
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 32 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :31
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 33 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :32
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 34 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :30
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 35 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :34
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 36 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :36
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 37 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :35
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 38 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :38
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 39 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :37
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 40 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :27
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 41 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :33
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 42 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :41
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 43 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :39
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 44 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :43
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 45 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :42
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 46 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :40
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 47 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :47
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 48 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :46
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 49 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :49
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 50 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :45
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 51 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :50
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 52 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :52
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 53 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :48
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 54 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :53
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 55 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :44
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 56 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :51
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 57 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :55
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 58 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :58
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 59 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :57
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 60 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :60
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 61 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :59
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 62 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :61
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 63 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :62
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 64 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :56
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 65 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :16
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 66 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :65
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 67 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :66
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 68 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :67
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 69 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :54
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 70 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :70
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 71 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :71
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 72 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :72
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 73 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :73
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 74 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :64
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 75 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :75
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 76 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :63
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 77 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :76
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 78 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :77
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 79 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :68
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 80 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :69
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 81 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :80
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 82 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :82
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 83 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :79
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 84 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :83
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 85 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :84
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 86 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :85
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 87 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :87
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 88 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :88
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 89 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :86
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 90 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :90
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 91 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :81
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 92 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :91
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 93 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :93
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 94 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :92
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 95 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :78
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 96 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :96
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 97 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :95
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 98 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :98
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 99 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :99
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 100 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :100
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 101 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :97
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 102 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :101
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 103 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :102
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 104 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :94
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 105 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :105
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 106 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :104
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 107 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :106
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 108 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :108
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 109 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :103
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 110 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :109
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 111 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :111
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 112 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :112
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 113 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :113
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 114 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :110
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 115 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :74
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 116 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :115
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 117 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :116
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 118 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :117
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 119 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :114
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 120 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :118
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 121 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :121
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 122 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :107
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 123 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :119
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 124 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :120
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 125 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :123
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 126 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :124
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 127 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :127
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 128 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :128
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 129 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :122
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 130 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :130
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 131 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :126
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 132 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :132
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 133 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :133
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 134 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :134
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 135 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :125
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 136 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :129
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 137 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :136
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 138 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :137
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 139 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :139
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 140 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :140
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 141 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :141
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 142 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :142
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 143 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :135
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 144 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :138
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 145 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :145
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 146 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :143
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 147 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :147
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 148 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :148
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 149 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :89
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 150 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :146
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 151 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :151
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 152 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :150
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 153 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :149
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 154 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :154
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 155 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :152
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 156 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :156
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 157 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :153
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 158 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :131
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 159 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :155
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 160 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :157
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 161 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :160
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 162 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :159
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 163 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :163
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 164 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :144
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 165 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :165
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 166 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :162
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 167 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :158
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 168 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :166
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 169 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :168
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 170 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :170
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 171 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :171
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 172 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :161
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 173 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :173
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 174 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :174
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 175 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :175
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 176 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :172
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 177 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :169
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 178 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :176
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 179 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :177
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 180 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :179
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 181 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :181
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 182 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :182
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 183 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :180
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 184 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :167
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 185 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :178
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 186 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :185
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 187 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :183
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 188 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :188
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 189 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :186
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 190 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :190
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 191 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :189
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 192 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :192
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 193 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :191
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 194 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :194
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 195 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :187
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 196 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :196
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 197 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :195
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 198 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :193
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 199 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :199
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 200 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :198
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 201 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :200
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 202 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :201
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 203 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :203
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 204 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :197
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 205 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :205
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 206 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :206
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 207 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :202
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 208 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :204
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 209 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :209
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 210 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :207
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 211 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :211
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 212 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :212
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 213 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :210
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 214 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :214
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 215 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :208
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 216 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :216
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 217 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :213
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 218 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :218
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 219 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :219
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 220 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :220
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 221 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :221
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 222 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :184
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 223 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :215
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 224 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :222
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 225 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :224
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 226 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :223
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 227 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :217
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 228 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :225
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 229 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :227
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :226
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 230 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 231 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :229
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 232 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :231
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 233 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :232
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 234 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :234
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 235 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :228
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 236 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :235
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 237 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :236
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 238 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :238
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 239 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :239
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 240 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :240
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 241 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :241
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 242 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :242
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 243 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :233
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 244 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :243
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 245 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :245
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 246 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :230
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 247 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :164
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 248 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :248
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 249 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :244
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 250 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :246
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 251 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :250
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 252 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :249
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 253 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :247
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 254 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :252
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 255 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :254
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 256 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :237
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 257 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :255
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 258 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :256
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 259 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :253
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 260 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :251
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 261 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :258
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 262 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :260
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 263 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :261
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 264 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :263
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 265 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :257
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 266 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :259
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 267 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :264
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 268 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :267
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 269 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :269
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 270 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :268
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 271 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :265
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 272 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :270
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 273 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :266
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 274 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :272
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 275 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :274
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 276 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :271
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 277 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :276
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 278 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :273
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 279 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :278
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 280 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :262
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 281 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :279
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 282 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :277
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 283 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :281
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 284 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :282
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 285 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :280
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 286 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :283
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 287 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :287
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 288 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :286
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 289 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :289
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 290 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :284
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 291 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :291
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 292 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :288
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 293 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :292
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 294 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :290
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 295 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :294
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 296 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :295
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 297 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :297
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 298 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :293
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 299 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :275
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 300 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :298
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 301 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :299
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 302 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :302
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 303 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :296
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 304 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :303
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 305 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :304
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 306 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :301
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 307 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :306
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 308 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :300
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 309 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :308
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 310 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :310
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 311 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :305
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 312 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :307
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 313 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :309
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 314 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :312
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 315 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :313
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 316 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :314
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 317 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :317
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 318 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :311
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 319 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :315
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 320 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :318
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 321 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :320
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 322 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :321
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 323 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :285
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 324 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :322
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 325 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :325
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 326 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :316
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 327 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :323
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 328 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :328
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 329 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :319
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 330 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :330
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 331 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :327
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 332 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :331
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 333 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :329
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 334 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :324
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 335 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :333
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 336 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :335
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 337 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :336
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 338 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :332
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 339 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :339
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 340 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :326
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 341 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :340
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 342 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :337
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 343 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :341
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 344 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :343
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 345 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :344
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :345
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 346 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 347 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :338
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 348 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :334
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 349 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :349
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 350 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :347
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 351 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :350
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 352 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :352
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 353 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :353
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 354 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :354
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 355 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :351
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 356 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :346
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 357 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :356
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 358 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :357
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 359 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :359
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 360 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :355
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 361 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :360
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 362 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :348
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 363 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :361
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 364 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :363
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 365 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :358
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 366 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :366
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 367 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :367
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 368 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :362
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 369 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :369
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 370 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :368
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 371 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :371
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 372 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :365
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 373 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :373
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 374 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :374
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 375 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :370
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 376 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :364
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 377 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :372
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 378 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :378
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 379 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :376
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 380 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :377
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 381 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :380
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 382 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :382
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 383 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :379
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 384 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :342
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 385 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :383
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 386 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :386
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 387 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :387
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 388 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :385
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 389 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :389
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 390 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :384
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 391 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :391
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 392 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :392
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 393 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :393
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 394 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :394
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 395 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :375
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 396 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :396
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :395
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 397 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 398 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :397
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 399 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :399
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 400 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :398
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 401 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :388
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 402 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :401
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 403 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :390
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 404 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :402
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 405 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :405
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 406 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :406
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 407 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :407
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 408 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :403
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 409 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :400
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 410 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :381
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 411 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :404
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 412 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :411
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 413 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :409
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 414 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :413
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 415 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :414
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 416 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :415
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 417 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :417
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 418 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :412
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 419 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :416
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 420 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :410
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 421 Block  0
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :418
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Requesting Piece 422 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :408
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 423 Block  0
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :421
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Requesting Piece 424 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :420
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 425 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :419
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 426 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :426
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 427 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :425
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 428 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :427
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 429 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :423
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 430 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :428
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 431 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :429
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 432 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :432
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 433 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :431
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 434 Block  0
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :433
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Requesting Piece 435 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :430
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Requesting Piece 436 Block  0
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :434
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Requesting Piece 437 Block  0
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] SHA-1 verified writing piece to file.
+[Thread-4] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :436
+[Thread-4] DEBUG Peers.PeerConnection  - [Thread-4] Closing the connection
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] SHA-1 verified writing piece to file.
+[Thread-2] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :437
+[Thread-2] DEBUG Peers.PeerConnection  - [Thread-2] Closing the connection
+[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] SHA-1 verified writing piece to file.
+[Thread-0] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :435
 [Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Closing the connection
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :udp://tracker.opentrackr.org:1337/announce?info_hash=%97%EC%83%09%5Ds%B7%B1%0F6%A3%8D%01z%F0%0AQqRG&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=365456263&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
-[main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
-[main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
-[main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
-[main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
-[main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
-[main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Closing the connection
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
-[main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
-[main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Closing the connection
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
-[main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
-[main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
-[main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2105blocks per piece32
-[main] DEBUG Peers.PeerConnection  - PeerController started
-[Thread-0] DEBUG Peers.PeerConnection  - Thread :[Thread-0]Started communicating with /10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Successful sent handshake to :/10.240.254.115:55502
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Peer id verified.
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] extended received
-[Thread-0] DEBUG Peers.PeerConnection  - [Thread-0] Bitfield received
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
-[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
-[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /194.226.19.74:21366
-[main] DEBUG Peers.PeerConnection  - /37.187.102.234:51413
-[main] DEBUG Peers.PeerConnection  - /108.173.140.231:6881
-[main] DEBUG Peers.PeerConnection  - /10.240.254.111:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.113:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.112:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.115:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.114:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.117:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.116:55502
-[main] DEBUG Peers.PeerConnection  - /10.240.254.118:55502
-[main] DEBUG Peers.PeerConnection  - /117.203.220.35:40982
-[main] DEBUG Peers.PeerConnection  - /176.77.87.163:51413
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Reading torrent file.
-[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
-[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
-[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
-[main] DEBUG Peers.PeerConnection  - Found following peers.
-[main] DEBUG Peers.PeerConnection  - /10.240.254.196:55501
-[main] DEBUG Peers.PeerConnection  - /10.240.254.195:55501
-[main] DEBUG Peers.PeerConnection  - /10.240.254.198:55501
-[main] DEBUG Peers.PeerConnection  - /10.240.254.197:55501
-[main] DEBUG Peers.PeerConnection  - /10.240.254.192:55501
-[main] DEBUG Peers.PeerConnection  - /10.240.254.191:55501
-[main] DEBUG Peers.PeerConnection  - /10.240.254.194:55501
-[main] DEBUG Peers.PeerConnection  - /10.240.254.193:55501
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] SHA-1 verified writing piece to file.
+[Thread-1] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :422
+[Thread-1] DEBUG Peers.PeerConnection  - [Thread-1] Closing the connection
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
+[Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :424
+[Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Closing the connection

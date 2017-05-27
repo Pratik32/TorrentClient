@@ -33,9 +33,9 @@ public class Constants {
 
     public static final String ID="-TO0042-0ab8e8a31019";
 
-    public static final String EVEN_STARTED="started";
-    public static final String EVEN_COMPLETED="completed";
-    public static final String EVEN_STOPPED="stopped";
+    public static final String EVENT_STARTED="started";
+    public static final String EVENT_COMPLETED="completed";
+    public static final String EVENT_STOPPED="stopped";
 
     public static final String PORT_PEER="6881";
 

@@ -3,6 +3,7 @@ package internal;
 import Peers.Peer;
 import Tracker.TrackerRequestPacket;
 import Tracker.TrakcerResponsePacket;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.net.InetSocketAddress;
@@ -19,6 +20,7 @@ import java.util.Random;
  */
 public class Utils {
 
+    private static  Logger logger=Constants.logger;
     public static TrackerRequestPacket craftPacket(TorrentMeta meta,long uploaded,long downloaded,long left){
         Constants.logger.debug("Crafting tracker request packet");
         TrackerRequestPacket packet=new TrackerRequestPacket(TrackerRequestPacket.Event.STARTED,downloaded,uploaded,left);
@@ -32,10 +34,10 @@ public class Utils {
     public static List<Peer> getPeerList(TrakcerResponsePacket packet){
         List<Peer> peerList=new ArrayList<Peer>();
         Map<InetSocketAddress,byte[]> map=packet.getPeer_info();
-            for (Map.Entry<InetSocketAddress,byte[]> e:map.entrySet()){
-                Peer peer=new Peer(e.getKey(),e.getValue());
-                peerList.add(peer);
-            }
+        for (Map.Entry<InetSocketAddress,byte[]> e:map.entrySet()){
+            Peer peer=new Peer(e.getKey(),e.getValue());
+            peerList.add(peer);
+        }
         return peerList;
     }
 
@@ -45,12 +47,14 @@ public class Utils {
          to the destination file.Function parameters are yet to be decided.
      */
     public static void writeToFile(String filename,byte data[],int pieceNumber,int pieceLength){
-        File file=new File(filename);
+        RandomAccessFile file;
         System.out.println("Writing to file :"+filename+"piece number :"+pieceNumber);
+        logger.debug("Writing to file :"+filename+"piece number :"+pieceNumber);
         try {
-            DataOutputStream stream=new DataOutputStream(new FileOutputStream(file));
-            stream.write(data,pieceNumber*pieceLength,pieceLength);
-            stream.close();
+            file=new RandomAccessFile(filename,"rw");
+            file.seek(pieceNumber*pieceLength);
+            file.write(data);
+            file.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -58,7 +62,6 @@ public class Utils {
         }
         System.out.println("Done writing to file.");
     }
-
     public static int generateRandomNumber(){
         Random random=new Random();
         return random.nextInt();

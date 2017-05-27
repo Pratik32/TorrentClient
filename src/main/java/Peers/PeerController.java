@@ -8,12 +8,10 @@ import internal.Constants;
 import internal.TorrentMeta;
 import internal.Utils;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 import static internal.Constants.BLOCK_LENGTH;
+import static internal.Constants.logger;
 
 /**
  * Created by ps on 7/5/17.
@@ -23,7 +21,7 @@ import static internal.Constants.BLOCK_LENGTH;
  * Also it will keep the track of which pieces/blocks are downloaded/downloading.
  * which peer is downloading which block.Scheduling a download for peer.
  * Keeping track of active peer list.
- * A downloading strategy(Rarest first) for downloading pieces.
+ * A downloading strategy(Rarest first,Sequential.) for downloading pieces.
  */
 public class PeerController {
     private long pieceLength;
@@ -33,9 +31,13 @@ public class PeerController {
     private long totalFileSize=0;
     private HashMap<Peer,List<Integer>> blocksMap=new HashMap<Peer,List<Integer>>();
     private List<Peer> peerList;
-    private int blockNo=0;
     private int pieceNo=0;
     private long trackerParams[]=new long[3];//downloaded,left,uploaded.
+    private BitSet globalBitField;
+    private BitSet workingBitField;
+    private BitSet completedBitField;
+    private int[] pieceFrequency;
+
 
     /*
         There is a proper strategy for selecting active-peer list.(Choke/Unchoke algorithm.)
@@ -48,11 +50,15 @@ public class PeerController {
         this.meta=meta;
         this.peerList=list;
         trackerParams[2]=meta.getTotalFilesize();
+        globalBitField=new BitSet(meta.getTotalPieces());
+        workingBitField=new BitSet(meta.getTotalPieces());
+        completedBitField=new BitSet(meta.getTotalPieces());
+        pieceFrequency=new int[meta.getTotalPieces()];
         initParams();
     }
 
     /*
-
+        starts the peer controller.
      */
     public void start(){
         try {
@@ -70,25 +76,10 @@ public class PeerController {
             for (PeerConnection p:connectionList){
                 p.join();
             }
-            //Utils.writeToFile(meta.getFileNames().get(0),piece_data,pieceNo,(int) pieceLength);
         }catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-    }
-
-    public synchronized  int[] getBlockParams(){
-        int[] params=new int[3];
-        System.out.println("Block number "+blockNo);
-        if(numberOfBlocks>blockNo){
-            params[0]=pieceNo;
-            params[1]=blockNo++;
-        }else{
-            params[0]=-1;
-            params[1]=-1;
-        }
-        params[2]=BLOCK_LENGTH;
-        return params;
     }
 
 
@@ -96,7 +87,14 @@ public class PeerController {
        This method will return next piece to download.
        Based on rarest first method.(based on bittorent docs.)
      */
-    public synchronized int getNextPieceToDownload(){
+    public synchronized int getNextPieceToDownload(BitSet set){
+       return getNextPiece(set);
+    }
+
+    /*
+      method is self explanatory.
+     */
+    public synchronized int testgetNextPieceToDownload(){
         if(pieceNo<numberOfPieces){
             return pieceNo++;
         }
@@ -111,9 +109,9 @@ public class PeerController {
         blockLength=BLOCK_LENGTH;
         numberOfBlocks=(int)(pieceLength/BLOCK_LENGTH);
         totalFileSize=meta.getTotalFilesize();
-        numberOfPieces=(int)(Math.ceil(meta.getTotalFilesize()/pieceLength));
+        numberOfPieces=meta.getTotalPieces();
         Constants.logger.debug("Init Params: "+"piece length :"+pieceLength+"blockLength :"+blockLength+"TotalSize :"+totalFileSize+"pieces:"+numberOfPieces+"blocks per piece"+numberOfBlocks);
-        System.out.println("Init Params: "+"piece length :"+pieceLength+"blockLength :"+blockLength+"TotalSize :"+totalFileSize+"pieces:"+meta.getTotalPieces()+"blocks per piece"+numberOfBlocks);
+        System.out.println("Init Params: "+"piece length : "+pieceLength+" blockLength :"+blockLength+" TotalSize :"+totalFileSize+" pieces: "+meta.getTotalPieces()+" blocks per piece "+numberOfBlocks);
     }
 
 
@@ -139,7 +137,9 @@ public class PeerController {
 
     private List<Peer> getActivePeerList(){
         List<Peer> active=new ArrayList<Peer>(5);
-        for(int i=0;i<1;i++){
+        System.out.println(peerList.size());
+        for(int i=0;i<5;i++){
+            //Peer p=peerList.remove(i);
             active.add(peerList.get(i));
         }
         return active;
@@ -153,12 +153,78 @@ public class PeerController {
     }
 
     public void pieceDownloaded(int pieceIndex,int pieceLength,byte[] data){
-        Utils.writeToFile(meta.getFileNames().get(0),data,pieceIndex,pieceLength);
+        completedBitField.set(pieceIndex,true);
+        workingBitField.set(pieceIndex,false);
+        pieceFrequency[pieceIndex]=-1;
+        Utils.writeToFile(meta.getFileNames().get(0),data,pieceIndex,(int)this.pieceLength);
         //update different bitsets(global,complete).
     }
 
-    public long getPieceLength() {
-        return pieceLength;
+    public synchronized void  updateGlobalBitField(BitSet set){
+        globalBitField.or(set);
+        for(int i=0;i<meta.getTotalPieces();i++){
+            if(set.get(i)==true && !completedBitField.get(i)){
+                globalBitField.set(i,true);
+                pieceFrequency[i]++;
+            }
+        }
     }
 
+    public synchronized void updateGlobalBitField(int index){
+        globalBitField.set(index,true);
+        pieceFrequency[index]++;
+    }
+
+
+    /*
+        Implementing rarest first strategy for choosing next piece to download.
+     */
+    private int getNextPiece(BitSet peerBitSet){
+        int pieceIndex=-1;
+
+        int minFreq=0;
+
+        List<Integer> list=new ArrayList<Integer>();
+        for(int i=0;i<globalBitField.size();i++){
+            if(globalBitField.get(i) && peerBitSet.get(i) && !workingBitField.get(i) && !completedBitField.get(i) &&(minFreq==0 || minFreq>pieceFrequency[i])){
+                minFreq=pieceFrequency[i];
+            }
+        }
+
+        for(int i=0;i<globalBitField.size();i++){
+            if(globalBitField.get(i) && peerBitSet.get(i) && !workingBitField.get(i) && !completedBitField.get(i) &&(pieceFrequency[i]==minFreq)){
+                list.add(i);
+            }
+        }
+
+        //choose randomly.
+        Random random=new Random();
+        int index=random.nextInt(list.size());
+        pieceIndex=list.get(index);
+        workingBitField.set(pieceIndex,true);
+        System.out.println(list.size());
+        System.out.println("Next choosen piece is : "+pieceIndex+" frequency "+minFreq);
+        return pieceIndex;
+
+    }
+    /*
+        This method will be called by PeerConnection.
+        To let PeerController know that it is closing.
+        Here PeerConnection may choose to start another PeerConnection.
+     */
+    public void notifyController(Peer p){
+        System.out.println(p.getAddress()+" is offline");
+        logger.debug(p.getAddress()+" is offline");
+        startNewPeerConnection();
+    }
+    private void startNewPeerConnection(){
+        if(!peerList.isEmpty()) {
+            Peer p = peerList.remove(0);
+            PeerConnection connection=new PeerConnection(p,meta,new byte[(int)pieceLength],this);
+            connection.start();
+        }
+        else{
+            //maybe request new peers or just do nothing.
+        }
+    }
 }

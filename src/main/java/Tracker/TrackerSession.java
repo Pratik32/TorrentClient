@@ -131,13 +131,13 @@ public  abstract class TrackerSession {
         String event_type="";
         switch (packet.getEvent()){
             case COMPLETED:
-                    event_type=EVEN_COMPLETED;
+                    event_type=EVENT_COMPLETED;
                     break;
             case STARTED:
-                    event_type=EVEN_STARTED;
+                    event_type=EVENT_STARTED;
                     break;
             case STOPPED:
-                   event_type=EVEN_STOPPED;
+                   event_type=EVENT_STOPPED;
         }
         String url=tracker_url+"?"+INFO_HASH+getEncodedString(info)
                 +PEER_ID+ID
@@ -154,8 +154,8 @@ public  abstract class TrackerSession {
     }
     private String getEncodedString(byte[] data){
         String encoded_string="";
-        String temp= null;
         try {
+            String temp= new String(data,"ISO-8859-1");
             System.out.println("Info hash "+temp);
             encoded_string= URLEncoder.encode(temp,"ISO-8859-1");
         } catch (UnsupportedEncodingException e) {
