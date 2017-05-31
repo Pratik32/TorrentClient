@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+import static internal.Constants.BLOCK_LENGTH;
+
 /**
  * Created by ps on 6/4/17.
  * This class has been created with an intention that,it will contain general
@@ -61,6 +63,27 @@ public class Utils {
             e.printStackTrace();
         }
         System.out.println("Done writing to file.");
+    }
+
+    /*
+        Reads a block from file.
+        called by PeerController for sending 'piece' messages to remote peers.
+     */
+    public static byte[] readFromFile(String filename,int pieceNumber,int pieceLen,int offset,int blockLen){
+        byte data[]=new byte[blockLen];
+        System.out.println("Reading block from file  "+pieceNumber+" "+"Block "+offset);
+        logger.debug("Reading block from file  "+pieceNumber+" "+"Block "+offset);
+        try{
+            RandomAccessFile file=new RandomAccessFile(filename,"r");
+            file.seek(pieceNumber*pieceLen+offset);
+            file.read(data);
+        }catch (FileNotFoundException e){
+            System.out.println("File not found");
+            logger.error("Requested file not find.");
+        }catch (IOException e){
+            logger.error("Unable to write to file.");
+        }
+        return data;
     }
     public static int generateRandomNumber(){
         Random random=new Random();

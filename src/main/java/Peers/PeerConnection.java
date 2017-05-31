@@ -43,6 +43,8 @@ public class PeerConnection extends Thread{
     private int notInterested=1;
     private int unchoke=0;
     private int interested=0;
+    private int peerInterested=0;
+    private int peerUnchoke=0;
     private boolean keepRunning=true;
     private PeerController peerController;
     private String threadID;
@@ -170,8 +172,11 @@ public class PeerConnection extends Thread{
                             keepRunning=sendRequest();
                             break;
                         case INTERESTED:
+                            receiveInterested();
+                            sendUnchoke();
                             break;
                         case NOT_INTERESTED:
+                            receiveNotinterested();
                             break;
                         case HAVE:
                             receiveHave();
@@ -181,10 +186,11 @@ public class PeerConnection extends Thread{
                             sendInterested();
                             break;
                         case REQUEST:
+                            sendPiece();
                             break;
                         case PIECE:
                             receivePiece(block);
-                            keepRunning=sendRequest();//if nothing to request shutdown the connection.
+                            keepRunning=sendRequest();//if nothing to request ,shutdown the connection.
                             break;
                         case EXTENDED:
                             receiveExtended(len);
@@ -208,7 +214,17 @@ public class PeerConnection extends Thread{
             //e.printStackTrace();
         }
         teardown();
-        //peerController.notifyController(peer);
+        peerController.notifyController(peer);
+    }
+
+    private void sendUnchoke() {
+        this.peerUnchoke=1;
+        try{
+            outputStream.write(unchokeMessage);
+        }catch (IOException e){
+            System.out.println(threadID+ " Failed to send unchoke message");
+            logger.error(threadID+ " Failed to send unchoke message");
+        }
     }
 
 
@@ -425,6 +441,7 @@ public class PeerConnection extends Thread{
                     System.out.println(threadID+" SHA-1 verified writing piece to file.");
                     logger.debug(threadID+" SHA-1 verified writing piece to file.");
                     peerController.pieceDownloaded(pieceIndex,piece_data.length,piece_data);
+                    sendHave(pieceIndex);
                 }
                 else {
                     logger.error(threadID+ " SHA-1 hash is incorrect received invalid piece.");
@@ -433,6 +450,26 @@ public class PeerConnection extends Thread{
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+    }
+
+    private void sendPiece(){
+        try{
+            int pieceIndex=inputStream.readInt();
+            int offset=inputStream.readInt();
+            int length=inputStream.readInt();
+            byte data[]=peerController.readBlockData(pieceIndex,offset,length);
+            ByteBuffer buffer=ByteBuffer.allocate(13+data.length);
+            buffer.putInt(9+data.length);
+            buffer.put((byte)7);
+            buffer.putInt(pieceIndex);
+            buffer.putInt(offset);
+            buffer.put(data);
+            outputStream.write(buffer.array());
+            outputStream.flush();
+        }catch (IOException e){
+
         }
 
     }
@@ -515,6 +552,20 @@ public class PeerConnection extends Thread{
             e.printStackTrace();
         }
     }
+
+    private void sendHave(int pieceIndex){
+        ByteBuffer buffer=ByteBuffer.allocate(haveMessage.length+4);
+        buffer.put(haveMessage);
+        buffer.putInt(pieceIndex);
+        try {
+            outputStream.write(buffer.array());
+            outputStream.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println(threadID+" sending have with pieceIndex "+pieceIndex);
+        logger.debug(threadID+" sending have with pieceIndex "+pieceIndex);
+    }
     /*
       A method that returns specified number of bytes from the
       given inputstream.
@@ -575,5 +626,13 @@ public class PeerConnection extends Thread{
             e.printStackTrace();
         }
         return result;
+    }
+    private void receiveInterested(){
+        this.peerInterested=1;
+    }
+    private void receiveNotinterested(){
+        this.peerInterested=0;
+        System.out.println(threadID+" received uninterested");
+        logger.debug(threadID+" received uninterested");
     }
 }

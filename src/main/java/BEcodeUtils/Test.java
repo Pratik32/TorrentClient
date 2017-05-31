@@ -23,9 +23,10 @@ import java.util.Set;
  * Created by ps on 24/3/17.
  */
 public class Test {
+     static Logger logger;
     public static void main(String[] args) throws InterruptedException {
         initialize();
-        File file=new File("music.torrent");
+        File file=new File("stub.torrent");
         byte[] data;
         try {
             /*
@@ -41,8 +42,8 @@ public class Test {
             //individualPeerTest(meta);
 
             List<Peer> peerList=getInitialPeerList(meta);
-            PeerController controller=new PeerController(meta,peerList);
-            controller.start();
+            //PeerController controller=new PeerController(meta,peerList);
+            //controller.start();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -67,6 +68,7 @@ public class Test {
     public static void intializeLogger(){
         //PropertyConfigurator.configure("log4j.properties");
         Constants.logger= Logger.getLogger(PeerConnection.class);
+        logger=Constants.logger;
 
     }
     /*
@@ -79,27 +81,43 @@ public class Test {
         connection.connect();
     }
 
+    /*
+        Try all the tracker one by one and collect peers.
+        Right now using only one tracker for collecting peers.
+     */
     public static List<Peer> getInitialPeerList(TorrentMeta meta){
         TrackerSession session=null;
         System.out.println(meta.getAnnounce());
-        if(meta.getAnnounce().startsWith("http")){
-            session=new HttpTrackerSession(meta);
-        }
-        else if(meta.getAnnounce().startsWith("udp")){
-            System.out.println("Tracker is Udp type.");
-            session=new UdpTrackerSession(meta);
-        }
-            /*
-                Create a request packet and and obtain a response packet.
-             */
-        TrackerRequestPacket packet= Utils.craftPacket(meta,0,0,meta.getTotalFilesize());
-        TrakcerResponsePacket response=session.sendRequest(packet);
 
-        //byte[] in below map represents peer id which does not have any encoding(hence byte[]).
-        //peer id may be null ,if compact response is sent by the server.handle that too.
-        Map<InetSocketAddress,byte[]> peer_info=response.getPeer_info();//not used for now.
-        printPeerInfo(peer_info.keySet());
-        List<Peer> peerList=Utils.getPeerList(response);
+        List<String> trackerUrls=meta.getAnnouce_list();
+        trackerUrls.add(0,meta.getAnnounce());
+        TrackerRequestPacket packet= Utils.craftPacket(meta,0,0,meta.getTotalFilesize());
+        TrakcerResponsePacket response=null;
+        List<Peer> peerList=new ArrayList<Peer>();
+        for(String str:trackerUrls){
+            if(str.startsWith("http")){
+                session=new HttpTrackerSession(meta,str);
+            }
+            else if(str.startsWith("udp")){
+                session=new UdpTrackerSession(meta,str);
+            }
+            else {
+                System.out.println("Invalid tracker url :"+ str);
+                logger.error("Invalid tracker url :"+ str);
+                continue;
+            }
+            response=session.sendRequest(packet);
+            if(response==null){
+                System.out.println("Connection time out from :"+ str);
+                logger.error("Connection time out from :"+str);
+                continue;
+            }
+            Map<InetSocketAddress,byte[]> peer_info=response.getPeer_info();//for debugging purpose.
+            printPeerInfo(peer_info.keySet());//for debugging purpose
+            List<Peer> temp=Utils.getPeerList(response);
+            peerList.addAll(temp);
+            break;
+        }
         return peerList;
     }
 }

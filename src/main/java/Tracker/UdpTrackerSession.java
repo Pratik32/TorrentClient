@@ -32,8 +32,8 @@ public class UdpTrackerSession extends TrackerSession {
     private Logger logger;
     private int ACTION_CONNECT=0;
     private int ACTION_ANNOUNCE=1;
-    public UdpTrackerSession(TorrentMeta meta){
-        super(meta);
+    public UdpTrackerSession(TorrentMeta meta,String announceUrl){
+        super(meta,announceUrl);
         this.logger=Constants.logger;
     }
     public Object connect(TrackerRequestPacket packet) {
@@ -42,8 +42,7 @@ public class UdpTrackerSession extends TrackerSession {
         logger.debug("Request is of UDP type.");
         try {
             //url = new URL(getTrackerUrl(packet));
-            URI uri=new URI(meta.getAnnounce());
-            System.out.println();
+            URI uri=new URI(tracker_url);
             InetSocketAddress address=new InetSocketAddress(uri.getHost(),uri.getPort());
             System.out.println("InetAddress is: "+address.toString());
             socket=new DatagramSocket();
@@ -64,11 +63,13 @@ public class UdpTrackerSession extends TrackerSession {
             System.out.println(response.getInt());
             System.out.println("transactionId "+response.getInt()+" Interval "+response.getInt()+" leechers "+response.getInt()+" seeders "+response.getInt());
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            return  null;
         } catch (IOException e) {
             e.printStackTrace();
+            return null;
         } catch (URISyntaxException e) {
             e.printStackTrace();
+            return null;
         }
         return response;
     }

@@ -49,7 +49,7 @@ public class PeerController {
     public PeerController(TorrentMeta meta,List<Peer> list){
         this.meta=meta;
         this.peerList=list;
-        trackerParams[2]=meta.getTotalFilesize();
+        trackerParams[1]=meta.getTotalFilesize();
         globalBitField=new BitSet(meta.getTotalPieces());
         workingBitField=new BitSet(meta.getTotalPieces());
         completedBitField=new BitSet(meta.getTotalPieces());
@@ -120,11 +120,10 @@ public class PeerController {
         This method will make Trakcer request.
         in return it will receive list of peers returned by tracker.
         this method must be called after "interval" amount of time has passed.
-
      */
     private List<Peer> updatePeerList(long downloaded,long uploaded,long left){
         TrackerRequestPacket packet= Utils.craftPacket(meta,downloaded,uploaded,left);
-        TrackerSession session=new HttpTrackerSession(meta);
+        TrackerSession session=new HttpTrackerSession(meta,meta.getAnnounce());
         TrakcerResponsePacket responsePacket=session.sendRequest(packet);
         return Utils.getPeerList(responsePacket);
     }
@@ -152,10 +151,12 @@ public class PeerController {
         this.numberOfBlocks = numberOfBlocks;
     }
 
-    public void pieceDownloaded(int pieceIndex,int pieceLength,byte[] data){
+    public synchronized void pieceDownloaded(int pieceIndex,int pieceLength,byte[] data){
         completedBitField.set(pieceIndex,true);
         workingBitField.set(pieceIndex,false);
         pieceFrequency[pieceIndex]=-1;
+        trackerParams[0]+=pieceLength;
+        trackerParams[1]-=trackerParams[0];
         Utils.writeToFile(meta.getFileNames().get(0),data,pieceIndex,(int)this.pieceLength);
         //update different bitsets(global,complete).
     }
@@ -179,7 +180,7 @@ public class PeerController {
     /*
         Implementing rarest first strategy for choosing next piece to download.
      */
-    private int getNextPiece(BitSet peerBitSet){
+    private synchronized int getNextPiece(BitSet peerBitSet){
         int pieceIndex=-1;
 
         int minFreq=0;
@@ -198,11 +199,13 @@ public class PeerController {
         }
 
         //choose randomly.
-        Random random=new Random();
-        int index=random.nextInt(list.size());
-        pieceIndex=list.get(index);
-        workingBitField.set(pieceIndex,true);
-        System.out.println(list.size());
+        System.out.println("Size of list "+ list.size());
+        if(list.size()>0) {
+            Random random = new Random();
+            int index = random.nextInt(list.size());
+            pieceIndex = list.get(index);
+            workingBitField.set(pieceIndex, true);
+        }
         System.out.println("Next choosen piece is : "+pieceIndex+" frequency "+minFreq);
         return pieceIndex;
 
@@ -217,7 +220,7 @@ public class PeerController {
         logger.debug(p.getAddress()+" is offline");
         startNewPeerConnection();
     }
-    private void startNewPeerConnection(){
+    private synchronized  void startNewPeerConnection(){
         if(!peerList.isEmpty()) {
             Peer p = peerList.remove(0);
             PeerConnection connection=new PeerConnection(p,meta,new byte[(int)pieceLength],this);
@@ -226,5 +229,9 @@ public class PeerController {
         else{
             //maybe request new peers or just do nothing.
         }
+    }
+
+    public byte[] readBlockData(int pieceIndex,int offset,int blockLen){
+        return Utils.readFromFile(meta.getFileNames().get(0),pieceIndex,(int)pieceLength,offset,blockLen);
     }
 }

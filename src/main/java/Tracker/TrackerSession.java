@@ -27,10 +27,10 @@ public  abstract class TrackerSession {
     private int interval_time;
     protected TorrentMeta meta;
 
-    TrackerSession(TorrentMeta meta ){
+    TrackerSession(TorrentMeta meta,String annouceUrl ){
         this.meta=meta;
         this.info=this.meta.getInfo_hash();
-        this.tracker_url=this.meta.getAnnounce();
+        this.tracker_url=annouceUrl;
     }
 
     /*
@@ -42,13 +42,11 @@ public  abstract class TrackerSession {
         returned by server,next time send request with compact flag set.
      */
     private Map<InetSocketAddress,byte[]> getPeerInfo(Element response){
-        List<InetSocketAddress> peers=new ArrayList<InetSocketAddress>();
         Map<InetSocketAddress,byte[]> peers_info=new HashMap<InetSocketAddress,byte[]>();
         Element element=response.getMap().get("peers");
         if(element.getValue() instanceof byte[]){
             COMPACT_RESPONSE=1;
             byte ip[]=element.getBytes();
-            System.out.println(ip.length);
             ByteBuffer byteBuffer=ByteBuffer.wrap(ip);
             InetSocketAddress address;
             for(int offset=0;offset<byteBuffer.capacity();offset+=6){
@@ -116,6 +114,11 @@ public  abstract class TrackerSession {
 
     public TrakcerResponsePacket sendRequest(TrackerRequestPacket packet ){
         Object obj=connect(packet);
+        //in case of connection timeout send.
+        if(obj==null){
+            System.out.println("Null response returned.");
+            return null;
+        }
         TrakcerResponsePacket responsePacket=craftPacket(obj);
         return responsePacket;
     }

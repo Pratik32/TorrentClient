@@ -63,7 +63,8 @@ public class Constants {
     public static final byte[] chokeMessage={0,0,0,1,0};
     public static final byte[] notinterestedMessage={0,0,0,1,3};
     public static final byte[] keepAliveMessage={0,0,0,0};
-
+    public static final byte[] haveMessage={0,0,0,5,4};
+    public static final byte[] unchokeMessage={0,0,0,1,1};
     //Udp tracker constants.
     public static final int UDP_CONNECTION_MESSAGE_LEN=16;
     public static final long UDP_CONNECT_REQUEST_MAGIC = 0x41727101980L;

@@ -1371,3 +1371,208 @@
 [Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] SHA-1 verified writing piece to file.
 [Thread-3] DEBUG Peers.PeerConnection  - Writing to file :Major Lazer x DJ Snake feat. MØ - Lean On.mp3piece number :424
 [Thread-3] DEBUG Peers.PeerConnection  - [Thread-3] Closing the connection
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://tracker.nwps.ws:6969/announce?info_hash=%2B%12%CE%09%23e%26%A7%28%C6%97L%0D%89%D5%28%60%E8-%AA&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=7160689&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.182:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.181:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.184:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.183:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.186:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.185:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.188:55505
+[main] DEBUG Peers.PeerConnection  - /10.240.254.187:55505
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%3B%95%23%96d%22%A9%BF%3F%DEVA%EB%3B%90%7B%40ry*&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=8316438&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://bigfoot1942.sektori.org:6969/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://bigfoot1942.sektori.org:6969/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://tracker2.wasabii.com.tw:6969/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://bigfoot1942.sektori.org:6969/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://bigfoot1942.sektori.org:6969/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://tracker2.wasabii.com.tw:6969/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://bigfoot1942.sektori.org:6969/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://bigfoot1942.sektori.org:6969/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://tracker2.wasabii.com.tw:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://bigfoot1942.sektori.org:6969/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://bigfoot1942.sektori.org:6969/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://tracker2.wasabii.com.tw:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.131:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.133:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.132:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.135:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.134:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.137:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.136:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.138:55504
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://bigfoot1942.sektori.org:6969/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://bigfoot1942.sektori.org:6969/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://tracker2.wasabii.com.tw:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.131:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.133:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.132:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.135:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.134:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.137:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.136:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.138:55504
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://tracker.mg64.net:6881/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://tracker.mg64.net:6881/announce
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bt.artvid.ru:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.131:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.133:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.132:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.135:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.134:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.137:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.136:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.138:55504
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://tracker1.wasabii.com.tw:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.131:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.133:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.132:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.135:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.134:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.137:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.136:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.138:55504
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://open.acgtracker.com:1096/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /108.90.70.2:34505
+[main] DEBUG Peers.PeerConnection  - /81.35.231.100:6881
+[main] DEBUG Peers.PeerConnection  - /105.103.31.4:6881
+[main] DEBUG Peers.PeerConnection  - /23.110.212.44:6881
+[main] DEBUG Peers.PeerConnection  - /105.229.127.93:6881
+[main] DEBUG Peers.PeerConnection  - /137.59.65.214:6881
+[main] DEBUG Peers.PeerConnection  - /216.196.216.254:25867
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://tracker.opentrackr.org/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] DEBUG Peers.PeerConnection  - Received tracker response with response code :200
+[main] DEBUG Peers.PeerConnection  - Successfully decoded tracker responses.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.131:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.133:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.132:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.135:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.134:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.137:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.136:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.138:55504
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://announce.torrentsmd.com:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1
+[main] ERROR Peers.PeerConnection  - Connection time out from :http://announce.torrentsmd.com:6969/announce
+[main] DEBUG Peers.PeerConnection  - Request is of UDP type.
+[main] DEBUG Peers.PeerConnection  - Sending UDP  connection request to tracker.openbittorrent.com/141.255.161.22:80
+[main] DEBUG Peers.PeerConnection  - Received connectionId :5695761383441517802 sending announce request.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.131:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.133:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.132:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.135:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.134:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.137:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.136:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.138:55504
+[main] DEBUG Peers.PeerConnection  - Request is of UDP type.
+[main] DEBUG Peers.PeerConnection  - Sending UDP  connection request to explodie.org/74.82.52.209:6969
+[main] DEBUG Peers.PeerConnection  - Received connectionId :5628842746531199050 sending announce request.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.131:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.133:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.132:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.135:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.134:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.137:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.136:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.138:55504
+[main] DEBUG Peers.PeerConnection  - Request is of UDP type.
+[main] DEBUG Peers.PeerConnection  - Sending UDP  connection request to mgtracker.org/37.19.5.155:6969
+[main] DEBUG Peers.PeerConnection  - Received connectionId :6958597017951971880 sending announce request.
+[main] DEBUG Peers.PeerConnection  - Crafting the response packet.
+[main] DEBUG Peers.PeerConnection  - Found following peers.
+[main] DEBUG Peers.PeerConnection  - /10.240.254.131:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.133:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.132:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.135:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.134:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.137:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.136:55504
+[main] DEBUG Peers.PeerConnection  - /10.240.254.138:55504
+[main] DEBUG Peers.PeerConnection  - Request is of UDP type.
+[main] DEBUG Peers.PeerConnection  - Sending UDP  connection request to asnet.pw/95.213.191.124:2710
