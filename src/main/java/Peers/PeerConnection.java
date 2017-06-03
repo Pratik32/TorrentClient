@@ -46,6 +46,7 @@ public class PeerConnection extends Thread{
     private int peerInterested=0;
     private int peerUnchoke=0;
     private boolean keepRunning=true;
+    private boolean bitfieldReceived=false;
     private PeerController peerController;
     private String threadID;
     private BitSet localBitField;
@@ -214,7 +215,7 @@ public class PeerConnection extends Thread{
             //e.printStackTrace();
         }
         teardown();
-        peerController.notifyController(peer);
+        //peerController.notifyController(peer);
     }
 
     private void sendUnchoke() {
@@ -340,6 +341,7 @@ public class PeerConnection extends Thread{
             }
 
         }
+        bitfieldReceived=true;
         System.out.println(threadID+" "+localBitField.size());
         System.out.println(threadID+" BitField received is: "+localBitField);
         peerController.updateGlobalBitField(localBitField);
@@ -440,7 +442,7 @@ public class PeerConnection extends Thread{
                 if(verifyPiece(piece_data,pieceIndex)) {
                     System.out.println(threadID+" SHA-1 verified writing piece to file.");
                     logger.debug(threadID+" SHA-1 verified writing piece to file.");
-                    peerController.pieceDownloaded(pieceIndex,piece_data.length,piece_data);
+                    peerController.pieceDownloaded(pieceIndex,piece_data.length,piece_data,threadID);
                     sendHave(pieceIndex);
                 }
                 else {
@@ -634,5 +636,22 @@ public class PeerConnection extends Thread{
         this.peerInterested=0;
         System.out.println(threadID+" received uninterested");
         logger.debug(threadID+" received uninterested");
+    }
+
+    /*
+        Checks if given peer is seeding.(i.e whether it has all the pieces)
+    */
+    private boolean isSeeding(){
+        if(bitfieldReceived){
+            if(localBitField.cardinality()==localBitField.size()){
+                System.out.println(threadID +" "+peer.getAddress().toString()+" is seeding.");
+                logger.debug(threadID +" "+peer.getAddress().toString()+" is seeding.");
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        return false;
     }
 }

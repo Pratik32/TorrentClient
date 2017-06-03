@@ -38,6 +38,7 @@ public class Constants {
     public static final String EVENT_STOPPED="stopped";
 
     public static final String PORT_PEER="6881";
+    public static final int TIMEOUT=10000;
 
     //This is used to check if server is sending a compact response or not.
     //Also,it is used while decrafting the response packet.

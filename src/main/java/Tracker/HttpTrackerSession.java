@@ -5,12 +5,12 @@ import BEcodeUtils.Element;
 import internal.Constants;
 import internal.TorrentMeta;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.output.ByteArrayOutputStream;
-
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import static internal.Constants.TIMEOUT;
 
 
 /**
@@ -28,7 +28,7 @@ public class HttpTrackerSession extends TrackerSession{
         try {
             url = new URL(getTrackerUrl(packet));
             connection = ((HttpURLConnection)(url.openConnection()));
-            connection.setConnectTimeout(20000);
+            connection.setConnectTimeout(TIMEOUT);
             InputStream stream=connection.getInputStream();
             System.out.println(connection.getResponseCode());
             Constants.logger.debug("Received tracker response with response code :"+connection.getResponseCode());

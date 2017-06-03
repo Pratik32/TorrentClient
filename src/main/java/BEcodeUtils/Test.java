@@ -9,15 +9,10 @@ import internal.TorrentMeta;
 import internal.Utils;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by ps on 24/3/17.
@@ -42,8 +37,8 @@ public class Test {
             //individualPeerTest(meta);
 
             List<Peer> peerList=getInitialPeerList(meta);
-            //PeerController controller=new PeerController(meta,peerList);
-            //controller.start();
+            PeerController controller=new PeerController(meta,peerList);
+            controller.start();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -94,6 +89,7 @@ public class Test {
         TrackerRequestPacket packet= Utils.craftPacket(meta,0,0,meta.getTotalFilesize());
         TrakcerResponsePacket response=null;
         List<Peer> peerList=new ArrayList<Peer>();
+        Set<Peer> peers=new HashSet<Peer>();
         for(String str:trackerUrls){
             if(str.startsWith("http")){
                 session=new HttpTrackerSession(meta,str);
@@ -117,7 +113,10 @@ public class Test {
             List<Peer> temp=Utils.getPeerList(response);
             peerList.addAll(temp);
             break;
+            //peers.addAll(temp);
         }
+        //System.out.println("Peer set is :");
+        //System.out.println(peers);
         return peerList;
     }
 }

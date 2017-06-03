@@ -151,13 +151,39 @@ public class PeerController {
         this.numberOfBlocks = numberOfBlocks;
     }
 
-    public synchronized void pieceDownloaded(int pieceIndex,int pieceLength,byte[] data){
+    public synchronized void pieceDownloaded(int pieceIndex,int pieceLength,byte[] data,String threadID){
         completedBitField.set(pieceIndex,true);
         workingBitField.set(pieceIndex,false);
         pieceFrequency[pieceIndex]=-1;
         trackerParams[0]+=pieceLength;
         trackerParams[1]-=trackerParams[0];
-        Utils.writeToFile(meta.getFileNames().get(0),data,pieceIndex,(int)this.pieceLength);
+        Map<String,Long> files=meta.getFiles();
+        List<String> filename=new ArrayList<String>(files.keySet());
+        List<Long> filesize=new ArrayList<Long>(files.values());
+
+        System.out.println(threadID+ " files :" +filename);
+        System.out.println(threadID+ " file sizes "+ filesize);
+        int pieceOffset=pieceIndex*(int)this.pieceLength;
+        int pieceEnd=pieceOffset+(pieceLength-1);
+
+        int fileStart=0;
+        int fileEnd=-1;
+        for(int i=1;i>=0;i--){
+            fileStart=fileEnd+1;
+            fileEnd=fileStart+filesize.get(i).intValue()-1;
+            if((pieceOffset<fileStart && pieceEnd<fileStart)||(pieceOffset>fileEnd && pieceEnd>fileEnd)){
+                System.out.println(threadID+" Piece is not the part of :"+ filename.get(i));
+            }else{
+                int start=Math.max(pieceOffset,fileStart);
+                int end=Math.min(pieceEnd,fileEnd);
+                int offset=Math.abs(start-fileStart);
+                byte[] temp=new byte[end-start+1];
+                System.out.println(threadID+ " start :"+start+ "end "+end+"offset "+offset);
+                System.arraycopy(data,Math.abs(start-pieceOffset),temp,0,temp.length);
+                Utils.writeToFile(filename.get(i),offset,temp);
+            }
+        }
+        //Utils.writeToFile(meta.getFileNames().get(0),data,pieceIndex,(int)this.pieceLength);
         //update different bitsets(global,complete).
     }
 

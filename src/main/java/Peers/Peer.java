@@ -30,4 +30,20 @@ public class Peer {
         this.peer_id = peer_id;
     }
 
+    @Override
+    public int hashCode() {
+        return address.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(this==obj){
+            return true;
+        }
+        if(obj instanceof Peer){
+            Peer p=(Peer)obj;
+            return this.address.toString().equals(p.getAddress().toString());
+        }
+        return false;
+    }
 }

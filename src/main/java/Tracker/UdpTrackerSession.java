@@ -46,6 +46,7 @@ public class UdpTrackerSession extends TrackerSession {
             InetSocketAddress address=new InetSocketAddress(uri.getHost(),uri.getPort());
             System.out.println("InetAddress is: "+address.toString());
             socket=new DatagramSocket();
+            socket.setSoTimeout(TIMEOUT);
             socket.connect(address);
 
             //send a connection request first with given transaction id.
@@ -65,10 +66,12 @@ public class UdpTrackerSession extends TrackerSession {
         } catch (MalformedURLException e) {
             return  null;
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Null response returned from :"+tracker_url);
+            logger.error("Null response returned from :"+tracker_url);
             return null;
         } catch (URISyntaxException e) {
-            e.printStackTrace();
+            System.out.println("Invalid URI syntax");
+            logger.error("Invalid URI syntax");
             return null;
         }
         return response;

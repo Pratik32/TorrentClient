@@ -71,12 +71,15 @@ public class Utils {
      */
     public static byte[] readFromFile(String filename,int pieceNumber,int pieceLen,int offset,int blockLen){
         byte data[]=new byte[blockLen];
+        RandomAccessFile file=null;
         System.out.println("Reading block from file  "+pieceNumber+" "+"Block "+offset);
         logger.debug("Reading block from file  "+pieceNumber+" "+"Block "+offset);
         try{
-            RandomAccessFile file=new RandomAccessFile(filename,"r");
+            file=new RandomAccessFile(filename,"r");
             file.seek(pieceNumber*pieceLen+offset);
             file.read(data);
+            file.close();
+
         }catch (FileNotFoundException e){
             System.out.println("File not found");
             logger.error("Requested file not find.");
@@ -84,6 +87,23 @@ public class Utils {
             logger.error("Unable to write to file.");
         }
         return data;
+    }
+
+    public static void writeToFile(String filename,int offset,byte data[]){
+        RandomAccessFile file=null;
+
+        try{
+            file=new RandomAccessFile(filename,"rw");
+            file.seek(offset);
+            file.write(data);
+        }catch (FileNotFoundException e){
+            System.out.println("File not found.");
+            logger.error("File not found.");
+        } catch (IOException e) {
+            System.out.println("Unable to write to file.");
+            logger.error("Unable to write to file");
+        }
+
     }
     public static int generateRandomNumber(){
         Random random=new Random();
