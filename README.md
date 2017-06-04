@@ -5,7 +5,7 @@ An implementation of [bittorrent protocol](https://wiki.theory.org/index.php/Bit
 Description
 -----------
 
-Supports following BitTorrent enhancement proposals(BEPs):
+Supports following Bittorrent enhancement proposals(BEPs):
 
 * Bittorrent protocol specification:
   This is the basic implmentation of bittorrent protocol.
