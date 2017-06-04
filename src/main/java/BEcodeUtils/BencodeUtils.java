@@ -5,8 +5,8 @@ import java.io.OutputStream;
 
 /**
  * Created by ps on 26/3/17.
- * Utility for decoding and encoding BECODE files.
- *
+ * Utility for decoding and encoding BENCODE files.(more like a wrapper to include
+ * all the functionalities)
  */
 public class BencodeUtils {
 

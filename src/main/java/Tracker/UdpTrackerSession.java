@@ -23,6 +23,7 @@ import static internal.Constants.*;
  * For UdpTrackerSession some extra work has to be done.
  * First we have to send a 'connection' request which will return a transaction id.
  * transaction id will be used in sending announce request.
+ * Extends TrackerSession so as to represent higher level hierarchy.
  * Refer : http://www.bittorrent.org/beps/bep_0015.html
  */
 public class UdpTrackerSession extends TrackerSession {

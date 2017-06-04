@@ -157,9 +157,8 @@ public class PeerController {
         pieceFrequency[pieceIndex]=-1;
         trackerParams[0]+=pieceLength;
         trackerParams[1]-=trackerParams[0];
-        Map<String,Long> files=meta.getFiles();
-        List<String> filename=new ArrayList<String>(files.keySet());
-        List<Long> filesize=new ArrayList<Long>(files.values());
+        List<String> filename=new ArrayList<String>(meta.getFilenames());
+        List<Long> filesize=new ArrayList<Long>(meta.getFilesizes());
 
         System.out.println(threadID+ " files :" +filename);
         System.out.println(threadID+ " file sizes "+ filesize);
@@ -168,7 +167,7 @@ public class PeerController {
 
         int fileStart=0;
         int fileEnd=-1;
-        for(int i=1;i>=0;i--){
+        for(int i=0;i<filename.size();i++){
             fileStart=fileEnd+1;
             fileEnd=fileStart+filesize.get(i).intValue()-1;
             if((pieceOffset<fileStart && pieceEnd<fileStart)||(pieceOffset>fileEnd && pieceEnd>fileEnd)){
@@ -183,8 +182,6 @@ public class PeerController {
                 Utils.writeToFile(filename.get(i),offset,temp);
             }
         }
-        //Utils.writeToFile(meta.getFileNames().get(0),data,pieceIndex,(int)this.pieceLength);
-        //update different bitsets(global,complete).
     }
 
     public synchronized void  updateGlobalBitField(BitSet set){
@@ -212,13 +209,13 @@ public class PeerController {
         int minFreq=0;
 
         List<Integer> list=new ArrayList<Integer>();
-        for(int i=0;i<globalBitField.size();i++){
+        for(int i=0;i<globalBitField.length();i++){
             if(globalBitField.get(i) && peerBitSet.get(i) && !workingBitField.get(i) && !completedBitField.get(i) &&(minFreq==0 || minFreq>pieceFrequency[i])){
                 minFreq=pieceFrequency[i];
             }
         }
 
-        for(int i=0;i<globalBitField.size();i++){
+        for(int i=0;i<globalBitField.length();i++){
             if(globalBitField.get(i) && peerBitSet.get(i) && !workingBitField.get(i) && !completedBitField.get(i) &&(pieceFrequency[i]==minFreq)){
                 list.add(i);
             }
@@ -246,6 +243,7 @@ public class PeerController {
         logger.debug(p.getAddress()+" is offline");
         startNewPeerConnection();
     }
+
     private synchronized  void startNewPeerConnection(){
         if(!peerList.isEmpty()) {
             Peer p = peerList.remove(0);

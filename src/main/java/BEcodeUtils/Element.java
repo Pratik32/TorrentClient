@@ -10,9 +10,11 @@ import java.util.Map;
  * Created by ps on 24/3/17.
  *
  * This class represents a bencode element.
- * A bencode element maybe a -
+ * A bencode element can be a -
  * List,Dictionary,Integer,String.
  *
+ * Main purpose of Element class is to have a higher level
+ * hierarchy that represents all the valid bencode elements(list,dictionary,integer)
  */
 public class Element implements Serializable{
     /*

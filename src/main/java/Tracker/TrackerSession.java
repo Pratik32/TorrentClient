@@ -18,7 +18,10 @@ import java.util.Map;
 
 import static internal.Constants.*;
 /**
- * Created by ps on 26/3/17.
+ * Created by ps on 26/3/17
+ * Represents a TrackerSession(http,udp).
+ * General representation of tracker session.
+ * contains common methods related to tracker components.
  */
 public  abstract class TrackerSession {
 

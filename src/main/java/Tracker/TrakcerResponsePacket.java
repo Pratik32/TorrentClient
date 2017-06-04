@@ -6,6 +6,7 @@ import java.util.Map;
 
 /**
  * Created by ps on 2/4/17.
+ * Represents tracker response.
  */
 public class TrakcerResponsePacket {
 

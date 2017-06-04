@@ -15,6 +15,10 @@ import static internal.Constants.TIMEOUT;
 
 /**
  * Created by ps on 26/3/17.
+ * Represents a http tracker session.
+ * This class extends TrackerSession so as to create higher level hierarchy.
+ * This class implements Tracker HTTP/HTTPS protocol.
+ * https://wiki.theory.org/index.php/BitTorrentSpecification#Tracker_HTTP.2FHTTPS_Protocol
  */
 public class HttpTrackerSession extends TrackerSession{
 

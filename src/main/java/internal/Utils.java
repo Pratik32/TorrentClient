@@ -17,8 +17,8 @@ import static internal.Constants.BLOCK_LENGTH;
 /**
  * Created by ps on 6/4/17.
  * This class has been created with an intention that,it will contain general
- * purpose methods like crafting different packets(Tracker:request,response)
- * parsing bencoded responses,writing bytes to files..new functionalities will be added as needed.
+ * purpose methods like crafting different packets(Tracker:request,response,DHT queries)
+ * parsing bencoded responses,writing bytes to files.
  */
 public class Utils {
 
@@ -31,7 +31,6 @@ public class Utils {
 
     /*
       function for obtaining Peers from response object.
-      First check if peer id is null,response sent by server maybe compact.
      */
     public static List<Peer> getPeerList(TrakcerResponsePacket packet){
         List<Peer> peerList=new ArrayList<Peer>();
@@ -41,28 +40,6 @@ public class Utils {
             peerList.add(peer);
         }
         return peerList;
-    }
-
-
-    /*
-        This method will accept a piece(basically a byte array) and will write it
-         to the destination file.Function parameters are yet to be decided.
-     */
-    public static void writeToFile(String filename,byte data[],int pieceNumber,int pieceLength){
-        RandomAccessFile file;
-        System.out.println("Writing to file :"+filename+"piece number :"+pieceNumber);
-        logger.debug("Writing to file :"+filename+"piece number :"+pieceNumber);
-        try {
-            file=new RandomAccessFile(filename,"rw");
-            file.seek(pieceNumber*pieceLength);
-            file.write(data);
-            file.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Done writing to file.");
     }
 
     /*

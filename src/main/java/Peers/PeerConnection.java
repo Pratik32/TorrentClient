@@ -21,10 +21,10 @@ import static internal.Constants.*;
  * This class represents an interface for connecting a peer
  * Right now Peer class is just a POJO for storing peer related information.
  * The actual handling of message flow is done by this class.
- * For now this class has different methods for sending different types of messages to peer.
+ * This class has different methods for sending different types of messages to peer.
  * Ideally it should extend Thread/Runnable and run independently.
  *
- * NOTE : When a PeerConnection is assigned with a piece,It will download all of its blocks
+ * NOTE : When a PeerConnection is assigned with a piece,It will download all of it's blocks.
  *        once all the blocks are downloaded PeerController may assign it with new piece.
  */
 public class PeerConnection extends Thread{
@@ -169,7 +169,7 @@ public class PeerConnection extends Thread{
                             break;
                         case UNCHOKE:
                             receiveUnchoke();
-                            pieceIndex=this.peerController.testgetNextPieceToDownload();
+                            pieceIndex=this.peerController.getNextPieceToDownload(localBitField);
                             keepRunning=sendRequest();
                             break;
                         case INTERESTED:
@@ -184,7 +184,9 @@ public class PeerConnection extends Thread{
                             break;
                         case BIT_FIELD:
                             receiveBitfield(len);
-                            sendInterested();
+                            isSeeding();
+                            keepRunning=false;
+                            sendRequest();
                             break;
                         case REQUEST:
                             sendPiece();
@@ -379,7 +381,7 @@ public class PeerConnection extends Thread{
         //check if last block
 
         if(blocksDownloaded==peerController.getNumberOfBlocks()){
-            pieceIndex=peerController.testgetNextPieceToDownload();
+            pieceIndex=peerController.getNextPieceToDownload(localBitField);
             System.out.println(threadID+ " Requesting a new piece: "+pieceIndex);
             if (pieceIndex==-1){
                 return false;
@@ -586,28 +588,6 @@ public class PeerConnection extends Thread{
         System.out.println(threadID+ " Actual data: "+len+" Data copied: "+copied);
         return data;
     }
-    private void testMethod(byte[] bitfield_array){
-        BitSet bs = new BitSet(meta.getTotalPieces());
-
-        byte bit_mask = (byte)0x80;
-        int l=0;
-        //reading in bitfield bit by bit
-        for(int k=0;k<bitfield_array.length;k++)
-        {
-            byte bitfield = bitfield_array[k];
-
-            for(int i=0;i<8;i++){
-                if(l<meta.getTotalPieces())
-                {
-                    bs.set(k*8+i, ((bitfield & bit_mask) == bit_mask) ? true : false);
-                    bitfield = (byte)(bitfield >>> 2);
-                    l++;
-                }
-            }
-        }
-        System.out.println("l :"+l);
-        System.out.println("Bitfield two : "+bs);
-    }
 
     /*
         Verify the sha1 hash of the given downloaded piece.
@@ -643,7 +623,8 @@ public class PeerConnection extends Thread{
     */
     private boolean isSeeding(){
         if(bitfieldReceived){
-            if(localBitField.cardinality()==localBitField.size()){
+            System.out.println("cardinality : "+localBitField.cardinality() +" length"+localBitField.length());
+            if(localBitField.cardinality()==localBitField.length()){
                 System.out.println(threadID +" "+peer.getAddress().toString()+" is seeding.");
                 logger.debug(threadID +" "+peer.getAddress().toString()+" is seeding.");
                 return true;

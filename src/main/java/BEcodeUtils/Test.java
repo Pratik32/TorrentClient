@@ -54,7 +54,7 @@ public class Test {
        }
     }
     /*
-        This method will is intended to setup environment for
+        This method is intended to setup environment for
         client.e.g logging service.User interface.
      */
     public static  void initialize(){

@@ -4,6 +4,8 @@ import java.net.InetSocketAddress;
 
 /**
  * Created by ps on 6/4/17.
+ * Represents a remote peer.
+ *
  */
 public class Peer {
 

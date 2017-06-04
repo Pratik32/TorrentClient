@@ -4,6 +4,7 @@ import org.apache.log4j.Logger;
 
 /**
  * Created by ps on 26/3/17.
+ * Contains constants related to different components.
  */
 public class Constants {
 
@@ -73,6 +74,5 @@ public class Constants {
     public static final int UDP_ANNOUNCE_MESSAGE_LEN=98;
 
     //Logger.
-
     public static Logger logger;
 }

@@ -2,6 +2,7 @@ package Tracker;
 
 /**
  * Created by ps on 2/4/17.
+ * Represents a tracker request(http,udp)
  */
 public class TrackerRequestPacket {
     public enum Event{

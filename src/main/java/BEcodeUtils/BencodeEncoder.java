@@ -11,6 +11,7 @@ import java.util.*;
 
 /**
  * Created by ps on 25/3/17.
+ * Encodes a byte stream into bencode elements(dictionary,list,string,number)
  */
 public class BencodeEncoder {
 
@@ -19,37 +20,25 @@ public class BencodeEncoder {
 
         if(e instanceof Map){
             data.write('d');
-            //System.out.print("d");
             encodeMap((Map<String,Element>)e,data);
             data.write('e');
-            //System.out.print("e");
         }
         else if(e instanceof List){
             data.write('l');
-            //System.out.print("l");
             encodeList((List<Element>)e,data);
-            //System.out.print("e");
             data.write('e');
         }
         else if(e instanceof Long){
             data.write('i');
             Long l=(Long)e;
             String str=String.valueOf(l);
-            /*System.out.print("i");
-            System.out.print(str);
-            System.out.print("e");*/
-            //byte[] result=serializeObject(l);
             data.write(str.getBytes("UTF-8"));
             data.write('e');
         }
         else if(e instanceof byte[]){
-            //System.out.println("string");
             byte string_bytes[]=(byte[])(e);
             String len=String.valueOf(new Integer(string_bytes.length));
             data.write(len.getBytes("UTF-8"));
-           /* System.out.print(len);
-            System.out.print(":");
-            System.out.print(new String(string_bytes,"UTF-8"));*/
             data.write(':');
             data.write(string_bytes);
         }
@@ -57,7 +46,6 @@ public class BencodeEncoder {
             String str=(String)e;
             String len=String.valueOf(new Integer(str.length()));
             data.write(len.getBytes("UTF-8"));
-           // System.out.print(len);
             data.write(':');
             //System.out.print(":");
             data.write(str.getBytes("UTF-8"));

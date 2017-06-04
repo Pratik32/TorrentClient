@@ -12,6 +12,7 @@ import java.util.Map;
  * This class is used for decoding torrent-file.
  * As torrent file does not have any encoding(UTF,ASCII)
  * Parsing is done at byte level.
+ * Refer : https://wiki.theory.org/index.php/BitTorrentSpecification#Bencoding.
  */
 public class BencodeDecoder {
 
@@ -88,9 +89,7 @@ public class BencodeDecoder {
             if(current_byte!='e') {
                 pos--;
             }
-            //System.out.println(data[pos+1]-'0');
         }
-        //System.out.println("dictionary closed");
         Element e=new Element(dictionary);
         return e;
     }

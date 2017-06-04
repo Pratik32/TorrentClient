@@ -15,6 +15,7 @@ import java.util.*;
 
 /**
  * Created by ps on 17/3/17.
+ * Class representation of .torrent file.
  */
 public class TorrentMeta {
 
@@ -23,6 +24,9 @@ public class TorrentMeta {
     String createdby;
     Date creation_date;
     Map<String,Long> files;
+
+    List<String> filenames;
+    List<Long> filesizes;
     long piecelength;
     byte[] pieces;
     String info_hash_hex;
@@ -112,9 +116,20 @@ public class TorrentMeta {
         totalPieces=n;
         pieceHashes=new ByteBuffer[totalPieces];
     }
-    public List<String> getFileSize(){
-        List<String> file_sizes=null;
-        return file_sizes;
+    public List<String> getFilenames() {
+        return filenames;
+    }
+
+    public void setFilenames(List<String> filenames) {
+        this.filenames = filenames;
+    }
+
+    public List<Long> getFilesizes() {
+        return filesizes;
+    }
+
+    public void setFilesizes(List<Long> filesizes) {
+        this.filesizes = filesizes;
     }
 
     public static TorrentMeta createTorrentMeta(byte[] data) throws IOException {
@@ -141,8 +156,13 @@ public class TorrentMeta {
 
         //set File-Size map.
         Map<String,Element> info=dictionary.get("info").getMap();
-        Map<String,Long> files=getfiles(info);
+        Map<String,Long> files=getfiles(info,meta);
         meta.setFiles(files);
+
+        for(int i=0;i<meta.filenames.size();i++){
+            System.out.println("filename "+meta.filenames.get(i));
+            System.out.println("filesize "+meta.filesizes.get(i));
+        }
 
         //set piece length
         Long piece_length=info.get("piece length").getLong();
@@ -173,21 +193,28 @@ public class TorrentMeta {
 
         return meta;
     }
-    private static  Map<String,Long> getfiles(Map<String,Element> info){
+    private static  Map<String,Long> getfiles(Map<String,Element> info,TorrentMeta meta){
         Map<String,Long> files=new HashMap<String, Long>();
+        List<String> filenames=new ArrayList<String>();
+        List<Long> filesizes=new ArrayList<Long>();
         if(info.containsKey("files")){
             List<Map<String,Element>> dictionaries=info.get("files").getListOfMap();
             for(Map<String,Element> e:dictionaries){
                 String filename=e.get("path").getList().get(0).getString();
+                filenames.add(filename);
                 Long size=e.get("length").getLong();
+                filesizes.add(size);
                 files.put(filename,size);
             }
         }else{
             String filename=info.get("name").getString();
+            filenames.add(filename);
             Long size=info.get("length").getLong();
-            System.out.println(size);
+            filesizes.add(size);
             files.put(filename,size);
         }
+        meta.setFilenames(filenames);
+        meta.setFilesizes(filesizes);
         return files;
     }
     private static  Object[] getsha1Hash(byte[] data){
