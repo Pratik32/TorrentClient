@@ -1,1 +1,5 @@
 
+[main] DEBUG Peers.PeerConnection  - Reading torrent file.
+[main] DEBUG Peers.PeerConnection  - TorrentMeta successfully created.
+[main] DEBUG Peers.PeerConnection  - Crafting tracker request packet
+[main] DEBUG Peers.PeerConnection  - Trakcer url is :http://bigfoot1942.sektori.org:6969/announce?info_hash=%F2%E5%9DV%09%A5%E3%BB%80%99UG%E4%04%FC%95%F7%99%90%9E&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=10411542&event=started&compact=1

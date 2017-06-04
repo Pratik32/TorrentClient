@@ -184,9 +184,7 @@ public class PeerConnection extends Thread{
                             break;
                         case BIT_FIELD:
                             receiveBitfield(len);
-                            isSeeding();
-                            keepRunning=false;
-                            sendRequest();
+                            sendInterested();
                             break;
                         case REQUEST:
                             sendPiece();

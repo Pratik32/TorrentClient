@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.*;
+import static internal.Constants.RESOURCE_DIR;
 
 /**
  * Created by ps on 24/3/17.
@@ -21,7 +22,7 @@ public class Test {
      static Logger logger;
     public static void main(String[] args) throws InterruptedException {
         initialize();
-        File file=new File("stub.torrent");
+        File file=new File(RESOURCE_DIR+"stub.torrent");
         byte[] data;
         try {
             /*
