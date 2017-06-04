@@ -74,13 +74,26 @@ public class Utils {
             file.seek(offset);
             file.write(data);
         }catch (FileNotFoundException e){
-            System.out.println("File not found.");
-            logger.error("File not found.");
+            System.out.println("File not found: "+filename);
+            logger.error("File not found: "+filename);
         } catch (IOException e) {
             System.out.println("Unable to write to file.");
             logger.error("Unable to write to file");
         }
 
+    }
+    public static void readFromFile(String filename,int offset,byte data[]){
+        RandomAccessFile file=null;
+        try{
+            file=new RandomAccessFile(filename,"r");
+            file.seek(offset);
+            file.read(data);
+        }catch (FileNotFoundException e){
+            System.out.println("File not found :"+ filename);
+            logger.error("File not found: "+filename);
+        }catch (IOException e){
+
+        }
     }
     public static int generateRandomNumber(){
         Random random=new Random();

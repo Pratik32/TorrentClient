@@ -47,7 +47,7 @@ public class UdpTrackerSession extends TrackerSession {
             InetSocketAddress address=new InetSocketAddress(uri.getHost(),uri.getPort());
             System.out.println("InetAddress is: "+address.toString());
             socket=new DatagramSocket();
-            socket.setSoTimeout(TIMEOUT);
+            //socket.setSoTimeout(TIMEOUT);
             socket.connect(address);
 
             //send a connection request first with given transaction id.

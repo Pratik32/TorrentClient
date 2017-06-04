@@ -22,7 +22,7 @@ public class Test {
      static Logger logger;
     public static void main(String[] args) throws InterruptedException {
         initialize();
-        File file=new File(RESOURCE_DIR+"stub.torrent");
+        File file=new File(RESOURCE_DIR+"movie.torrent");
         byte[] data;
         try {
             /*
@@ -38,8 +38,8 @@ public class Test {
             //individualPeerTest(meta);
 
             List<Peer> peerList=getInitialPeerList(meta);
-            PeerController controller=new PeerController(meta,peerList);
-            controller.start();
+            //PeerController controller=new PeerController(meta,peerList);
+            //controller.start();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -113,7 +113,7 @@ public class Test {
             printPeerInfo(peer_info.keySet());//for debugging purpose
             List<Peer> temp=Utils.getPeerList(response);
             peerList.addAll(temp);
-            break;
+            //break;
             //peers.addAll(temp);
         }
         //System.out.println("Peer set is :");

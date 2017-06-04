@@ -8,6 +8,7 @@ import internal.Constants;
 import internal.TorrentMeta;
 import internal.Utils;
 
+import java.nio.ByteBuffer;
 import java.util.*;
 
 import static internal.Constants.BLOCK_LENGTH;
@@ -255,7 +256,36 @@ public class PeerController {
         }
     }
 
+    /*
+        To serve 'have' requests.
+     */
     public byte[] readBlockData(int pieceIndex,int offset,int blockLen){
-        return Utils.readFromFile(meta.getFileNames().get(0),pieceIndex,(int)pieceLength,offset,blockLen);
+        trackerParams[2]+=blockLen;
+        int blockOffset=pieceIndex*(int)this.pieceLength+offset;
+        int blockEnd=blockOffset+(blockLen-1);
+
+        List<String> filename=meta.getFilenames();
+        List<Long>   filesize=meta.getFilesizes();
+
+        int fileStart=0;
+        int fileEnd=-1;
+        ByteBuffer buffer=ByteBuffer.allocate(blockLen);
+        for(int i=0;i<filename.size();i++){
+            fileStart=fileEnd+1;
+            fileEnd=filesize.get(i).intValue();
+            if((blockOffset<fileStart && blockEnd<fileStart)||(blockOffset>fileEnd && blockEnd>fileEnd)){
+                System.out.println("Block is not the part of file: "+filename.get(i));
+            }
+            else{
+                int start=Math.max(blockOffset,fileStart);
+                int end=Math.min(blockEnd,fileEnd);
+                int fileOffset=Math.abs(start-fileStart);
+                byte[] temp=new byte[end-start+1];
+                Utils.readFromFile(filename.get(i),fileOffset,temp);
+                buffer.put(temp);
+            }
+
+        }
+        return buffer.array();
     }
 }
