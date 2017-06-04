@@ -7,28 +7,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/Mw Hits Cover.jpg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/announce" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/siliconvalley.torrent" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Peers/PeerConnection.class" afterPath="$PROJECT_DIR$/target/classes/Peers/PeerConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Peers/PeerController.class" afterPath="$PROJECT_DIR$/target/classes/Peers/PeerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/internal/TorrentMeta.class" afterPath="$PROJECT_DIR$/target/classes/internal/TorrentMeta.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events.log" afterPath="$PROJECT_DIR$/events.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BEcodeUtils/BencodeDecoder.java" afterPath="$PROJECT_DIR$/src/main/java/BEcodeUtils/BencodeDecoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BEcodeUtils/BencodeEncoder.java" afterPath="$PROJECT_DIR$/src/main/java/BEcodeUtils/BencodeEncoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BEcodeUtils/BencodeUtils.java" afterPath="$PROJECT_DIR$/src/main/java/BEcodeUtils/BencodeUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BEcodeUtils/Element.java" afterPath="$PROJECT_DIR$/src/main/java/BEcodeUtils/Element.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/BEcodeUtils/Test.java" afterPath="$PROJECT_DIR$/src/main/java/BEcodeUtils/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Peers/Peer.java" afterPath="$PROJECT_DIR$/src/main/java/Peers/Peer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Peers/PeerConnection.java" afterPath="$PROJECT_DIR$/src/main/java/Peers/PeerConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Peers/PeerController.java" afterPath="$PROJECT_DIR$/src/main/java/Peers/PeerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Tracker/HttpTrackerSession.java" afterPath="$PROJECT_DIR$/src/main/java/Tracker/HttpTrackerSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Tracker/TrackerRequestPacket.java" afterPath="$PROJECT_DIR$/src/main/java/Tracker/TrackerRequestPacket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Tracker/TrackerSession.java" afterPath="$PROJECT_DIR$/src/main/java/Tracker/TrackerSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Tracker/TrakcerResponsePacket.java" afterPath="$PROJECT_DIR$/src/main/java/Tracker/TrakcerResponsePacket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Tracker/UdpTrackerSession.java" afterPath="$PROJECT_DIR$/src/main/java/Tracker/UdpTrackerSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/internal/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/internal/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/internal/TorrentMeta.java" afterPath="$PROJECT_DIR$/src/main/java/internal/TorrentMeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/internal/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/internal/Utils.java" />
     </list>
     <ignored path="TClient.iws" />
     <ignored path=".idea/workspace.xml" />
