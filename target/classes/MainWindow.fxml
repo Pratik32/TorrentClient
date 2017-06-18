@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" stylesheets="@modernui.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uicontroller.MainWindow">
+   <children>
+      <HBox fx:id="menubar" layoutX="50.0" prefHeight="59.0" prefWidth="600.0" styleClass="hbox-menubar">
+         <children>
+            <Label prefHeight="59.0" prefWidth="99.0" styleClass="label-title" text="  Flud" />
+            <HBox prefHeight="59.0" prefWidth="236.0" spacing="20.0">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="550.0" />
+               </HBox.margin>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/home/ps/IdeaProjects/TClient/resources/magnet-3-256.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="60.0" top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets top="17.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="file:/home/ps/IdeaProjects/TClient/resources/delete_white_48x48.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets top="17.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="file:/home/ps/IdeaProjects/TClient/resources/settings.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets top="17.0" />
+                     </HBox.margin>
+                     <image>
+                        <Image url="file:/home/ps/IdeaProjects/TClient/resources/share.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="444.0" prefWidth="900.0" styleClass="hbox-pane">
+         <children>
+            <JFXListView fx:id="list" cellVerticalMargin="0.0" prefHeight="443.0" prefWidth="384.0" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

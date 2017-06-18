@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 public class Constants {
 
 
-    //Tracker Constants.
+    //tracker Constants.
     public static String INFO_HASH="info_hash=";
 
     public static final String PEER_ID="&peer_id=";

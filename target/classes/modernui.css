@@ -1,0 +1,52 @@
+.hbox-menubar{
+    -fx-background-color: #0093AF;
+}
+.label-title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Segoe UI bold", Helvetica, Arial, sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 14pt;
+}
+.label-customcell-label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Aerial";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}
+.jfx-progress-bar > .bar {
+    -fx-background-color: #0093AF;
+    -fx-background-radius: 0;
+    -fx-background-insets: 1;
+
+}
+
+.jfx-progress-bar > .track {
+    -fx-background-color: #0093AF;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+.vbox-customcell {
+ -fx-background-color:#333333;
+}
+.jfx-list-view{
+  -fx-background-color:#333333;
+}
+
+.jfx-list-cell{
+    -fx-padding:1px ;
+    -fx-control-inner-background:#333333;
+}
+.jfx-list-cell .jfx-rippler{
+    -fx-rippler-fill:BLUE;
+}
+.jfx-list-cell:hover{
+    -fx-background-color:white;
+}
+
+.hbox-pane{
+  -fx-background-color: #373535;
+}
+.list-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-padding:-7;
+}

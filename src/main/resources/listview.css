@@ -1,0 +1,21 @@
+.root {
+ -fx-background-color:#333333;
+}
+.label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Aerial";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}
+.jfx-progress-bar > .bar {
+    -fx-background-color: #0093AF;
+    -fx-background-radius: 0;
+    -fx-background-insets: 1;
+
+}
+
+.jfx-progress-bar > .track {
+    -fx-background-color: #0093AF;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}

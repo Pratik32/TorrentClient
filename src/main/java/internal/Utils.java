@@ -1,8 +1,8 @@
 package internal;
 
-import Peers.Peer;
-import Tracker.TrackerRequestPacket;
-import Tracker.TrakcerResponsePacket;
+import peer.Peer;
+import tracker.TrackerRequestPacket;
+import tracker.TrakcerResponsePacket;
 import org.apache.log4j.Logger;
 
 import java.io.*;
@@ -12,12 +12,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-import static internal.Constants.BLOCK_LENGTH;
-
 /**
  * Created by ps on 6/4/17.
  * This class has been created with an intention that,it will contain general
- * purpose methods like crafting different packets(Tracker:request,response,DHT queries)
+ * purpose methods like crafting different packets(tracker:request,response,DHT queries)
  * parsing bencoded responses,writing bytes to files.
  */
 public class Utils {
@@ -30,7 +28,7 @@ public class Utils {
     }
 
     /*
-      function for obtaining Peers from response object.
+      function for obtaining peer from response object.
      */
     public static List<Peer> getPeerList(TrakcerResponsePacket packet){
         List<Peer> peerList=new ArrayList<Peer>();

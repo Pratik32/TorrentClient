@@ -1,15 +1,11 @@
 package internal;
 
-import BEcodeUtils.BencodeDecoder;
-import BEcodeUtils.BencodeEncoder;
-import BEcodeUtils.BencodeUtils;
-import BEcodeUtils.Element;
+import bencodeutils.BencodeUtils;
+import bencodeutils.Element;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.io.output.ByteArrayOutputStream;
 
 import java.io.IOException;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
 import java.nio.ByteBuffer;
 import java.util.*;
 
