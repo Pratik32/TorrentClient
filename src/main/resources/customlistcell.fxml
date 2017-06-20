@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="customcell" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="81.0" prefWidth="380.0" spacing="9.0" styleClass="vbox-customcell" stylesheets="@modernui.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="customcell" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="81.0" prefWidth="383.5" spacing="9.0" styleClass="vbox-customcell" stylesheets="@modernui.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="filename" prefHeight="23.0" prefWidth="163.0" styleClass="label-customcell-label" stylesheets="@listview.css" text="filename" textFill="WHITE">
          <VBox.margin>

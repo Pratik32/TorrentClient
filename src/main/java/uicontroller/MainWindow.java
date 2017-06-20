@@ -15,6 +15,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Tab;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -32,7 +33,7 @@ public class MainWindow extends Application implements Initializable{
     public HBox menubar;
     public JFXListView list;
     JFXDepthManager manager;
-
+    Tab tab;
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader=new FXMLLoader(getClass().getResource("/MainWindow.fxml"));
         Parent parent=loader.load();
@@ -52,11 +53,13 @@ public class MainWindow extends Application implements Initializable{
             }
         });
         manager=new JFXDepthManager();
-        manager.setDepth(list,1);
+        manager.setDepth(list,2);
         ObservableList<Download> downloads= FXCollections.observableArrayList();
         downloads.add(new Download("Linux mint 2.0.1.iso",1.0));
         downloads.add(new Download("Backtrack 5.0.3.iso",0.0));
         list.setItems(downloads);
+
+        tab=new Tab();
     }
 }
 

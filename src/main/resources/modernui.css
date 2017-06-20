@@ -4,12 +4,11 @@
 .label-title {
     -fx-text-fill: #FFFFFF;
     -fx-font-family: "Segoe UI bold", Helvetica, Arial, sans-serif;
-    -fx-font-weight: bold;
-    -fx-font-size: 14pt;
+    -fx-font-size: 16pt;
 }
 .label-customcell-label {
     -fx-font-size: 11pt;
-    -fx-font-family: "Aerial";
+    -fx-font-family: "Segoe UI bold";
     -fx-text-fill: white;
     -fx-opacity: 0.6;
 }
@@ -49,4 +48,29 @@
 .list-view .scroll-bar:horizontal {
     -fx-opacity: 0;
     -fx-padding:-7;
+}
+.tab{
+    -fx-background-color: #0093AF;
+    -fx-background-radius: 0px;
+}
+.tab .tab-label{
+    -fx-alignment: CENTER;
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI bold";
+
+}
+.jfx-tab-pane{
+    -fx-tab-min-width:100px;
+    -fx-tab-max-width:100px;
+    -fx-tab-min-height:40px;
+    -fx-tab-max-height:40px;
+}
+.jfx-tab-pane *.tab-header-area *.tab-header-background {
+  -fx-background-color:#0093AF;
+}
+.jfx-button{
+    -fx-background-color:#CF1020;
+     -jfx-button-type: RAISED;
+     -fx-background-radius:60;
+     -fx-font-size: 20pt;
 }
