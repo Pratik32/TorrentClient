@@ -4,12 +4,11 @@
 .label-title {
     -fx-text-fill: #FFFFFF;
     -fx-font-family: "Segoe UI bold", Helvetica, Arial, sans-serif;
-    -fx-font-weight: bold;
-    -fx-font-size: 14pt;
+    -fx-font-size: 16pt;
 }
 .label-customcell-label {
     -fx-font-size: 11pt;
-    -fx-font-family: "Arial";
+    -fx-font-family: "Segoe UI bold";
     -fx-text-fill: white;
     -fx-opacity: 0.6;
 }
@@ -57,6 +56,8 @@
 .tab .tab-label{
     -fx-alignment: CENTER;
     -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI bold";
+
 }
 .jfx-tab-pane{
     -fx-tab-min-width:100px;
@@ -69,7 +70,8 @@
 }
 .jfx-button{
     -fx-background-color:#CF1020;
-     -jfx-button-type: RAISED;
-     -fx-background-radius:60;
-     -fx-font-size: 20pt;
+    -fx-text-fill:#FFFFFF;
+    -jfx-button-type: RAISED;
+    -fx-background-radius:60;
+    -fx-font-size: 30px;
 }

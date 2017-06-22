@@ -70,7 +70,8 @@
 }
 .jfx-button{
     -fx-background-color:#CF1020;
-     -jfx-button-type: RAISED;
-     -fx-background-radius:60;
-     -fx-font-size: 20pt;
+    -fx-text-fill:#FFFFFF;
+    -jfx-button-type: RAISED;
+    -fx-background-radius:60;
+    -fx-font-size: 30px;
 }

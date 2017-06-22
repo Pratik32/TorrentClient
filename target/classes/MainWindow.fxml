@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXProgressBar?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -12,6 +13,8 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" stylesheets="@modernui.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uicontroller.MainWindow">
    <children>
@@ -67,32 +70,163 @@
             <StackPane prefHeight="451.0" prefWidth="393.0">
                <children>
                   <JFXListView fx:id="list" />
-                  <JFXButton alignment="BOTTOM_RIGHT" buttonType="RAISED" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" prefHeight="60.0" prefWidth="60.0" StackPane.alignment="BOTTOM_RIGHT">
+                  <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="70.0" maxWidth="68.0" minHeight="60.0" minWidth="60.0" prefHeight="70.0" prefWidth="68.0" text="+" textAlignment="CENTER" textOverrun="CLIP" StackPane.alignment="BOTTOM_RIGHT">
                      <StackPane.margin>
                         <Insets bottom="50.0" right="30.0" />
                      </StackPane.margin>
-                     <graphic>
-                        <AnchorPane prefHeight="18.0" prefWidth="28.0">
-                           <children>
-                              <ImageView fitHeight="27.0" fitWidth="35.0" layoutX="-2.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="file:/home/ps/IdeaProjects/TClient/resources/add.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                           <padding>
-                              <Insets bottom="8.0" right="3.0" />
-                           </padding>
-                        </AnchorPane>
-                     </graphic>
                   </JFXButton>
                </children>
             </StackPane>
-            <JFXTabPane prefHeight="443.0" prefWidth="517.0">
+            <JFXTabPane depthTest="DISABLE" prefHeight="443.0" prefWidth="517.0">
                <tabs>
                   <Tab text="DETAILS">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="405.0" prefWidth="512.0" spacing="10.0">
+                                 <children>
+                                    <VBox prefHeight="137.0" prefWidth="512.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="TOP_LEFT" text="Linux mint 2.0.1.iso" textFill="WHITE" textOverrun="CLIP">
+                                             <VBox.margin>
+                                                <Insets left="165.0" top="25.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Label text="Downloading" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets left="75.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="System Italic" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXProgressBar prefHeight="0.0" prefWidth="370.0" progress="0.0">
+                                             <VBox.margin>
+                                                <Insets left="75.0" />
+                                             </VBox.margin>
+                                          </JFXProgressBar>
+                                          <HBox prefHeight="39.0" prefWidth="473.0" spacing="130.0">
+                                             <children>
+                                                <Label prefHeight="24.0" prefWidth="133.0" text="52.4 KB/s" textFill="WHITE">
+                                                   <HBox.margin>
+                                                      <Insets left="75.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <ImageView pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/home/ps/IdeaProjects/TClient/resources/arrow_down.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                                <Label prefHeight="24.0" prefWidth="126.0" text="3.2 KB/s" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <ImageView pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="file:/home/ps/IdeaProjects/TClient/resources/arrow_up.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Line endX="510.0" stroke="DIMGRAY">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Line>
+                                    <HBox prefHeight="61.0" prefWidth="611.0" spacing="170.0">
+                                       <children>
+                                          <VBox prefHeight="100.0" prefWidth="183.0" spacing="5.0">
+                                             <children>
+                                                <Label text="DOWNLOADING" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets left="50.0" top="20.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="16.0" prefWidth="129.0" text="250.8 MB/500 MB" textFill="#808080">
+                                                   <VBox.margin>
+                                                      <Insets left="50.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                             <children>
+                                                <Label text="ETA" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets left="25.0" top="20.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="16.0" prefWidth="87.0" text="1 hr 2 min" textFill="#808080">
+                                                   <VBox.margin>
+                                                      <Insets left="25.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <Line endX="510.0" startX="-100.0" stroke="DIMGRAY" />
+                                    <HBox prefHeight="65.0" prefWidth="611.0" spacing="170.0">
+                                       <children>
+                                          <VBox prefHeight="100.0" prefWidth="183.0" spacing="5.0">
+                                             <children>
+                                                <Label text="LEECHERS" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets left="50.0" top="20.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="16.0" prefWidth="129.0" text="2(14)" textFill="#808080">
+                                                   <VBox.margin>
+                                                      <Insets left="50.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                             <children>
+                                                <Label text="SEEDERS" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets left="25.0" top="20.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="16.0" prefWidth="87.0" text="19(662)" textFill="#808080">
+                                                   <VBox.margin>
+                                                      <Insets left="25.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                    <Line endX="510.0" layoutX="11.0" layoutY="158.0" stroke="DIMGRAY" />
+                                 </children>
+                              </VBox>
+                           </children></AnchorPane>
                     </content>
                   </Tab>
                   <Tab text="STATUS">
