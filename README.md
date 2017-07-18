@@ -16,5 +16,13 @@ Supports following Bittorrent enhancement proposals(BEPs):
 * Compact response from trackers:
   Supports compact response from tracker.Trackers send ip:port pair(omitting peer ID.)
  
+Required libraires
+------------------
+
+Apache Commons IO:
+
+https://mvnrepository.com/artifact/commons-io/commons-io/2.5
+  
+ 
 
 
