@@ -20,8 +20,16 @@ Required libraires
 ------------------
 
 Apache Commons IO:
-
 https://mvnrepository.com/artifact/commons-io/commons-io/2.5
+
+Apache Commons Codec:
+https://mvnrepository.com/artifact/commons-codec/commons-codec/1.10
+
+Apache httpclient:
+https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient/4.5.2
+
+log4j:
+https://mvnrepository.com/artifact/log4j/log4j/1.2.17
   
  
 
