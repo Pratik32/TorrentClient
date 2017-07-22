@@ -34,4 +34,7 @@ https://mvnrepository.com/artifact/log4j/log4j/1.2.17
 java 1.8.101+ (or javafx+java 1.8+)
 http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 
+Screenshot:
+![Screenshot]( TorrentClient/src/main/resources/sample.png?raw=true "GUI")
+
 
