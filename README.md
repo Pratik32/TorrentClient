@@ -36,6 +36,6 @@ http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.h
 
 Screenshot:
 
-![Screenshot](TorrentClient/src/main/resources/sample.png)
+![Screenshot]( TorrentClient/src/main/resources/sample.png?raw=true "GUI")
 
 
