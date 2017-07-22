@@ -20,9 +20,9 @@ import java.util.Random;
  */
 public class Utils {
 
-    private static  Logger logger=Constants.logger;
+    private static  Logger logger=CustomLogger.getInstance();
     public static TrackerRequestPacket craftPacket(TorrentMeta meta,long uploaded,long downloaded,long left){
-        Constants.logger.debug("Crafting tracker request packet");
+        logger.debug("Crafting tracker request packet");
         TrackerRequestPacket packet=new TrackerRequestPacket(TrackerRequestPacket.Event.STARTED,downloaded,uploaded,left);
         return packet;
     }

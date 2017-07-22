@@ -1,6 +1,7 @@
 package peer;
 
 import internal.Constants;
+import internal.CustomLogger;
 import internal.TorrentMeta;
 import org.apache.log4j.Logger;
 
@@ -52,7 +53,7 @@ public class PeerConnection extends Thread{
     public PeerConnection(Peer peer,TorrentMeta meta,byte[] data,PeerController c){
         this.peer=peer;
         this.meta=meta;
-        this.logger=Constants.logger;
+        this.logger= CustomLogger.getInstance();
         this.peerController=c;
         this.piece_data=data;
         localBitField=new BitSet(meta.getTotalPieces());
@@ -61,7 +62,7 @@ public class PeerConnection extends Thread{
     //Keeping this method  for quick testing purpose.
     public void connect() throws IOException, InterruptedException {
         System.out.println("In connect()");
-        Constants.logger.debug("Connecting peer :"+peer.getAddress().toString());
+        logger.debug("Connecting peer :"+peer.getAddress().toString());
         System.out.println(peer.getAddress().toString());
         Socket socket=new Socket(peer.getAddress().getAddress(),peer.getAddress().getPort());
         byte[] messsage=createHandshakeMessage(meta.getInfo_hash(),Constants.ID);
@@ -93,13 +94,13 @@ public class PeerConnection extends Thread{
         code=stream1.readByte();
 
         System.out.println("Length :"+len+"Type is :"+code);
-        Constants.logger.debug("Length :"+len+"Type is :"+code);
+        logger.debug("Length :"+len+"Type is :"+code);
         stream1.skipBytes(len-1);
         if(code!=5) {
             len = stream1.readInt();
             code = stream1.readByte();
             System.out.println("Length :" + len + "Type is :" + code);
-            Constants.logger.debug("Length :" + len + "Type is :" + code);
+            logger.debug("Length :" + len + "Type is :" + code);
             stream1.skipBytes(len - 1);
         }
         //sending interested message to peer.
@@ -107,7 +108,7 @@ public class PeerConnection extends Thread{
         len=stream1.readInt();
         code=stream1.readByte();
         System.out.println("Length :"+len+"Type is :"+code);
-        Constants.logger.debug("Length :"+len+"Type is :"+code);
+        logger.debug("Length :"+len+"Type is :"+code);
         stream1.skipBytes(len-1);
         stream.flush();
 
@@ -136,7 +137,7 @@ public class PeerConnection extends Thread{
         int copied=stream1.skipBytes(BLOCK_LENGTH);
         System.out.println("Data skipped"+copied);
         System.out.println("Length :"+len+"Type is :"+code);
-        Constants.logger.debug("Length :"+len+"Type is :"+code);
+        logger.debug("Length :"+len+"Type is :"+code);
     }
 
     public void run() {

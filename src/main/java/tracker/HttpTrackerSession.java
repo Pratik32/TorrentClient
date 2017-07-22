@@ -23,27 +23,32 @@ import static internal.Constants.TIMEOUT;
 public class HttpTrackerSession extends TrackerSession{
 
     private HttpURLConnection connection;
+    private Element element;
     public HttpTrackerSession(TorrentMeta meta,String announceUrl){
         super(meta,announceUrl);
     }
-    public Object connect(TrackerRequestPacket packet) {
+    public void connect(TrackerRequestPacket packet) {
         URL url=null;
-        Element element=null;
         try {
             url = new URL(getTrackerUrl(packet));
             connection = ((HttpURLConnection)(url.openConnection()));
             connection.setConnectTimeout(TIMEOUT);
             InputStream stream=connection.getInputStream();
             System.out.println(connection.getResponseCode());
-            Constants.logger.debug("Received tracker response with response code :"+connection.getResponseCode());
+            logger.debug("Received tracker response with response code :"+connection.getResponseCode());
             byte data[]= IOUtils.toByteArray(stream);
             element= BencodeUtils.decode(data);
-            Constants.logger.debug("Successfully decoded tracker responses.");
+            logger.debug("Successfully decoded tracker responses.");
         } catch (MalformedURLException e) {
-            return  null;
+            status=STATUSCODE.MALFORMED_URL.getStatus();
         } catch (IOException e) {
-            return null;
+            status=STATUSCODE.TIMOUT.getStatus();
         }
+        status=STATUSCODE.OK.getStatus();
+    }
+
+    @Override
+    public Object getTrackerResponse() {
         return element;
     }
 }

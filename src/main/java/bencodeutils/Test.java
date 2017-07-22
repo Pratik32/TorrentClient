@@ -1,7 +1,10 @@
 package bencodeutils;
 
+import internal.CustomLogger;
+import org.apache.commons.io.FileUtils;
 import peer.Peer;
 import peer.PeerConnection;
+import peer.PeerController;
 import tracker.*;
 import dht.DHTConnection;
 import internal.Constants;
@@ -9,29 +12,32 @@ import internal.TorrentMeta;
 import internal.Utils;
 import org.apache.log4j.Logger;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.*;
+
+import static internal.Constants.RESOURCE_DIR;
 
 /**
  * Created by ps on 24/3/17.
  */
 public class Test {
-     static Logger logger;
+     static Logger logger= CustomLogger.getInstance();
     public static void main(String[] args) throws InterruptedException, IOException {
         DHTConnection connection=new DHTConnection();
         connection.connect();
-        //initialize();
-        /*File file=new File(RESOURCE_DIR+"music.torrent");
+        initialize();
+         File file=new File(RESOURCE_DIR+"music.torrent");
         byte[] data;
         try {
             /*
                 Read the torrent file and create TorrentMeta Object from it.
              */
-          /*  data = FileUtils.readFileToByteArray(file);
-            Constants.logger.debug("Reading torrent file.");
+            data = FileUtils.readFileToByteArray(file);
+            logger.debug("Reading torrent file.");
             TorrentMeta meta=TorrentMeta.createTorrentMeta(data);
-            Constants.logger.debug("TorrentMeta successfully created.");
+            logger.debug("TorrentMeta successfully created.");
 
             //While testing individual peer uncomment below line and comment controller code.
 
@@ -43,14 +49,14 @@ public class Test {
 
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
     }
     //temporary method for printing the peer data.(ip,port,peer_id).
     private static void printPeerInfo(Set<InetSocketAddress> addresses){
         System.out.println("Found peer :");
-        Constants.logger.debug("Found following peers.");
+        logger.debug("Found following peers.");
        for(InetSocketAddress ip:addresses ){
-           Constants.logger.debug(ip.toString());
+           logger.debug(ip.toString());
            System.out.println(ip.toString());
        }
     }
@@ -63,9 +69,7 @@ public class Test {
     }
     public static void intializeLogger(){
         //PropertyConfigurator.configure("log4j.properties");
-        Constants.logger= Logger.getLogger(PeerConnection.class);
-        logger=Constants.logger;
-
+        logger= CustomLogger.getInstance();
     }
     /*
      Method for testing individual peers.

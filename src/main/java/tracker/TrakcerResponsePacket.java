@@ -9,12 +9,21 @@ import java.util.Map;
  */
 public class TrakcerResponsePacket {
 
+    private int statusCode;
     Map<InetSocketAddress,byte[]> peer_info;
     int interval;
     int min_interval;
     int complete;
     int incomplete;
 
+
+    public int getStatusCode() {
+        return statusCode;
+    }
+
+    public void setStatusCode(int statusCode) {
+        this.statusCode = statusCode;
+    }
 
     public int getInterval() {
         return interval;

@@ -1,6 +1,8 @@
 package peer;
 
 import interfaces.UIController;
+import internal.CustomLogger;
+import org.apache.log4j.Logger;
 import tracker.HttpTrackerSession;
 import tracker.TrackerRequestPacket;
 import tracker.TrackerSession;
@@ -13,12 +15,11 @@ import java.nio.ByteBuffer;
 import java.util.*;
 
 import static internal.Constants.BLOCK_LENGTH;
-import static internal.Constants.logger;
 
 /**
  * Created by ps on 7/5/17.
  *
- * Represents a Controller for all PeerConnection instances.
+ * Represents a Controller for all PeerConnection instances(of a single torrent session).
  * This class will calculate all parameters(piece length,block length).
  * Also it will keep the track of which pieces/blocks are downloaded/downloading.
  * which peer is downloading which block.Scheduling a download for peer.
@@ -26,6 +27,7 @@ import static internal.Constants.logger;
  * A downloading strategy(Rarest first,Sequential.) for downloading pieces.
  * This class also implements UIController which provides interface for UI
  * components.
+ *
  */
 public class PeerController implements UIController {
     private long pieceLength;
@@ -41,6 +43,7 @@ public class PeerController implements UIController {
     private BitSet workingBitField;
     private BitSet completedBitField;
     private int[] pieceFrequency;
+    private Logger logger;
 
 
     /*
@@ -58,6 +61,7 @@ public class PeerController implements UIController {
         workingBitField=new BitSet(meta.getTotalPieces());
         completedBitField=new BitSet(meta.getTotalPieces());
         pieceFrequency=new int[meta.getTotalPieces()];
+        logger= CustomLogger.getInstance();
         initParams();
     }
 
@@ -66,7 +70,7 @@ public class PeerController implements UIController {
      */
     public void start(){
         try {
-            Constants.logger.debug("PeerController started");
+            logger.debug("PeerController started");
             byte[] piece_data = new byte[(int) pieceLength];
             activePeerList = getActivePeerList();
 
@@ -114,7 +118,7 @@ public class PeerController implements UIController {
         numberOfBlocks=(int)(pieceLength/BLOCK_LENGTH);
         totalFileSize=meta.getTotalFilesize();
         numberOfPieces=meta.getTotalPieces();
-        Constants.logger.debug("Init Params: "+"piece length :"+pieceLength+"blockLength :"+blockLength+"TotalSize :"+totalFileSize+"pieces:"+numberOfPieces+"blocks per piece"+numberOfBlocks);
+        logger.debug("Init Params: "+"piece length :"+pieceLength+"blockLength :"+blockLength+"TotalSize :"+totalFileSize+"pieces:"+numberOfPieces+"blocks per piece"+numberOfBlocks);
         System.out.println("Init Params: "+"piece length : "+pieceLength+" blockLength :"+blockLength+" TotalSize :"+totalFileSize+" pieces: "+meta.getTotalPieces()+" blocks per piece "+numberOfBlocks);
     }
 

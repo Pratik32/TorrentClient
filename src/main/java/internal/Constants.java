@@ -9,6 +9,8 @@ import org.apache.log4j.Logger;
 public class Constants {
 
 
+    public static final String HTTP="http";
+    public static final String HTTPS="htttps";
     //tracker Constants.
     public static String INFO_HASH="info_hash=";
 
@@ -68,12 +70,12 @@ public class Constants {
     public static final byte[] haveMessage={0,0,0,5,4};
     public static final byte[] unchokeMessage={0,0,0,1,1};
     //Udp tracker constants.
+    public static final String UDP="udp";
     public static final int UDP_CONNECTION_MESSAGE_LEN=16;
     public static final long UDP_CONNECT_REQUEST_MAGIC = 0x41727101980L;
     public static final int UDP_PACKET_LENGTH=512;
     public static final int UDP_ANNOUNCE_MESSAGE_LEN=98;
 
     //Logger.
-    public static Logger logger;
     public static final String RESOURCE_DIR="resources/";
 }

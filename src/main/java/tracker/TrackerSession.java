@@ -2,7 +2,9 @@ package tracker;
 
 import bencodeutils.Element;
 import internal.Constants;
+import internal.CustomLogger;
 import internal.TorrentMeta;
+import org.apache.log4j.Logger;
 
 import java.io.UnsupportedEncodingException;
 import java.net.InetAddress;
@@ -21,6 +23,11 @@ import static internal.Constants.*;
  * Represents a TrackerSession(http,udp).
  * General representation of tracker session.
  * contains common methods related to tracker components.
+ * [added on 19/07/17]: I have made 'connect' method to return nothing(void)
+ * in order to make code error proof.This is how http works,first
+ * you connect,then check status code,and according to status code
+ * proceed.
+ *
  */
 public  abstract class TrackerSession {
 
@@ -28,11 +35,25 @@ public  abstract class TrackerSession {
     protected byte[] info;
     private int interval_time;
     protected TorrentMeta meta;
+    protected Logger logger;
+    protected int status;
+    public static enum STATUSCODE{
+        OK(1),TIMOUT(2),MALFORMED_URL(3),URISYNTAX(4);
+        int status;
+        STATUSCODE(int num){
+            this.status=num;
+        }
+
+        public int getStatus() {
+            return status;
+        }
+    }
 
     TrackerSession(TorrentMeta meta,String annouceUrl ){
         this.meta=meta;
         this.info=this.meta.getInfo_hash();
         this.tracker_url=annouceUrl;
+        logger= CustomLogger.getInstance();
     }
 
     /*
@@ -44,6 +65,7 @@ public  abstract class TrackerSession {
         returned by server,next time send request with compact flag set.
      */
     private Map<InetSocketAddress,byte[]> getPeerInfo(Element response){
+        int status=0;
         Map<InetSocketAddress,byte[]> peers_info=new HashMap<InetSocketAddress,byte[]>();
         Element element=response.getMap().get("peers");
         if(element.getValue() instanceof byte[]){
@@ -115,34 +137,47 @@ public  abstract class TrackerSession {
 
 
     public TrakcerResponsePacket sendRequest(TrackerRequestPacket packet ){
-        Object obj=connect(packet);
-        //in case of connection timeout send.
-        if(obj==null){
-            System.out.println("Null response returned.");
-            return null;
+        connect(packet);
+        Object obj=null;
+        TrakcerResponsePacket responsePacket=new TrakcerResponsePacket();
+        if(getStatus()==STATUSCODE.OK.getStatus()) {
+            obj=getTrackerResponse();
+            //in case of connection timeout send.
+            if (obj == null) {
+                System.out.println("Null response returned.");
+                responsePacket.setStatusCode(-1);
+                return responsePacket;
+            }else{
+                responsePacket=craftPacket(obj);
+                responsePacket.setStatusCode(1);
+            }
+            //special case for handling Timeout related errors.
+        }else if(getStatus()==STATUSCODE.TIMOUT.getStatus()){
+            responsePacket.setStatusCode(0);
+        }else{
+            responsePacket.setStatusCode(-1);
         }
-        TrakcerResponsePacket responsePacket=craftPacket(obj);
         return responsePacket;
     }
 
     /*
         The contract for connect method had to be changed.
         Because UDP tracker cannot return an Element(because response is not bencoded.)
-        But I wanted to keep the tracker model same.hence returning a Object.
      */
-    public abstract Object connect(TrackerRequestPacket packet);
+    public abstract void connect(TrackerRequestPacket packet);
 
+    public abstract Object getTrackerResponse();
     protected String getTrackerUrl(TrackerRequestPacket packet){
         String event_type="";
         switch (packet.getEvent()){
             case COMPLETED:
-                    event_type=EVENT_COMPLETED;
-                    break;
+                event_type=EVENT_COMPLETED;
+                break;
             case STARTED:
-                    event_type=EVENT_STARTED;
-                    break;
+                event_type=EVENT_STARTED;
+                break;
             case STOPPED:
-                   event_type=EVENT_STOPPED;
+                event_type=EVENT_STOPPED;
         }
         String url=tracker_url+"?"+INFO_HASH+getEncodedString(info)
                 +PEER_ID+ID
@@ -153,7 +188,7 @@ public  abstract class TrackerSession {
                 +EVENT+event_type
                 +COMPACT+1;
         System.out.println(url);
-        Constants.logger.debug("Trakcer url is :"+url);
+        logger.debug("Trakcer url is :"+url);
         return url;
 
     }
@@ -176,7 +211,7 @@ public  abstract class TrackerSession {
             It will call getPeerInfo with ByteBuffer as param(morph 2)
      */
     private  TrakcerResponsePacket craftPacket(Object obj){
-        Constants.logger.debug("Crafting the response packet.");
+        logger.debug("Crafting the response packet.");
         Map<InetSocketAddress,byte[]> peer_info=null;
         if(obj instanceof Element) {
             Element element=(Element)obj;
@@ -189,5 +224,8 @@ public  abstract class TrackerSession {
         TrakcerResponsePacket packet=new TrakcerResponsePacket();
         packet.setPeer_info(peer_info);
         return  packet;
+    }
+    protected int getStatus(){
+        return status;
     }
 }

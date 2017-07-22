@@ -24,16 +24,14 @@ public class UdpTrackerSession extends TrackerSession {
 
     DatagramSocket socket;
     private int transactionId;
-    private Logger logger;
     private int ACTION_CONNECT=0;
     private int ACTION_ANNOUNCE=1;
+    private ByteBuffer response;
     public UdpTrackerSession(TorrentMeta meta,String announceUrl){
         super(meta,announceUrl);
-        this.logger=Constants.logger;
     }
-    public Object connect(TrackerRequestPacket packet) {
+    public void connect(TrackerRequestPacket packet) {
         URL url=null;
-        ByteBuffer response=null;
         logger.debug("Request is of UDP type.");
         try {
             //url = new URL(getTrackerUrl(packet));
@@ -59,17 +57,16 @@ public class UdpTrackerSession extends TrackerSession {
             System.out.println(response.getInt());
             System.out.println("transactionId "+response.getInt()+" Interval "+response.getInt()+" leechers "+response.getInt()+" seeders "+response.getInt());
         } catch (MalformedURLException e) {
-            return  null;
+            status=STATUSCODE.MALFORMED_URL.getStatus();
         } catch (IOException e) {
+            status=STATUSCODE.TIMOUT.getStatus();
             System.out.println("Null response returned from :"+tracker_url);
             logger.error("Null response returned from :"+tracker_url);
-            return null;
         } catch (URISyntaxException e) {
+            status=STATUSCODE.URISYNTAX.getStatus();
             System.out.println("Invalid URI syntax");
             logger.error("Invalid URI syntax");
-            return null;
         }
-        return response;
     }
     private byte[] createConnectionRequest(){
         ByteBuffer buffer=ByteBuffer.allocate(UDP_CONNECTION_MESSAGE_LEN);
@@ -137,6 +134,12 @@ public class UdpTrackerSession extends TrackerSession {
         }
 
         return buffer.array();
+    }
+    public Object getTrackerResponse(){
+        return response;
+    }
+    public int getStatusCode(){
+        return status;
     }
 
 }

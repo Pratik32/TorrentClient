@@ -30,19 +30,19 @@
                </VBox.margin>
                <children>
                   <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="file:/home/ps/IdeaProjects/TClient/resources/magnet-3-256.png" />
-                     </image>
                      <HBox.margin>
                         <Insets left="60.0" top="20.0" />
                      </HBox.margin>
+                     <image>
+                        <Image url="@images/magnet-3-256.png" />
+                     </image>
                   </ImageView>
                   <ImageView fitHeight="28.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
                         <Insets top="17.0" />
                      </HBox.margin>
                      <image>
-                        <Image url="file:/home/ps/IdeaProjects/TClient/resources/delete_white_48x48.png" />
+                        <Image url="@images/delete_white_48x48.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
@@ -50,7 +50,7 @@
                         <Insets top="17.0" />
                      </HBox.margin>
                      <image>
-                        <Image url="file:/home/ps/IdeaProjects/TClient/resources/settings.png" />
+                        <Image url="@images/settings.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="28.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
@@ -58,7 +58,7 @@
                         <Insets top="17.0" />
                      </HBox.margin>
                      <image>
-                        <Image url="file:/home/ps/IdeaProjects/TClient/resources/share.png" />
+                        <Image url="@images/share.png" />
                      </image>
                   </ImageView>
                </children>
@@ -70,7 +70,7 @@
             <StackPane prefHeight="451.0" prefWidth="393.0">
                <children>
                   <JFXListView fx:id="list" />
-                  <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="70.0" maxWidth="68.0" minHeight="60.0" minWidth="60.0" prefHeight="70.0" prefWidth="68.0" text="+" textAlignment="CENTER" textOverrun="CLIP" StackPane.alignment="BOTTOM_RIGHT">
+                  <JFXButton fx:id="add" alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="0.0" maxHeight="70.0" maxWidth="68.0" minHeight="60.0" minWidth="60.0" onAction="#onAddButtonClicked" prefHeight="70.0" prefWidth="68.0" text="+" textAlignment="CENTER" textOverrun="CLIP" StackPane.alignment="BOTTOM_RIGHT">
                      <StackPane.margin>
                         <Insets bottom="50.0" right="30.0" />
                      </StackPane.margin>
@@ -79,7 +79,7 @@
             </StackPane>
             <JFXTabPane depthTest="DISABLE" prefHeight="443.0" prefWidth="517.0">
                <tabs>
-                  <Tab text="DETAILS">
+                  <Tab text="STATUS">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
@@ -120,7 +120,7 @@
                                                    <graphic>
                                                       <ImageView pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="file:/home/ps/IdeaProjects/TClient/resources/arrow_down.png" />
+                                                            <Image url="@images/arrow_down.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -132,7 +132,7 @@
                                                    <graphic>
                                                       <ImageView pickOnBounds="true" preserveRatio="true">
                                                          <image>
-                                                            <Image url="file:/home/ps/IdeaProjects/TClient/resources/arrow_up.png" />
+                                                            <Image url="@images/arrow_up.png" />
                                                          </image>
                                                       </ImageView>
                                                    </graphic>
@@ -224,14 +224,55 @@
                                        </children>
                                     </HBox>
                                     <Line endX="510.0" layoutX="11.0" layoutY="158.0" stroke="DIMGRAY" />
+                                    <HBox prefHeight="65.0" prefWidth="611.0" spacing="170.0">
+                                       <children>
+                                          <VBox prefHeight="100.0" prefWidth="183.0" spacing="5.0">
+                                             <children>
+                                                <Label text="UPLOADED" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets left="50.0" top="20.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="16.0" prefWidth="129.0" text="2(14)" textFill="#808080">
+                                                   <VBox.margin>
+                                                      <Insets left="50.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                                             <children>
+                                                <Label prefHeight="14.0" prefWidth="103.0" text="RATIO" textFill="WHITE">
+                                                   <VBox.margin>
+                                                      <Insets left="25.0" top="20.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="11.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label prefHeight="16.0" prefWidth="87.0" text="19(662)" textFill="#808080">
+                                                   <VBox.margin>
+                                                      <Insets left="25.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
                                  </children>
                               </VBox>
                            </children></AnchorPane>
                     </content>
                   </Tab>
-                  <Tab text="STATUS">
+                  <Tab text="DETAILS">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXListView layoutX="-3.0" layoutY="-11.0" prefHeight="413.0" prefWidth="525.0" />
+                           </children></AnchorPane>
                     </content>
                   </Tab>
                   <Tab text="FILES">

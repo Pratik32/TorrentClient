@@ -12,6 +12,10 @@ import java.util.*;
 /**
  * Created by ps on 17/3/17.
  * Class representation of .torrent file.
+ * Note:(added on 18/07)->Two torrent metas are equal
+ * only if they have same info_hash values.because a torrent
+ * file represents a torrent swarm while a torrent swarm is
+ * represented by it's info_hash(hence overriding the equals method)
  */
 public class TorrentMeta {
 
@@ -254,4 +258,20 @@ public class TorrentMeta {
     public byte[] getPieceHash(int pieceIndex){
         return pieceHashes[pieceIndex].array();
     }
+
+    /*
+        to check if two torrent metas represent same swarm.
+
+     */
+    public boolean equals(Object o){
+        if(o==this){
+            return true;
+        }
+        if(o instanceof TorrentMeta){
+            TorrentMeta obj=(TorrentMeta)o;
+                return (Arrays.equals(obj.info_hash,this.info_hash));
+        }
+        return false;
+    }
+
 }
