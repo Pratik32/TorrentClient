@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f965184-1f98-4df2-8901-1796872bc903" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/internal/CustomLogger.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/internal/Scheduler.java" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resources/add.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resources/arrow.torrent" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resources/arrow_down.png" afterPath="" />
@@ -17,11 +15,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/resources/share.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resources/stub.torrent" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resources/ubuntu.torrent" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/Bdecoder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/BencodeParser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/TorrentMeta.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/TrackerConnection.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/test.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BEcodeUtils/BencodeUtils.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BEcodeUtils/Element.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Bdecoder.class" afterPath="" />
@@ -38,35 +31,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Tracker/TrakcerResponsePacket.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/TrackerConnection.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/test.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/bencodeutils/Test.class" afterPath="$PROJECT_DIR$/target/classes/bencodeutils/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/internal/Constants.class" afterPath="$PROJECT_DIR$/target/classes/internal/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/internal/TorrentMeta.class" afterPath="$PROJECT_DIR$/target/classes/internal/TorrentMeta.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/internal/Utils.class" afterPath="$PROJECT_DIR$/target/classes/internal/Utils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/peer/PeerConnection.class" afterPath="$PROJECT_DIR$/target/classes/peer/PeerConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/peer/PeerController.class" afterPath="$PROJECT_DIR$/target/classes/peer/PeerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tracker/HttpTrackerSession.class" afterPath="$PROJECT_DIR$/target/classes/tracker/HttpTrackerSession.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tracker/TrackerSession$1.class" afterPath="$PROJECT_DIR$/target/classes/tracker/TrackerSession$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tracker/TrackerSession.class" afterPath="$PROJECT_DIR$/target/classes/tracker/TrackerSession.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tracker/UdpTrackerSession.class" afterPath="$PROJECT_DIR$/target/classes/tracker/UdpTrackerSession.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uicontroller/CustomListViewCell.class" afterPath="$PROJECT_DIR$/target/classes/uicontroller/CustomListViewCell.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uicontroller/Download.class" afterPath="$PROJECT_DIR$/target/classes/uicontroller/Download.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uicontroller/MainWindow$1.class" afterPath="$PROJECT_DIR$/target/classes/uicontroller/MainWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uicontroller/MainWindow.class" afterPath="$PROJECT_DIR$/target/classes/uicontroller/MainWindow.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events.log" afterPath="$PROJECT_DIR$/events.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/bencodeutils/Test.java" afterPath="$PROJECT_DIR$/src/main/java/bencodeutils/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/internal/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/internal/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/internal/TorrentMeta.java" afterPath="$PROJECT_DIR$/src/main/java/internal/TorrentMeta.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/internal/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/internal/Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/peer/PeerConnection.java" afterPath="$PROJECT_DIR$/src/main/java/peer/PeerConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/peer/PeerController.java" afterPath="$PROJECT_DIR$/src/main/java/peer/PeerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tracker/HttpTrackerSession.java" afterPath="$PROJECT_DIR$/src/main/java/tracker/HttpTrackerSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tracker/TrackerSession.java" afterPath="$PROJECT_DIR$/src/main/java/tracker/TrackerSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tracker/TrakcerResponsePacket.java" afterPath="$PROJECT_DIR$/src/main/java/tracker/TrakcerResponsePacket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tracker/UdpTrackerSession.java" afterPath="$PROJECT_DIR$/src/main/java/tracker/UdpTrackerSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java" afterPath="$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/MainWindow.fxml" afterPath="$PROJECT_DIR$/target/classes/MainWindow.fxml" />
     </list>
     <ignored path="TClient.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,8 +56,8 @@
       <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-324">
-              <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+            <state relative-caret-position="1368">
+              <caret line="116" column="7" selection-start-line="116" selection-start-column="7" selection-end-line="116" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -100,17 +66,9 @@
       <file leaf-file-name="Scheduler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/internal/Scheduler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1818">
+            <state relative-caret-position="283">
               <caret line="118" column="27" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2791#2792#0" expanded="false" />
-                <element signature="e#2839#2840#0" expanded="false" />
-                <element signature="e#5079#5080#0" expanded="false" />
-                <element signature="e#5113#5114#0" expanded="false" />
-                <element signature="e#5165#5166#0" expanded="false" />
-                <element signature="e#5230#5231#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -121,27 +79,8 @@
             <state relative-caret-position="360">
               <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="37" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#524#525#0" expanded="false" />
-                <element signature="e#555#556#0" expanded="false" />
-                <element signature="e#600#601#0" expanded="false" />
-                <element signature="e#640#641#0" expanded="false" />
-                <element signature="e#676#677#0" expanded="false" />
-                <element signature="e#711#712#0" expanded="false" />
-                <element signature="e#764#765#0" expanded="false" />
-                <element signature="e#812#813#0" expanded="false" />
-                <element signature="e#844#845#0" expanded="false" />
-                <element signature="e#875#876#0" expanded="false" />
-                <element signature="e#920#921#0" expanded="false" />
-                <element signature="e#960#961#0" expanded="false" />
-                <element signature="e#994#995#0" expanded="false" />
-                <element signature="e#1027#1028#0" expanded="false" />
-                <element signature="e#1076#1077#0" expanded="false" />
-                <element signature="e#1120#1121#0" expanded="false" />
-                <element signature="e#1180#1181#0" expanded="false" />
-                <element signature="e#1212#1213#0" expanded="false" />
-                <element signature="e#1286#1287#0" expanded="false" />
-                <element signature="e#1328#1329#0" expanded="false" />
+                <element signature="e#448#449#0" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,15 +91,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
               <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#933#934#0" expanded="false" />
-                <element signature="e#972#973#0" expanded="false" />
-                <element signature="e#5930#5931#0" expanded="false" />
-                <element signature="e#5961#5962#0" expanded="false" />
-                <element signature="e#5993#5994#0" expanded="false" />
-                <element signature="e#6022#6023#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -170,13 +101,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="414">
               <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#824#825#0" expanded="false" />
-                <element signature="e#863#864#0" expanded="false" />
-                <element signature="e#1822#1823#0" expanded="false" />
-                <element signature="e#1852#1853#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -186,15 +111,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2340">
               <caret line="151" column="48" selection-start-line="151" selection-start-column="48" selection-end-line="151" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1269#1270#0" expanded="false" />
-                <element signature="e#1308#1309#0" expanded="false" />
-                <element signature="e#1342#1343#0" expanded="false" />
-                <element signature="e#1379#1380#0" expanded="false" />
-                <element signature="e#8361#8362#0" expanded="false" />
-                <element signature="e#8390#8391#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -204,9 +121,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -270,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/main/java/internal/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/internal/TorrentMeta.java" />
         <option value="$PROJECT_DIR$/src/main/java/peer/PeerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/internal/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/HttpTrackerSession.java" />
@@ -278,6 +192,7 @@
         <option value="$PROJECT_DIR$/src/main/java/tracker/TrakcerResponsePacket.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/TrackerSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/internal/Scheduler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java" />
       </list>
     </option>
   </component>
@@ -289,9 +204,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-4" />
+    <option name="y" value="24" />
     <option name="width" value="1366" />
-    <option name="height" value="772" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -318,8 +233,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -480,7 +393,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -810,7 +725,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -828,8 +743,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993808" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1098,9 +1013,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1119,36 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/TrakcerResponsePacket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#524#525#0" expanded="false" />
-            <element signature="e#555#556#0" expanded="false" />
-            <element signature="e#600#601#0" expanded="false" />
-            <element signature="e#640#641#0" expanded="false" />
-            <element signature="e#676#677#0" expanded="false" />
-            <element signature="e#711#712#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
-            <element signature="e#812#813#0" expanded="false" />
-            <element signature="e#844#845#0" expanded="false" />
-            <element signature="e#875#876#0" expanded="false" />
-            <element signature="e#920#921#0" expanded="false" />
-            <element signature="e#960#961#0" expanded="false" />
-            <element signature="e#994#995#0" expanded="false" />
-            <element signature="e#1027#1028#0" expanded="false" />
-            <element signature="e#1076#1077#0" expanded="false" />
-            <element signature="e#1120#1121#0" expanded="false" />
-            <element signature="e#1180#1181#0" expanded="false" />
-            <element signature="e#1212#1213#0" expanded="false" />
-            <element signature="e#1286#1287#0" expanded="false" />
-            <element signature="e#1328#1329#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/bencodeutils/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
@@ -1156,32 +1039,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/TrackerSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="151" column="48" selection-start-line="151" selection-start-column="48" selection-end-line="151" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1269#1270#0" expanded="false" />
-            <element signature="e#1308#1309#0" expanded="false" />
-            <element signature="e#1342#1343#0" expanded="false" />
-            <element signature="e#1379#1380#0" expanded="false" />
-            <element signature="e#8361#8362#0" expanded="false" />
-            <element signature="e#8390#8391#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tracker/HttpTrackerSession.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dht/DHTConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/TrakcerResponsePacket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#824#825#0" expanded="false" />
-            <element signature="e#863#864#0" expanded="false" />
-            <element signature="e#1822#1823#0" expanded="false" />
-            <element signature="e#1852#1853#0" expanded="false" />
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1190,46 +1069,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#933#934#0" expanded="false" />
-            <element signature="e#972#973#0" expanded="false" />
-            <element signature="e#5930#5931#0" expanded="false" />
-            <element signature="e#5961#5962#0" expanded="false" />
-            <element signature="e#5993#5994#0" expanded="false" />
-            <element signature="e#6022#6023#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/internal/Scheduler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1818">
+        <state relative-caret-position="283">
           <caret line="118" column="27" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2791#2792#0" expanded="false" />
-            <element signature="e#2839#2840#0" expanded="false" />
-            <element signature="e#5079#5080#0" expanded="false" />
-            <element signature="e#5113#5114#0" expanded="false" />
-            <element signature="e#5165#5166#0" expanded="false" />
-            <element signature="e#5230#5231#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dht/DHTConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/tracker/TrackerSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="52" column="40" selection-start-line="52" selection-start-column="40" selection-end-line="52" selection-end-column="40" />
+        <state relative-caret-position="2340">
+          <caret line="151" column="48" selection-start-line="151" selection-start-column="48" selection-end-line="151" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+        <state relative-caret-position="1368">
+          <caret line="116" column="7" selection-start-line="116" selection-start-column="7" selection-end-line="116" selection-end-column="7" />
           <folding />
         </state>
       </provider>

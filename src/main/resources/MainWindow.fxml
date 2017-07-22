@@ -20,7 +20,7 @@
    <children>
       <HBox fx:id="menubar" layoutX="50.0" prefHeight="59.0" prefWidth="600.0" styleClass="hbox-menubar">
          <children>
-            <Label prefHeight="59.0" prefWidth="99.0" styleClass="label-title" text="  Flud" />
+            <Label prefHeight="59.0" prefWidth="99.0" styleClass="label-title" text="  TClient" />
             <HBox prefHeight="59.0" prefWidth="236.0" spacing="20.0">
                <HBox.margin>
                   <Insets bottom="10.0" left="550.0" />
