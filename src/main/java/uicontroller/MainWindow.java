@@ -80,6 +80,8 @@ public class MainWindow extends Application implements Initializable{
 
         FileChooser fileChooser=new FileChooser();
         fileChooser.setTitle("Choose torrent file");
+        FileChooser.ExtensionFilter extensionFilter=new FileChooser.ExtensionFilter("torrent files (*.torrent)","*.torrent");
+        fileChooser.getExtensionFilters().add(extensionFilter);
         File file=fileChooser.showOpenDialog(primary);
         System.out.println(file.toString());
         //startNewTorrentSession(file.toString());
