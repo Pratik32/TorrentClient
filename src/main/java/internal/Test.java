@@ -5,7 +5,7 @@ package internal;
  */
 public class Test {
     public static void main(String[] args) {
-        long bytes=18372198;
+        long bytes=1104052224;
         System.out.println(Utils.getConvertedBytes(bytes));
     }
 }

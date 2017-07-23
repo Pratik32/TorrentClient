@@ -15,12 +15,12 @@
 .jfx-progress-bar > .bar {
     -fx-background-color: #0093AF;
     -fx-background-radius: 0;
-    -fx-background-insets: 1;
+    -fx-background-insets: 0;
 
 }
 
 .jfx-progress-bar > .track {
-    -fx-background-color: #0093AF;
+    -fx-background-color: #FFFFFF;
     -fx-background-insets: 0;
     -fx-background-radius: 0;
 }

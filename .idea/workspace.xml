@@ -2,30 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f965184-1f98-4df2-8901-1796872bc903" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/internal/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/internal/Constants.class" afterPath="$PROJECT_DIR$/target/classes/internal/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/internal/Scheduler.class" afterPath="$PROJECT_DIR$/target/classes/internal/Scheduler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/internal/Utils.class" afterPath="$PROJECT_DIR$/target/classes/internal/Utils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tracker/HttpTrackerSession.class" afterPath="$PROJECT_DIR$/target/classes/tracker/HttpTrackerSession.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tracker/TrackerSession$1.class" afterPath="$PROJECT_DIR$/target/classes/tracker/TrackerSession$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tracker/TrackerSession.class" afterPath="$PROJECT_DIR$/target/classes/tracker/TrackerSession.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tracker/TrakcerResponsePacket.class" afterPath="$PROJECT_DIR$/target/classes/tracker/TrakcerResponsePacket.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/tracker/UdpTrackerSession.class" afterPath="$PROJECT_DIR$/target/classes/tracker/UdpTrackerSession.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uicontroller/CustomListViewCell.class" afterPath="$PROJECT_DIR$/target/classes/uicontroller/CustomListViewCell.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uicontroller/Download.class" afterPath="$PROJECT_DIR$/target/classes/uicontroller/Download.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uicontroller/MainWindow$1.class" afterPath="$PROJECT_DIR$/target/classes/uicontroller/MainWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uicontroller/MainWindow.class" afterPath="$PROJECT_DIR$/target/classes/uicontroller/MainWindow.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events.log" afterPath="$PROJECT_DIR$/events.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/internal/Scheduler.java" afterPath="$PROJECT_DIR$/src/main/java/internal/Scheduler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/internal/TorrentMeta.java" afterPath="$PROJECT_DIR$/src/main/java/internal/TorrentMeta.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/internal/Test.java" afterPath="$PROJECT_DIR$/src/main/java/internal/Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/internal/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/internal/Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tracker/HttpTrackerSession.java" afterPath="$PROJECT_DIR$/src/main/java/tracker/HttpTrackerSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/tracker/UdpTrackerSession.java" afterPath="$PROJECT_DIR$/src/main/java/tracker/UdpTrackerSession.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java" afterPath="$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/customlistcell.fxml" afterPath="$PROJECT_DIR$/src/main/resources/customlistcell.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/MainWindow.fxml" afterPath="$PROJECT_DIR$/target/classes/MainWindow.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/modernui.css" afterPath="$PROJECT_DIR$/src/main/resources/modernui.css" />
     </list>
     <ignored path="TClient.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +32,26 @@
       <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="115" column="18" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
+            <state relative-caret-position="-3456">
+              <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+              <folding>
+                <element signature="e#2244#2245#0" expanded="true" />
+                <element signature="e#2272#2273#0" expanded="true" />
+                <element signature="e#2460#2660#0" expanded="true" />
+                <element signature="e#2659#2660#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statustab.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/statustab.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -59,8 +60,18 @@
       <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/internal/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
+            <state relative-caret-position="1746">
+              <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/internal/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -69,8 +80,8 @@
       <file leaf-file-name="TorrentMeta.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/internal/TorrentMeta.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="290" column="8" selection-start-line="290" selection-start-column="8" selection-end-line="290" selection-end-column="26" />
+            <state relative-caret-position="715">
+              <caret line="266" column="0" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
               <folding>
                 <element signature="e#8126#8127#0" expanded="true" />
                 <element signature="e#8170#8171#0" expanded="true" />
@@ -86,8 +97,8 @@
       <file leaf-file-name="Scheduler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/internal/Scheduler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="94" column="57" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
+            <state relative-caret-position="-252">
+              <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
               <folding>
                 <element signature="e#2493#2501#0" expanded="true" />
                 <element signature="e#4530#4531#0" expanded="true" />
@@ -161,28 +172,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomLogger.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/internal/CustomLogger.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/internal/Constants.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="46" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -223,7 +212,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/customlistcell.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/listview.css" />
         <option value="$PROJECT_DIR$/src/main/java/BEcodeUtils/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/modernui.css" />
         <option value="$PROJECT_DIR$/src/main/java/internal/Schedular.java" />
         <option value="$PROJECT_DIR$/src/main/java/internal/Logger.java" />
         <option value="$PROJECT_DIR$/src/main/java/internal/CustomLogger.java" />
@@ -234,12 +222,13 @@
         <option value="$PROJECT_DIR$/src/main/java/internal/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/TrakcerResponsePacket.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/TrackerSession.java" />
-        <option value="$PROJECT_DIR$/src/main/java/internal/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/internal/TorrentMeta.java" />
-        <option value="$PROJECT_DIR$/src/main/java/internal/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/HttpTrackerSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/UdpTrackerSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/internal/Scheduler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/internal/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/internal/Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/modernui.css" />
         <option value="$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java" />
       </list>
     </option>
@@ -386,6 +375,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TClient" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="peer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -846,13 +861,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/internal/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/internal/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
@@ -980,13 +988,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/modernui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/listview.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1026,13 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/peer/PeerConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8425">
-          <caret line="139" column="8" selection-start-line="139" selection-start-column="8" selection-end-line="139" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1129,37 +1123,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/internal/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/internal/TorrentMeta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="290" column="8" selection-start-line="290" selection-start-column="8" selection-end-line="290" selection-end-column="26" />
-          <folding>
-            <element signature="e#8126#8127#0" expanded="true" />
-            <element signature="e#8170#8171#0" expanded="true" />
-            <element signature="e#8208#8209#0" expanded="true" />
-            <element signature="e#8250#8251#0" expanded="true" />
-            <element signature="e#8287#8288#0" expanded="true" />
-            <element signature="e#8320#8321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/internal/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="133" column="40" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/tracker/TrackerSession.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -1184,10 +1147,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/internal/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1746">
+          <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/internal/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/internal/TorrentMeta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="266" column="0" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+          <folding>
+            <element signature="e#8126#8127#0" expanded="true" />
+            <element signature="e#8170#8171#0" expanded="true" />
+            <element signature="e#8208#8209#0" expanded="true" />
+            <element signature="e#8250#8251#0" expanded="true" />
+            <element signature="e#8287#8288#0" expanded="true" />
+            <element signature="e#8320#8321#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/internal/Scheduler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="94" column="57" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
+        <state relative-caret-position="-252">
+          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
           <folding>
             <element signature="e#2493#2501#0" expanded="true" />
             <element signature="e#4530#4531#0" expanded="true" />
@@ -1196,11 +1190,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/peer/PeerConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10261">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/modernui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/statustab.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="115" column="18" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
-          <folding />
+        <state relative-caret-position="-3456">
+          <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+          <folding>
+            <element signature="e#2244#2245#0" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
+            <element signature="e#2460#2660#0" expanded="true" />
+            <element signature="e#2659#2660#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

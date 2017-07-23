@@ -102,24 +102,13 @@ public class Utils {
     }
 
     public static String getConvertedBytes(long bytes){
-        String KB="KB";
-        String MB="MB";
-        String GB="GB";
-        String result="BYTES";
-        double data=bytes;
-
-        if(bytes>=1024){
-            data/=1024;
-            result=KB;
-        }if(data>=1024){
-            data/=1024;
-            result=MB;
-        }if (data>=1024){
-            data/=1024;
-            result=GB;
+        if (bytes<1024){
+            return bytes+"B";
         }
-        Double d= BigDecimal.valueOf(data).setScale(1, RoundingMode.HALF_UP).doubleValue();
-        return d.doubleValue()+result;
+        String units[]={"KB","MB","GB","TB","PB"};
+        int exp=(int)(Math.log(bytes)/Math.log(1024));
+        double res=(bytes/Math.pow(1024,exp));
+        return String.format("%.2f %s",res,units[exp-1]);
     }
     /*
         call this method inorder to create a TorrentMeta

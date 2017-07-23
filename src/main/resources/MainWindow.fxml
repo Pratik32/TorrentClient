@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXListView?>
-<?import com.jfoenix.controls.JFXProgressBar?>
 <?import com.jfoenix.controls.JFXTabPane?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -13,8 +12,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" stylesheets="@modernui.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uicontroller.MainWindow">
    <children>
@@ -79,197 +76,21 @@
             </StackPane>
             <JFXTabPane fx:id="tabpane" depthTest="DISABLE" prefHeight="443.0" prefWidth="517.0">
                <tabs>
-                  <Tab text="STATUS">
+                  <Tab fx:id="statustab" text="STATUS">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <VBox prefHeight="405.0" prefWidth="512.0" spacing="10.0">
+                              <HBox alignment="CENTER" prefHeight="408.0" prefWidth="512.0">
                                  <children>
-                                    <VBox prefHeight="137.0" prefWidth="512.0" spacing="10.0">
-                                       <children>
-                                          <Label fx:id="title" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="301.0" text="   Linux mint 2.0.1.iso" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
-                                             <VBox.margin>
-                                                <Insets left="140.0" top="25.0" />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font size="20.0" />
-                                             </font>
-                                          </Label>
-                                          <Label fx:id="downloadinglabel" text="Downloading" textFill="WHITE">
-                                             <VBox.margin>
-                                                <Insets left="75.0" />
-                                             </VBox.margin>
-                                             <font>
-                                                <Font name="System Italic" size="13.0" />
-                                             </font>
-                                          </Label>
-                                          <JFXProgressBar prefHeight="0.0" prefWidth="370.0" progress="0.0">
-                                             <VBox.margin>
-                                                <Insets left="75.0" />
-                                             </VBox.margin>
-                                          </JFXProgressBar>
-                                          <HBox prefHeight="39.0" prefWidth="473.0" spacing="130.0">
-                                             <children>
-                                                <Label fx:id="downloadspeed" prefHeight="24.0" prefWidth="133.0" text="52.4 KB/s" textFill="WHITE">
-                                                   <HBox.margin>
-                                                      <Insets left="75.0" />
-                                                   </HBox.margin>
-                                                   <font>
-                                                      <Font size="15.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <ImageView pickOnBounds="true" preserveRatio="true">
-                                                         <image>
-                                                            <Image url="@images/arrow_down.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                   </graphic>
-                                                </Label>
-                                                <Label fx:id="uploadspeed" prefHeight="24.0" prefWidth="126.0" text="3.2 KB/s" textFill="WHITE">
-                                                   <font>
-                                                      <Font size="15.0" />
-                                                   </font>
-                                                   <graphic>
-                                                      <ImageView pickOnBounds="true" preserveRatio="true">
-                                                         <image>
-                                                            <Image url="@images/arrow_up.png" />
-                                                         </image>
-                                                      </ImageView>
-                                                   </graphic>
-                                                </Label>
-                                             </children>
-                                          </HBox>
-                                       </children>
-                                    </VBox>
-                                    <Line endX="510.0" stroke="DIMGRAY">
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </Line>
-                                    <HBox prefHeight="61.0" prefWidth="611.0" spacing="170.0">
-                                       <children>
-                                          <VBox prefHeight="100.0" prefWidth="183.0" spacing="5.0">
-                                             <children>
-                                                <Label fx:id="downloading" text="DOWNLOADING" textFill="WHITE">
-                                                   <VBox.margin>
-                                                      <Insets left="50.0" top="20.0" />
-                                                   </VBox.margin>
-                                                   <font>
-                                                      <Font name="System Bold" size="11.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label prefHeight="16.0" prefWidth="129.0" text="250.8 MB/500 MB" textFill="#808080">
-                                                   <VBox.margin>
-                                                      <Insets left="50.0" />
-                                                   </VBox.margin>
-                                                </Label>
-                                             </children>
-                                          </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
-                                             <children>
-                                                <Label fx:id="eta" text="ETA" textFill="WHITE">
-                                                   <VBox.margin>
-                                                      <Insets left="25.0" top="20.0" />
-                                                   </VBox.margin>
-                                                   <font>
-                                                      <Font name="System Bold" size="11.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label prefHeight="16.0" prefWidth="87.0" text="1 hr 2 min" textFill="#808080">
-                                                   <VBox.margin>
-                                                      <Insets left="25.0" />
-                                                   </VBox.margin>
-                                                </Label>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                    <Line endX="510.0" startX="-100.0" stroke="DIMGRAY" />
-                                    <HBox prefHeight="65.0" prefWidth="611.0" spacing="170.0">
-                                       <children>
-                                          <VBox prefHeight="100.0" prefWidth="183.0" spacing="5.0">
-                                             <children>
-                                                <Label fx:id="leechers" text="LEECHERS" textFill="WHITE">
-                                                   <VBox.margin>
-                                                      <Insets left="50.0" top="20.0" />
-                                                   </VBox.margin>
-                                                   <font>
-                                                      <Font name="System Bold" size="11.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label prefHeight="16.0" prefWidth="129.0" text="2(14)" textFill="#808080">
-                                                   <VBox.margin>
-                                                      <Insets left="50.0" />
-                                                   </VBox.margin>
-                                                </Label>
-                                             </children>
-                                          </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
-                                             <children>
-                                                <Label fx:id="seeders" text="SEEDERS" textFill="WHITE">
-                                                   <VBox.margin>
-                                                      <Insets left="25.0" top="20.0" />
-                                                   </VBox.margin>
-                                                   <font>
-                                                      <Font name="System Bold" size="11.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label prefHeight="16.0" prefWidth="87.0" text="19(662)" textFill="#808080">
-                                                   <VBox.margin>
-                                                      <Insets left="25.0" />
-                                                   </VBox.margin>
-                                                </Label>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                    <Line endX="510.0" layoutX="11.0" layoutY="158.0" stroke="DIMGRAY" />
-                                    <HBox prefHeight="65.0" prefWidth="611.0" spacing="170.0">
-                                       <children>
-                                          <VBox prefHeight="100.0" prefWidth="183.0" spacing="5.0">
-                                             <children>
-                                                <Label fx:id="uploaded" text="UPLOADED" textFill="WHITE">
-                                                   <VBox.margin>
-                                                      <Insets left="50.0" top="20.0" />
-                                                   </VBox.margin>
-                                                   <font>
-                                                      <Font name="System Bold" size="11.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label prefHeight="16.0" prefWidth="129.0" text="2(14)" textFill="#808080">
-                                                   <VBox.margin>
-                                                      <Insets left="50.0" />
-                                                   </VBox.margin>
-                                                </Label>
-                                             </children>
-                                          </VBox>
-                                          <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
-                                             <children>
-                                                <Label fx:id="ratio" prefHeight="14.0" prefWidth="103.0" text="RATIO" textFill="WHITE">
-                                                   <VBox.margin>
-                                                      <Insets left="25.0" top="20.0" />
-                                                   </VBox.margin>
-                                                   <font>
-                                                      <Font name="System Bold" size="11.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label prefHeight="16.0" prefWidth="87.0" text="19(662)" textFill="#808080">
-                                                   <VBox.margin>
-                                                      <Insets left="25.0" />
-                                                   </VBox.margin>
-                                                </Label>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
+                                    <Label prefHeight="38.0" prefWidth="336.0" text="                       Nothing to display" textFill="GREY" />
                                  </children>
-                              </VBox>
+                              </HBox>
                            </children></AnchorPane>
                     </content>
                   </Tab>
-                  <Tab text="DETAILS">
+                  <Tab fx:id="detailstab" text="DETAILS">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <AnchorPane fx:id="pane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
                               <JFXListView layoutX="-3.0" layoutY="-11.0" prefHeight="413.0" prefWidth="525.0" />
                            </children></AnchorPane>

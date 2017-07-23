@@ -14,6 +14,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -47,6 +48,7 @@ public class MainWindow extends Application implements Initializable{
     Tab tab;
     //Status tab elements.
     public TabPane tabpane;
+    @FXML
     public Label title;
     public Label downloadinglabel;
     public Label downloadspeed;
@@ -56,7 +58,11 @@ public class MainWindow extends Application implements Initializable{
     public Label leechers;
     public Label seeders;
     public Label uploaded;
-
+    public JFXProgressBar progress;
+    public AnchorPane pane;
+    public VBox statuscontent;
+    public Tab detailstab;
+    public Tab statustab;
 
 
     public void start(Stage primaryStage) throws Exception {
@@ -74,6 +80,7 @@ public class MainWindow extends Application implements Initializable{
     }
 
     public void initialize(URL location, ResourceBundle resources) {
+        Label label=new Label("No content");
         logger=CustomLogger.getInstance();
         list.setCellFactory(new Callback<ListView<Download>, ListCell<Download>>() {
             public ListCell<Download> call(ListView<Download> param) {
@@ -82,7 +89,9 @@ public class MainWindow extends Application implements Initializable{
         });
         manager=new JFXDepthManager();
         manager.setDepth(list,2);
+        pane.getChildren().addAll(label);
         scheduler=new Scheduler();
+
     }
 
 
@@ -125,7 +134,7 @@ public class MainWindow extends Application implements Initializable{
      */
     private void initializeUIElements(TorrentMeta meta,PeerController controller){
         addToListView(meta);
-        //initializeTabPane(meta,controller);
+        initializeTabPane(meta,controller);
     }
     /*
      Add given download to the list view.
@@ -162,16 +171,31 @@ public class MainWindow extends Application implements Initializable{
 
     }
     private void setupStatusTab(TorrentMeta meta){
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("/statustab.fxml"));
+        try {
+            AnchorPane pane=(AnchorPane)loader.load();
+            loader.setController(this);
+            statustab.setContent(pane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         String titletext=meta.isMultiFileMode()?meta.getFoldername():meta.getFilenames().get(0);
+        System.out.println(titletext);
+        if (title==null){
+            System.out.println("null");
+        }
         title.setText(titletext);
         downloadinglabel.setText("Downloading");
+        String downloadString="0 B/"+Utils.getConvertedBytes(meta.getTotalFilesize());
+        downloading.setText(downloadString);
         downloadspeed.setText("0 KB/s");
         uploadspeed.setText("0 KB/s");
         uploaded.setText("0KB");
         seeders.setText("52");
         leechers.setText("2");
-        eta.setText("1hr 20min");
-
+        eta.setText("? hr ? min");
+        progress.setProgress(0.0d);
     }
 
 }
