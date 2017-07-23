@@ -1,11 +1,14 @@
 package internal;
 
+import org.apache.commons.io.FileUtils;
 import peer.Peer;
 import tracker.TrackerRequestPacket;
 import tracker.TrakcerResponsePacket;
 import org.apache.log4j.Logger;
 
 import java.io.*;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.List;
@@ -96,6 +99,41 @@ public class Utils {
     public static int generateRandomNumber(){
         Random random=new Random();
         return random.nextInt();
+    }
+
+    public static String getConvertedBytes(long bytes){
+        String KB="KB";
+        String MB="MB";
+        String GB="GB";
+        String result="BYTES";
+        double data=bytes;
+
+        if(bytes>=1024){
+            data/=1024;
+            result=KB;
+        }if(data>=1024){
+            data/=1024;
+            result=MB;
+        }if (data>=1024){
+            data/=1024;
+            result=GB;
+        }
+        Double d= BigDecimal.valueOf(data).setScale(1, RoundingMode.HALF_UP).doubleValue();
+        return d.doubleValue()+result;
+    }
+    /*
+        call this method inorder to create a TorrentMeta
+     */
+    public static TorrentMeta createTorrentMeta(String filename){
+        File file=new File(filename);
+        TorrentMeta meta=null;
+        try {
+            byte data[] = FileUtils.readFileToByteArray(file);
+            meta=TorrentMeta.createTorrentMeta(data);
+        }catch (IOException e){
+            System.out.println("[Utils]:Error");
+        }
+        return meta;
     }
 
 }

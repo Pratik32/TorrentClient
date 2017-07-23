@@ -39,12 +39,12 @@ public class HttpTrackerSession extends TrackerSession{
             byte data[]= IOUtils.toByteArray(stream);
             element= BencodeUtils.decode(data);
             logger.debug("Successfully decoded tracker responses.");
+            status=STATUSCODE.OK.getStatus();
         } catch (MalformedURLException e) {
             status=STATUSCODE.MALFORMED_URL.getStatus();
         } catch (IOException e) {
             status=STATUSCODE.TIMOUT.getStatus();
         }
-        status=STATUSCODE.OK.getStatus();
     }
 
     @Override

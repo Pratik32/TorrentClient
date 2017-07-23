@@ -56,6 +56,7 @@ public class UdpTrackerSession extends TrackerSession {
             response=receive(socket);
             System.out.println(response.getInt());
             System.out.println("transactionId "+response.getInt()+" Interval "+response.getInt()+" leechers "+response.getInt()+" seeders "+response.getInt());
+            status=STATUSCODE.OK.getStatus();
         } catch (MalformedURLException e) {
             status=STATUSCODE.MALFORMED_URL.getStatus();
         } catch (IOException e) {

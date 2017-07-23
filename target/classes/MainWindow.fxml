@@ -20,7 +20,7 @@
    <children>
       <HBox fx:id="menubar" layoutX="50.0" prefHeight="59.0" prefWidth="600.0" styleClass="hbox-menubar">
          <children>
-            <Label prefHeight="59.0" prefWidth="99.0" styleClass="label-title" text="  Flud" />
+            <Label prefHeight="59.0" prefWidth="99.0" styleClass="label-title" text="  TClient" />
             <HBox prefHeight="59.0" prefWidth="236.0" spacing="20.0">
                <HBox.margin>
                   <Insets bottom="10.0" left="550.0" />
@@ -77,7 +77,7 @@
                   </JFXButton>
                </children>
             </StackPane>
-            <JFXTabPane depthTest="DISABLE" prefHeight="443.0" prefWidth="517.0">
+            <JFXTabPane fx:id="tabpane" depthTest="DISABLE" prefHeight="443.0" prefWidth="517.0">
                <tabs>
                   <Tab text="STATUS">
                     <content>
@@ -87,15 +87,15 @@
                                  <children>
                                     <VBox prefHeight="137.0" prefWidth="512.0" spacing="10.0">
                                        <children>
-                                          <Label alignment="TOP_LEFT" text="Linux mint 2.0.1.iso" textFill="WHITE" textOverrun="CLIP">
+                                          <Label fx:id="title" alignment="TOP_LEFT" prefHeight="25.0" prefWidth="301.0" text="   Linux mint 2.0.1.iso" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
                                              <VBox.margin>
-                                                <Insets left="165.0" top="25.0" />
+                                                <Insets left="140.0" top="25.0" />
                                              </VBox.margin>
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
                                           </Label>
-                                          <Label text="Downloading" textFill="WHITE">
+                                          <Label fx:id="downloadinglabel" text="Downloading" textFill="WHITE">
                                              <VBox.margin>
                                                 <Insets left="75.0" />
                                              </VBox.margin>
@@ -110,7 +110,7 @@
                                           </JFXProgressBar>
                                           <HBox prefHeight="39.0" prefWidth="473.0" spacing="130.0">
                                              <children>
-                                                <Label prefHeight="24.0" prefWidth="133.0" text="52.4 KB/s" textFill="WHITE">
+                                                <Label fx:id="downloadspeed" prefHeight="24.0" prefWidth="133.0" text="52.4 KB/s" textFill="WHITE">
                                                    <HBox.margin>
                                                       <Insets left="75.0" />
                                                    </HBox.margin>
@@ -125,7 +125,7 @@
                                                       </ImageView>
                                                    </graphic>
                                                 </Label>
-                                                <Label prefHeight="24.0" prefWidth="126.0" text="3.2 KB/s" textFill="WHITE">
+                                                <Label fx:id="uploadspeed" prefHeight="24.0" prefWidth="126.0" text="3.2 KB/s" textFill="WHITE">
                                                    <font>
                                                       <Font size="15.0" />
                                                    </font>
@@ -150,7 +150,7 @@
                                        <children>
                                           <VBox prefHeight="100.0" prefWidth="183.0" spacing="5.0">
                                              <children>
-                                                <Label text="DOWNLOADING" textFill="WHITE">
+                                                <Label fx:id="downloading" text="DOWNLOADING" textFill="WHITE">
                                                    <VBox.margin>
                                                       <Insets left="50.0" top="20.0" />
                                                    </VBox.margin>
@@ -167,7 +167,7 @@
                                           </VBox>
                                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                                              <children>
-                                                <Label text="ETA" textFill="WHITE">
+                                                <Label fx:id="eta" text="ETA" textFill="WHITE">
                                                    <VBox.margin>
                                                       <Insets left="25.0" top="20.0" />
                                                    </VBox.margin>
@@ -189,7 +189,7 @@
                                        <children>
                                           <VBox prefHeight="100.0" prefWidth="183.0" spacing="5.0">
                                              <children>
-                                                <Label text="LEECHERS" textFill="WHITE">
+                                                <Label fx:id="leechers" text="LEECHERS" textFill="WHITE">
                                                    <VBox.margin>
                                                       <Insets left="50.0" top="20.0" />
                                                    </VBox.margin>
@@ -206,7 +206,7 @@
                                           </VBox>
                                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                                              <children>
-                                                <Label text="SEEDERS" textFill="WHITE">
+                                                <Label fx:id="seeders" text="SEEDERS" textFill="WHITE">
                                                    <VBox.margin>
                                                       <Insets left="25.0" top="20.0" />
                                                    </VBox.margin>
@@ -228,7 +228,7 @@
                                        <children>
                                           <VBox prefHeight="100.0" prefWidth="183.0" spacing="5.0">
                                              <children>
-                                                <Label text="UPLOADED" textFill="WHITE">
+                                                <Label fx:id="uploaded" text="UPLOADED" textFill="WHITE">
                                                    <VBox.margin>
                                                       <Insets left="50.0" top="20.0" />
                                                    </VBox.margin>
@@ -245,7 +245,7 @@
                                           </VBox>
                                           <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                                              <children>
-                                                <Label prefHeight="14.0" prefWidth="103.0" text="RATIO" textFill="WHITE">
+                                                <Label fx:id="ratio" prefHeight="14.0" prefWidth="103.0" text="RATIO" textFill="WHITE">
                                                    <VBox.margin>
                                                       <Insets left="25.0" top="20.0" />
                                                    </VBox.margin>

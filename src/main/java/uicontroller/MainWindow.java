@@ -7,6 +7,7 @@ import com.jfoenix.effects.JFXDepthManager;
 import internal.CustomLogger;
 import internal.Scheduler;
 import internal.TorrentMeta;
+import internal.Utils;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,10 +16,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListCell;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Tab;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
@@ -39,15 +38,31 @@ import java.util.ResourceBundle;
 public class MainWindow extends Application implements Initializable{
 
     public HBox menubar;
+    public static final String MAINWINDOW="[MainWindow]: ";
     public JFXListView list;
     JFXDepthManager manager;
     private Scheduler scheduler;
     private Logger logger;
     Stage primary;
     Tab tab;
+    //Status tab elements.
+    public TabPane tabpane;
+    public Label title;
+    public Label downloadinglabel;
+    public Label downloadspeed;
+    public Label uploadspeed;
+    public Label downloading;
+    public Label eta;
+    public Label leechers;
+    public Label seeders;
+    public Label uploaded;
+
+
+
     public void start(Stage primaryStage) throws Exception {
         primary=primaryStage;
         FXMLLoader loader=new FXMLLoader(getClass().getResource("/MainWindow.fxml"));
+        primaryStage.setResizable(false);
         Parent parent=loader.load();
         Scene scene=new Scene(parent,900,500);
         primaryStage.setScene(scene);
@@ -67,12 +82,7 @@ public class MainWindow extends Application implements Initializable{
         });
         manager=new JFXDepthManager();
         manager.setDepth(list,2);
-
         scheduler=new Scheduler();
-        ObservableList<Download> downloads= FXCollections.observableArrayList();
-        downloads.add(new Download("Linux mint 2.0.1.iso",1.0));
-        downloads.add(new Download("Backtrack 5.0.3.iso",0.0));
-        list.setItems(downloads);
     }
 
 
@@ -83,19 +93,25 @@ public class MainWindow extends Application implements Initializable{
         FileChooser.ExtensionFilter extensionFilter=new FileChooser.ExtensionFilter("torrent files (*.torrent)","*.torrent");
         fileChooser.getExtensionFilters().add(extensionFilter);
         File file=fileChooser.showOpenDialog(primary);
-        System.out.println(file.toString());
-        //startNewTorrentSession(file.toString());
+        if (file!=null) {
+            System.out.println(file.toString());
+        }
+        startNewTorrentSession(file.toString());
     }
     private void startNewTorrentSession(String filename){
-        if(scheduler.sessionExists(filename)){
-            System.out.println("Session already exits.");
-            logger.debug("session already exists");
+        TorrentMeta meta= Utils.createTorrentMeta(filename);
+        if(scheduler.sessionExists(meta)){
+            System.out.println(MAINWINDOW+"Session already exits.");
+            logger.debug(MAINWINDOW+"session already exists");
             //show a dialog box or some message box.
         }else{
-            boolean result=scheduler.schedule(filename);
+            System.out.println(MAINWINDOW+"Starting a new session");
+            boolean result=scheduler.schedule(meta);
+            System.out.println(result);
             if(!result){
                 String errorString=scheduler.getErrorString();
-                System.out.println("Error ocurred while scheduling :"+errorString);
+                System.out.println(MAINWINDOW+"Error ocurred while scheduling :"+errorString);
+                logger.error(MAINWINDOW+"Error ocurred while scheduling :"+errorString);
                 //show errorString in some dialog box.
             }else{
                 PeerController controller=scheduler.getThisPeerController();
@@ -109,14 +125,16 @@ public class MainWindow extends Application implements Initializable{
      */
     private void initializeUIElements(TorrentMeta meta,PeerController controller){
         addToListView(meta);
-        initializeTabPane(meta,controller);
+        //initializeTabPane(meta,controller);
     }
     /*
      Add given download to the list view.
      initialize ProgressBar,labels etc.
      */
     private void addToListView(TorrentMeta meta){
-
+        String filename=meta.isMultiFileMode()?meta.getFoldername():meta.getFileNames().get(0);
+        Download download=new Download(filename,0.0d);
+        list.getItems().addAll(download);
     }
 
     /*
@@ -131,6 +149,7 @@ public class MainWindow extends Application implements Initializable{
         setupPeersTab(meta,controller);
     }
     private void setupDetailsTab(TorrentMeta meta){
+        AnchorPane pane=(AnchorPane)tabpane.getTabs().get(0).getContent();
 
     }
     private void setupFilesTab(TorrentMeta meta){
@@ -143,6 +162,15 @@ public class MainWindow extends Application implements Initializable{
 
     }
     private void setupStatusTab(TorrentMeta meta){
+        String titletext=meta.isMultiFileMode()?meta.getFoldername():meta.getFilenames().get(0);
+        title.setText(titletext);
+        downloadinglabel.setText("Downloading");
+        downloadspeed.setText("0 KB/s");
+        uploadspeed.setText("0 KB/s");
+        uploaded.setText("0KB");
+        seeders.setText("52");
+        leechers.setText("2");
+        eta.setText("1hr 20min");
 
     }
 

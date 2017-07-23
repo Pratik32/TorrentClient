@@ -43,30 +43,18 @@ public class Scheduler {
         Method is self explanatory.
         It also checks, if same session is already going on.
      */
-    public boolean schedule(String filename){
+    public boolean schedule(TorrentMeta meta){
         boolean result=true;
-        File file=new File(filename);
-        try {
-            byte data[]= FileUtils.readFileToByteArray(file);
-            TorrentMeta meta=TorrentMeta.createTorrentMeta(data);
-            List<Peer> peers=getInitialPeerList(meta);
-            if(peers.size()<=0){
-                result=false;
-                errorString="No peers found.";
-                logger.error(SCHEDULAR_STRING+errorString);
-                return result;
-            }
-            PeerController controller=new PeerController(meta,peers);
-            controllerList.add(controller);
-            controller.start();
-        } catch (IOException e) {
+        List<Peer> peers=getInitialPeerList(meta);
+        if(peers.size()<=0){
             result=false;
-            errorString=INVALID_ENCODING;
-            logger.error(SCHEDULAR_STRING +errorString);
+            errorString="No peers found.";
+            logger.error(SCHEDULAR_STRING+errorString);
             return result;
         }
-
-
+        PeerController controller=new PeerController(meta,peers);
+        controllerList.add(controller);
+        //controller.start();
         return result;
     }
 
@@ -75,17 +63,11 @@ public class Scheduler {
         iterate through all peercontroller and check if
         torrentmetas are equal,return true if equal.
      */
-    public boolean sessionExists(String filename){
-        try {
-            byte data[] = FileUtils.readFileToByteArray(new File(filename));
-            TorrentMeta meta = TorrentMeta.createTorrentMeta(data);
-            for (PeerController controller : controllerList) {
-                if (controller.getTorrentMeta().equals(meta)){
-                    return true;
-                }
+    public boolean sessionExists(TorrentMeta meta){
+        for (PeerController controller : controllerList) {
+            if (controller.getTorrentMeta().equals(meta)){
+                return true;
             }
-        }catch (IOException e){
-
         }
         return  false;
     }
@@ -102,7 +84,7 @@ public class Scheduler {
         TrackerSession session=null;
         System.out.println(meta.getAnnounce());
 
-        List<String> trackerUrls=meta.getAnnouce_list();
+        List<String> trackerUrls=new ArrayList<String>();
         trackerUrls.add(0,meta.getAnnounce());
         TrackerRequestPacket packet= Utils.craftPacket(meta,0,0,meta.getTotalFilesize());
         TrakcerResponsePacket response=null;

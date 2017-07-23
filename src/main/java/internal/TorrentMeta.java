@@ -24,7 +24,7 @@ public class TorrentMeta {
     String createdby;
     Date creation_date;
     Map<String,Long> files;
-
+    String foldername;
     List<String> filenames;
     List<Long> filesizes;
     long piecelength;
@@ -158,7 +158,13 @@ public class TorrentMeta {
         Map<String,Element> info=dictionary.get("info").getMap();
         Map<String,Long> files=getfiles(info,meta);
         meta.setFiles(files);
-
+        if(files.size()>1){
+            if (info.containsKey("name")){
+                String foldername=info.get("name").getString();
+                System.out.println("Foldername :"+foldername);
+                meta.setFoldername(foldername);
+            }
+        }
         for(int i=0;i<meta.filenames.size();i++){
             System.out.println("filename "+meta.filenames.get(i));
             System.out.println("filesize "+meta.filesizes.get(i));
@@ -274,4 +280,14 @@ public class TorrentMeta {
         return false;
     }
 
+    public void setFoldername(String foldername) {
+        this.foldername = foldername;
+    }
+    public boolean isMultiFileMode(){
+        return !(foldername==null);
+    }
+
+    public String getFoldername() {
+        return foldername;
+    }
 }
