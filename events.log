@@ -862,3 +862,197 @@
 [JavaFX Application Thread] DEBUG peer.PeerConnection  - /78.154.139.181:36075
 [JavaFX Application Thread] DEBUG peer.PeerConnection  - /91.121.86.113:51413
 [JavaFX Application Thread] DEBUG peer.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2106blocks per piece32
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Crafting tracker request packet
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Received tracker response with response code :200
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Successfully decoded tracker responses.
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Crafting the response packet.
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - [Scheduler]: Found following peers.
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /77.23.152.195:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /37.46.122.86:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /85.238.69.197:25252
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /37.48.82.5:56500
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /85.191.49.97:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /185.21.216.195:59993
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /86.61.71.149:42013
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /68.111.229.128:6881
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /163.172.195.211:12011
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /188.165.25.37:21145
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /86.151.226.106:9882
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /95.139.1.66:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /139.59.148.215:33100
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /81.230.146.13:51001
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /178.47.140.25:6890
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /71.173.216.171:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /174.4.122.224:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /185.56.20.13:55419
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /72.235.129.122:6881
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /68.113.154.241:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /92.221.226.18:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /68.32.185.199:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /37.187.112.64:13371
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /109.255.81.111:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /92.221.128.51:6888
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /195.154.222.46:6952
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /81.193.149.58:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /185.47.160.149:62184
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /176.77.27.174:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /151.41.61.151:6882
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /92.111.172.106:6995
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /192.171.47.33:8151
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /94.46.76.33:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /47.186.225.231:49018
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /154.0.7.134:50005
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /80.220.46.71:27200
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /101.100.141.180:50000
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /136.32.213.237:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /79.140.42.20:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /88.156.181.147:9062
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /108.173.140.231:6881
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /95.42.19.145:39355
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /79.137.115.152:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /94.75.194.39:50308
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /195.154.221.27:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /80.144.108.37:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /88.159.38.11:6881
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /89.15.226.63:51752
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /185.56.20.36:52639
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /188.243.129.182:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2106blocks per piece32
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Crafting tracker request packet
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Received tracker response with response code :200
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Successfully decoded tracker responses.
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Crafting the response packet.
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - [Scheduler]: Found following peers.
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /79.98.26.56:55978
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /79.246.85.163:52051
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /203.94.130.78:58123
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /185.148.3.172:61926
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /85.238.69.197:25252
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /86.42.153.52:21358
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /78.154.139.166:36075
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /86.61.71.149:42013
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /202.174.185.166:28057
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /185.149.90.96:51108
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /46.38.254.99:50000
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /91.121.138.25:45000
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /149.202.216.54:52769
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /188.143.71.206:6881
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /46.166.184.35:16609
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /85.17.21.98:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /206.225.82.161:47780
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /74.92.214.37:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /104.229.31.179:18201
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /96.60.11.62:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /174.4.122.224:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /68.113.154.241:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /5.9.158.13:9000
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /63.210.25.139:6884
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /91.210.179.229:59911
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /37.187.112.64:13371
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /72.49.236.87:12700
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /163.172.46.166:45000
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /5.39.124.38:55612
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /185.47.160.149:62184
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /5.134.39.2:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /92.98.204.169:25357
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /177.98.202.96:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /84.57.248.11:6881
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /47.55.70.1:58465
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /202.216.19.70:44864
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /100.15.164.125:16881
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /82.144.192.7:61678
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /77.51.190.230:51051
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /88.156.181.147:9062
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /82.82.50.105:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /95.66.157.157:51600
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /91.210.87.205:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /62.210.182.32:49152
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /116.87.68.66:6881
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /66.131.159.26:1500
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /5.196.88.106:45000
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /138.68.243.240:33100
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /84.113.179.180:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /5.79.67.89:53333
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2106blocks per piece32
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Crafting tracker request packet
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Received tracker response with response code :200
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Successfully decoded tracker responses.
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Crafting the response packet.
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - [Scheduler]: Found following peers.
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /79.246.85.163:52051
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /46.246.35.152:15963
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /203.94.130.78:58123
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /86.42.153.52:21358
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /216.71.7.249:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /188.213.49.218:38018
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /117.248.154.225:40982
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /72.192.234.40:8999
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /185.149.90.96:51108
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /88.87.85.248:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /31.211.102.129:63947
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /62.210.82.82:5366
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /62.210.103.121:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /139.59.148.215:33100
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /188.143.71.206:6881
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /46.166.184.35:16609
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /91.121.159.144:45001
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /185.45.195.192:20170
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /75.101.100.46:5141
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /67.40.5.49:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /174.4.122.224:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /68.113.154.241:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /117.208.32.172:31544
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /37.48.124.178:33112
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /195.154.226.249:64808
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /68.32.185.199:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /176.15.58.229:56009
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /37.187.112.64:13371
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /163.172.46.166:45000
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /136.62.160.39:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /83.134.185.249:29781
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /65.186.43.27:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /195.154.222.46:6952
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /185.47.160.149:62184
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /188.232.56.81:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /92.98.204.169:25357
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /94.46.76.33:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /80.220.46.71:27200
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /58.96.45.25:55531
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /195.154.221.27:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /109.61.249.235:34915
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /62.75.224.42:6929
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /103.224.116.250:42518
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /62.210.182.32:49152
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /66.131.159.26:1500
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /163.172.128.52:8999
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /5.167.238.10:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /99.45.80.146:51781
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /209.134.95.37:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /85.57.55.112:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2106blocks per piece32
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Crafting tracker request packet
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Received tracker response with response code :200
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Successfully decoded tracker responses.
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Crafting the response packet.
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - [Scheduler]: Found following peers.
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /96.43.143.156:42864
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /91.121.159.144:45001
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /46.246.35.152:15963
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /176.77.27.174:51413
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /86.61.71.149:42013
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /202.174.185.166:28057
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /72.235.129.122:6881
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /163.172.195.211:12011
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /188.187.166.215:10002
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /62.210.182.32:49152
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /195.242.156.241:8080
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /163.172.128.52:8999
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /47.55.70.1:58465
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /62.210.192.180:53496
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /84.42.23.212:6881
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - /89.36.218.186:6881
+[JavaFX Application Thread] DEBUG peer.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2106blocks per piece32

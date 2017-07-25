@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uicontroller.MainWindow">
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <VBox fx:id="statuscontent" layoutX="-1.0" prefHeight="403.0" prefWidth="622.0" spacing="10.0">
          <children>
@@ -25,7 +25,7 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label fx:id="downloadinglabel" text="Downloading" textFill="WHITE">
+                  <Label fx:id="downloadinglabel" textFill="WHITE">
                      <VBox.margin>
                         <Insets left="75.0" />
                      </VBox.margin>
@@ -40,7 +40,7 @@
                   </JFXProgressBar>
                   <HBox prefHeight="39.0" prefWidth="473.0" spacing="130.0">
                      <children>
-                        <Label fx:id="downloadspeed" prefHeight="24.0" prefWidth="133.0" text="52.4 KB/s" textFill="WHITE">
+                        <Label fx:id="downloadspeed" prefHeight="24.0" prefWidth="133.0" textFill="WHITE">
                            <HBox.margin>
                               <Insets left="75.0" />
                            </HBox.margin>
@@ -55,7 +55,7 @@
                               </ImageView>
                            </graphic>
                         </Label>
-                        <Label fx:id="uploadspeed" prefHeight="24.0" prefWidth="126.0" text="3.2 KB/s" textFill="WHITE">
+                        <Label fx:id="uploadspeed" prefHeight="24.0" prefWidth="126.0" textFill="WHITE">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -88,7 +88,7 @@
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Label>
-                        <Label fx:id="downloading" prefHeight="16.0" prefWidth="129.0" text="250.8 MB/500 MB" textFill="#808080">
+                        <Label fx:id="downloading" prefHeight="16.0" prefWidth="129.0" textFill="#808080">
                            <VBox.margin>
                               <Insets left="50.0" />
                            </VBox.margin>
@@ -105,7 +105,7 @@
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Label>
-                        <Label fx:id="eta" prefHeight="16.0" prefWidth="87.0" text="1 hr 2 min" textFill="#808080">
+                        <Label fx:id="eta" prefHeight="16.0" prefWidth="87.0" textFill="#808080">
                            <VBox.margin>
                               <Insets left="25.0" />
                            </VBox.margin>
@@ -127,7 +127,7 @@
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Label>
-                        <Label fx:id="leechers" prefHeight="16.0" prefWidth="129.0" text="2(14)" textFill="#808080">
+                        <Label fx:id="leechers" prefHeight="16.0" prefWidth="129.0" textFill="#808080">
                            <VBox.margin>
                               <Insets left="50.0" />
                            </VBox.margin>
@@ -144,7 +144,7 @@
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Label>
-                        <Label fx:id="seeders" prefHeight="16.0" prefWidth="87.0" text="19(662)" textFill="#808080">
+                        <Label fx:id="seeders" prefHeight="16.0" prefWidth="87.0" textFill="#808080">
                            <VBox.margin>
                               <Insets left="25.0" />
                            </VBox.margin>
@@ -166,7 +166,7 @@
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Label>
-                        <Label fx:id="uploaded" prefHeight="16.0" prefWidth="129.0" text="2(14)" textFill="#808080">
+                        <Label fx:id="uploaded" prefHeight="16.0" prefWidth="129.0" textFill="#808080">
                            <VBox.margin>
                               <Insets left="50.0" />
                            </VBox.margin>
@@ -183,7 +183,7 @@
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Label>
-                        <Label fx:id="ratio" prefHeight="16.0" prefWidth="87.0" text="19(662)" textFill="#808080">
+                        <Label fx:id="ratio" prefHeight="16.0" prefWidth="87.0" textFill="#808080">
                            <VBox.margin>
                               <Insets left="25.0" />
                            </VBox.margin>
