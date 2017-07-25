@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f965184-1f98-4df2-8901-1796872bc903" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uicontroller/StatusTabController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uicontroller/CustomListViewCell.class" afterPath="$PROJECT_DIR$/target/classes/uicontroller/CustomListViewCell.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uicontroller/Download.class" afterPath="$PROJECT_DIR$/target/classes/uicontroller/Download.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uicontroller/MainWindow$1.class" afterPath="$PROJECT_DIR$/target/classes/uicontroller/MainWindow$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/uicontroller/MainWindow.class" afterPath="$PROJECT_DIR$/target/classes/uicontroller/MainWindow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events.log" afterPath="$PROJECT_DIR$/events.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java" afterPath="$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uicontroller/StatusTabController.java" afterPath="$PROJECT_DIR$/src/main/java/uicontroller/StatusTabController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/statustab.fxml" afterPath="$PROJECT_DIR$/src/main/resources/statustab.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/statustab.fxml" afterPath="$PROJECT_DIR$/target/classes/statustab.fxml" />
     </list>
     <ignored path="TClient.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +38,7 @@
       <file leaf-file-name="MainWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-252">
+            <state relative-caret-position="467">
               <caret line="149" column="34" selection-start-line="149" selection-start-column="34" selection-end-line="149" selection-end-column="34" />
               <folding />
             </state>
@@ -55,8 +48,8 @@
       <file leaf-file-name="StatusTabController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uicontroller/StatusTabController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+            <state relative-caret-position="85">
+              <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -662,7 +655,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8034056" sideWeight="0.5060606" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8003096" sideWeight="0.4939394" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8003096" sideWeight="0.4939394" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1102,7 +1095,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
+        <state relative-caret-position="467">
           <caret line="149" column="34" selection-start-line="149" selection-start-column="34" selection-end-line="149" selection-end-column="34" />
           <folding />
         </state>
@@ -1110,8 +1103,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uicontroller/StatusTabController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="48" column="32" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+        <state relative-caret-position="85">
+          <caret line="42" column="38" selection-start-line="42" selection-start-column="38" selection-end-line="42" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

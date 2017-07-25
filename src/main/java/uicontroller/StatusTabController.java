@@ -24,32 +24,39 @@ public class StatusTabController {
     public Label leechers;
     public Label seeders;
     public Label uploaded;
+    @FXML
     public JFXProgressBar progress;
     public AnchorPane anchorpane;
+    FXMLLoader loader;
     public AnchorPane setupStatusTab(TorrentMeta meta){
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("/statustab.fxml"));
+        if (loader==null) {
+            loader = new FXMLLoader(getClass().getResource("/statustab.fxml"));
+            loader.setController(this);
+        }
         try {
             loader.load();
-            loader.setController(this);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         String titletext=meta.isMultiFileMode()?meta.getFoldername():meta.getFilenames().get(0);
         System.out.println(titletext);
+        if (progress==null){
+            System.out.println("error");
+        }
         if (title==null){
             System.out.println("null");
         }
         title.setText(titletext);
         downloadinglabel.setText("Downloading");
-        String downloadString="0 B/"+ Utils.getConvertedBytes(meta.getTotalFilesize());
+        String downloadString="200MB/"+ Utils.getConvertedBytes(meta.getTotalFilesize());
         downloading.setText(downloadString);
-        downloadspeed.setText("0 KB/s");
-        uploadspeed.setText("0 KB/s");
-        uploaded.setText("0KB");
+        downloadspeed.setText("500KB/s");
+        uploadspeed.setText("52KB/s");
+        uploaded.setText("20KB");
         seeders.setText("52");
         leechers.setText("2");
-        eta.setText("? hr ? min");
+        eta.setText("1hr 20min");
         progress.setProgress(0.0d);
         return anchorpane;
     }

@@ -97,7 +97,7 @@
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
                      <children>
-                        <Label text="ETA" textFill="WHITE">
+                        <Label prefHeight="14.0" prefWidth="87.0" text="ETA" textFill="WHITE">
                            <VBox.margin>
                               <Insets left="25.0" top="20.0" />
                            </VBox.margin>
@@ -105,7 +105,7 @@
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Label>
-                        <Label fx:id="eta" prefHeight="16.0" prefWidth="87.0" textFill="#808080">
+                        <Label fx:id="eta" prefHeight="16.0" prefWidth="104.0" textFill="#808080">
                            <VBox.margin>
                               <Insets left="25.0" />
                            </VBox.margin>
@@ -183,7 +183,7 @@
                               <Font name="System Bold" size="11.0" />
                            </font>
                         </Label>
-                        <Label fx:id="ratio" prefHeight="16.0" prefWidth="87.0" textFill="#808080">
+                        <Label fx:id="ratio" prefHeight="16.0" prefWidth="87.0" text="?" textFill="#808080">
                            <VBox.margin>
                               <Insets left="25.0" />
                            </VBox.margin>
