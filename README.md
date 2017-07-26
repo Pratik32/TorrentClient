@@ -8,13 +8,13 @@ Description
 Supports following Bittorrent enhancement proposals(BEPs):
 
 * Bittorrent protocol specification:
-  This is the basic implmentation of bittorrent protocol.
+  This is the basic implmentation of bittorrent protocol.(BEP3)
 * Multi-tracker support:
-  Supports 'announce-list' in .torrent file.(multiple tracker requests.)
+  Supports 'announce-list' in .torrent file.(multiple tracker requests.)(BEP12)
 * UDP tracker protocol:
   Implemenation of UDP tracker protocol (BEP13).
 * Compact response from trackers:
-  Supports compact response from tracker.Trackers send ip:port pair(omitting peer ID.)
+  Supports compact response from tracker(BEP23)
  
 Required libraires
 ------------------
