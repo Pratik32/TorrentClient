@@ -16,7 +16,7 @@ Supports following Bittorrent enhancement proposals(BEPs):
 * Compact response from trackers:
   Supports compact response from tracker(BEP23)
  
-Required libraires
+Required libraries
 ------------------
 
 Apache Commons IO:
