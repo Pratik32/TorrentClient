@@ -46,7 +46,6 @@ public class MainWindow extends Application implements Initializable{
     private Logger logger;
     Stage primary;
     Tab tab;
-    //Status tab elements.
     public TabPane tabpane;
     public VBox statuscontent;
     public Tab detailstab;
