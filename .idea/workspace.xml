@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f965184-1f98-4df2-8901-1796872bc903" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events.log" afterPath="$PROJECT_DIR$/events.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java" afterPath="$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uicontroller/StatusTabController.java" afterPath="$PROJECT_DIR$/src/main/java/uicontroller/StatusTabController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/peer/PeerConnection.java" afterPath="$PROJECT_DIR$/src/main/java/peer/PeerConnection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/peer/PeerController.java" afterPath="$PROJECT_DIR$/src/main/java/peer/PeerController.java" />
     </list>
     <ignored path="TClient.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,9 +67,26 @@
       <file leaf-file-name="PeerConnection.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/peer/PeerConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+            <state relative-caret-position="2232">
+              <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PeerController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/peer/PeerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="318" column="43" selection-start-line="318" selection-start-column="43" selection-end-line="318" selection-end-column="43" />
+              <folding>
+                <element signature="e#5481#5482#0" expanded="true" />
+                <element signature="e#5533#5534#0" expanded="true" />
+                <element signature="e#11097#11098#0" expanded="true" />
+                <element signature="e#11124#11125#0" expanded="true" />
+                <element signature="e#11188#11189#0" expanded="true" />
+                <element signature="e#11238#11239#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -120,8 +135,6 @@
         <option value="$PROJECT_DIR$/src/main/java/internal/Logger.java" />
         <option value="$PROJECT_DIR$/src/main/java/internal/CustomLogger.java" />
         <option value="$PROJECT_DIR$/src/main/java/bencodeutils/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/peer/PeerConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/peer/PeerController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/internal/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/tracker/TrakcerResponsePacket.java" />
@@ -135,6 +148,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/modernui.css" />
         <option value="$PROJECT_DIR$/src/main/java/uicontroller/MainWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/uicontroller/StatusTabController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/peer/PeerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/peer/PeerConnection.java" />
       </list>
     </option>
   </component>
@@ -839,13 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/peer/PeerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2502">
-          <caret line="157" column="3" selection-start-line="157" selection-start-column="3" selection-end-line="157" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/test.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/TrackerConnection.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/TorrentMeta.java" />
@@ -1064,10 +1072,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/peer/PeerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="318" column="43" selection-start-line="318" selection-start-column="43" selection-end-line="318" selection-end-column="43" />
+          <folding>
+            <element signature="e#5481#5482#0" expanded="true" />
+            <element signature="e#5533#5534#0" expanded="true" />
+            <element signature="e#11097#11098#0" expanded="true" />
+            <element signature="e#11124#11125#0" expanded="true" />
+            <element signature="e#11188#11189#0" expanded="true" />
+            <element signature="e#11238#11239#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/peer/PeerConnection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        <state relative-caret-position="2232">
+          <caret line="136" column="32" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="32" />
           <folding />
         </state>
       </provider>

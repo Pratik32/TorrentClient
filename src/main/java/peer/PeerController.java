@@ -35,7 +35,6 @@ public class PeerController implements UIController {
     private int numberOfBlocks;//per piece.
     private int numberOfPieces;
     private long totalFileSize=0;
-    private HashMap<Peer,List<Integer>> blocksMap=new HashMap<Peer,List<Integer>>();
     private List<Peer> peerList;
     private int pieceNo=0;
     private long trackerParams[]=new long[3];//downloaded,left,uploaded.
@@ -44,6 +43,7 @@ public class PeerController implements UIController {
     private BitSet completedBitField;
     private int[] pieceFrequency;
     private Logger logger;
+    private List<PeerConnection> peerConnections;
 
 
     /*
@@ -62,6 +62,7 @@ public class PeerController implements UIController {
         completedBitField=new BitSet(meta.getTotalPieces());
         pieceFrequency=new int[meta.getTotalPieces()];
         logger= CustomLogger.getInstance();
+        peerConnections=new ArrayList<PeerConnection>();
         initParams();
     }
 
@@ -75,13 +76,12 @@ public class PeerController implements UIController {
             activePeerList = getActivePeerList();
 
             //Assign a PeerConnection to each peer.
-            List<PeerConnection> connectionList = new ArrayList<PeerConnection>();
             for (Peer p : activePeerList) {
                 PeerConnection connection = new PeerConnection(p, meta, piece_data, this);
-                connectionList.add(connection);
+                peerConnections.add(connection);
                 connection.start();
             }
-            for (PeerConnection p:connectionList){
+            for (PeerConnection p:peerConnections){
                 p.join();
             }
         }catch (InterruptedException e) {
@@ -314,5 +314,8 @@ public class PeerController implements UIController {
 
     public TorrentMeta getTorrentMeta() {
         return meta;
+    }
+    public void removePeerConnetion(PeerConnection connection){
+        peerConnections.remove(connection);
     }
 }

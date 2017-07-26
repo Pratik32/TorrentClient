@@ -50,6 +50,7 @@ public class PeerConnection extends Thread{
     private PeerController peerController;
     private String threadID;
     private BitSet localBitField;
+    private long perUnitDownloaded;
     public PeerConnection(Peer peer,TorrentMeta meta,byte[] data,PeerController c){
         this.peer=peer;
         this.meta=meta;
@@ -502,6 +503,7 @@ public class PeerConnection extends Thread{
         logger.debug(threadID+" Closing the connection");
         try {
             socket.close();
+            peerController.removePeerConnetion(this);
         } catch (IOException e) {
             System.out.println(threadID+" connection was not established");
             logger.error(threadID+" connection was not established");
