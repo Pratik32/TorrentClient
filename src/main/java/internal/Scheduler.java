@@ -26,7 +26,7 @@ import static internal.Constants.UDP;
  * tracker request.
  *
  */
-public class Scheduler {
+public class Scheduler implements  Runnable{
 
     List<PeerController> controllerList;
     String errorString=" ";
@@ -64,6 +64,7 @@ public class Scheduler {
         torrentmetas are equal,return true if equal.
      */
     public boolean sessionExists(TorrentMeta meta){
+        System.out.println(SCHEDULAR_STRING+"Thread Id"+Thread.currentThread().getName());
         for (PeerController controller : controllerList) {
             if (controller.getTorrentMeta().equals(meta)){
                 return true;
@@ -135,5 +136,10 @@ public class Scheduler {
     }
     public  PeerController getThisPeerController(){
         return getPeerController(controllerList.size()-1);
+    }
+
+    public void run() {
+        System.out.println("Scheduler started.");
+        logger.debug(SCHEDULAR_STRING+"Scheduler started.");
     }
 }

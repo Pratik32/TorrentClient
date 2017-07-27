@@ -77,6 +77,13 @@ public class MainWindow extends Application implements Initializable{
         manager=new JFXDepthManager();
         manager.setDepth(list,2);
         scheduler=new Scheduler();
+        Thread thread=new Thread(scheduler);
+        thread.start();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         FXMLLoader loader=new FXMLLoader(getClass().getResource("/statustab.fxml"));
         try {
             loader.load();
@@ -91,15 +98,17 @@ public class MainWindow extends Application implements Initializable{
 
 
     public void onAddButtonClicked(){
+        System.out.println(MAINWINDOW+"Thread Id "+Thread.currentThread().getName());
         FileChooser fileChooser=new FileChooser();
         fileChooser.setTitle("Choose torrent file");
         FileChooser.ExtensionFilter extensionFilter=new FileChooser.ExtensionFilter("torrent files (*.torrent)","*.torrent");
         fileChooser.getExtensionFilters().add(extensionFilter);
-        File file=fileChooser.showOpenDialog(primary);
+        Stage stage=new Stage();
+        File file=fileChooser.showOpenDialog(stage);
         if (file!=null) {
             System.out.println(file.toString());
+            startNewTorrentSession(file.toString());
         }
-        startNewTorrentSession(file.toString());
     }
     private void startNewTorrentSession(String filename){
         TorrentMeta meta= Utils.createTorrentMeta(filename);
