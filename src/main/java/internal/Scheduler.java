@@ -26,7 +26,7 @@ import static internal.Constants.UDP;
  * tracker request.
  *
  */
-public class Scheduler implements  Runnable{
+public class Scheduler{
 
     List<PeerController> controllerList;
     String errorString=" ";
@@ -136,10 +136,5 @@ public class Scheduler implements  Runnable{
     }
     public  PeerController getThisPeerController(){
         return getPeerController(controllerList.size()-1);
-    }
-
-    public void run() {
-        System.out.println("Scheduler started.");
-        logger.debug(SCHEDULAR_STRING+"Scheduler started.");
     }
 }

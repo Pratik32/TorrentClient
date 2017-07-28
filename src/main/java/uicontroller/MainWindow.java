@@ -39,6 +39,8 @@ import java.util.ResourceBundle;
 public class MainWindow extends Application implements Initializable{
 
     public HBox menubar;
+    TorrentMeta meta;
+    boolean result;
     public static final String MAINWINDOW="[MainWindow]: ";
     public JFXListView list;
     JFXDepthManager manager;
@@ -77,13 +79,6 @@ public class MainWindow extends Application implements Initializable{
         manager=new JFXDepthManager();
         manager.setDepth(list,2);
         scheduler=new Scheduler();
-        Thread thread=new Thread(scheduler);
-        thread.start();
-        try {
-            thread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         FXMLLoader loader=new FXMLLoader(getClass().getResource("/statustab.fxml"));
         try {
             loader.load();
@@ -103,22 +98,44 @@ public class MainWindow extends Application implements Initializable{
         fileChooser.setTitle("Choose torrent file");
         FileChooser.ExtensionFilter extensionFilter=new FileChooser.ExtensionFilter("torrent files (*.torrent)","*.torrent");
         fileChooser.getExtensionFilters().add(extensionFilter);
-        Stage stage=new Stage();
-        File file=fileChooser.showOpenDialog(stage);
+        File file=fileChooser.showOpenDialog(null);
         if (file!=null) {
             System.out.println(file.toString());
             startNewTorrentSession(file.toString());
         }
     }
-    private void startNewTorrentSession(String filename){
-        TorrentMeta meta= Utils.createTorrentMeta(filename);
+    private void startNewTorrentSession(final String filename){
+        Runnable runnable=new Runnable() {
+            public void run() {
+                meta=Utils.createTorrentMeta(filename);
+            }
+        };
+        Thread thread=new Thread(runnable);
+        thread.start();
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         if(scheduler.sessionExists(meta)){
             System.out.println(MAINWINDOW+"Session already exits.");
             logger.debug(MAINWINDOW+"session already exists");
             //show a dialog box or some message box.
         }else{
             System.out.println(MAINWINDOW+"Starting a new session");
-            boolean result=scheduler.schedule(meta);
+            Runnable runnable1=new Runnable() {
+                public void run() {
+                    result=scheduler.schedule(meta);
+                }
+            };
+            Thread thread1=new Thread(runnable1);
+            thread1.start();
+            try {
+                thread1.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
             System.out.println(result);
             if(!result){
                 String errorString=scheduler.getErrorString();

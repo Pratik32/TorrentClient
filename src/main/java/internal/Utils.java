@@ -114,6 +114,7 @@ public class Utils {
         call this method inorder to create a TorrentMeta
      */
     public static TorrentMeta createTorrentMeta(String filename){
+        System.out.println("Thread Id is:"+Thread.currentThread().getName());
         File file=new File(filename);
         TorrentMeta meta=null;
         try {
