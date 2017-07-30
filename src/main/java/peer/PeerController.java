@@ -318,4 +318,18 @@ public class PeerController implements UIController {
     public void removePeerConnetion(PeerConnection connection){
         peerConnections.remove(connection);
     }
+
+    public long perUnitDownloadSpeed(){
+        long totalDownloaded=0;
+
+        for(PeerConnection connection:peerConnections){
+            totalDownloaded+=connection.getPerUnitDownloaded();
+        }
+        return totalDownloaded;
+    }
+    public String getETA(long perUnitDownloadSpeed){
+        double time=(double) totalFileSize/perUnitDownloadSpeed;
+        String timeString=Utils.getETAString(time);
+        return timeString;
+    }
 }

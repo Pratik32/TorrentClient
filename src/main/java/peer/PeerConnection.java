@@ -22,10 +22,12 @@ import static internal.Constants.*;
  * Right now Peer class is just a POJO for storing peer related information.
  * The actual handling of message flow is done by this class.
  * This class has different methods for sending different types of messages to peer.
- * Ideally it should extend Thread/Runnable and run independently.
+ * Ideally it should extend Thread/Runnable and run independently(and it is.)
  *
  * NOTE : When a PeerConnection is assigned with a piece,It will download all of it's blocks.
- *        once all the blocks are downloaded PeerController may assign it with new piece.
+ *        once all the blocks are downloaded PeerController may assign it with new piece based
+ *        on availability.
+ *
  */
 public class PeerConnection extends Thread{
     private  Peer peer;
@@ -431,6 +433,7 @@ public class PeerConnection extends Thread{
             while(copied<blockData.length){
                 blockData[copied++]=inputStream.readByte();
             }
+            perUnitDownloaded=copied-1;
             System.out.println(threadID+" Data actually copied :"+copied+"Bytes");
             System.arraycopy(blockData,0,piece_data,offset,blockData.length);
 
@@ -635,5 +638,11 @@ public class PeerConnection extends Thread{
             }
         }
         return false;
+    }
+    public long getPerUnitDownloaded(){
+        long temp=perUnitDownloaded;
+        this.peer.downloadSpeed=perUnitDownloaded;
+        perUnitDownloaded=0;
+        return temp;
     }
 }

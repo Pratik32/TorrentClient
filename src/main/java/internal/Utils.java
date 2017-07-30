@@ -125,5 +125,11 @@ public class Utils {
         }
         return meta;
     }
-
+    /*
+        Method yet to be completed.
+     */
+    public static String getETAString(double time){
+        String timeString=null;
+        return timeString;
+    }
 }

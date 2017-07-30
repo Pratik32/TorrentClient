@@ -11,6 +11,8 @@ public class Peer {
 
     InetSocketAddress address;
     byte[] peer_id;
+    double downloadSpeed;
+    double uploadSpeed;
 
     public Peer(InetSocketAddress address,byte[] peer_id){
         this.address=address;
