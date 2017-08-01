@@ -13,12 +13,12 @@
          <children>
             <VBox prefHeight="78.0" prefWidth="512.0">
                <children>
-                  <Label prefHeight="30.0" prefWidth="153.0" text="NAME">
+                  <Label prefHeight="30.0" prefWidth="153.0" text="NAME" textFill="WHITE">
                      <VBox.margin>
                         <Insets left="30.0" top="15.0" />
                      </VBox.margin>
                   </Label>
-                  <Label prefHeight="25.0" prefWidth="395.0">
+                  <Label fx:id="name" prefHeight="25.0" prefWidth="395.0" textFill="#666666">
                      <VBox.margin>
                         <Insets left="30.0" />
                      </VBox.margin>
@@ -32,12 +32,12 @@
             </VBox>
             <VBox layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="516.0">
                <children>
-                  <Label prefHeight="30.0" prefWidth="153.0" text="STORAGE PATH">
+                  <Label prefHeight="30.0" prefWidth="153.0" text="STORAGE PATH" textFill="WHITE">
                      <VBox.margin>
                         <Insets left="30.0" top="15.0" />
                      </VBox.margin>
                   </Label>
-                  <Label prefHeight="25.0" prefWidth="395.0">
+                  <Label fx:id="path" prefHeight="25.0" prefWidth="395.0" textFill="#666666">
                      <VBox.margin>
                         <Insets left="30.0" />
                      </VBox.margin>
@@ -51,12 +51,12 @@
             </VBox>
             <VBox layoutX="10.0" layoutY="88.0" prefHeight="80.0" prefWidth="516.0">
                <children>
-                  <Label prefHeight="30.0" prefWidth="153.0" text="TOTAL PATH">
+                  <Label prefHeight="30.0" prefWidth="153.0" text="TOTAL SIZE" textFill="WHITE">
                      <VBox.margin>
                         <Insets left="30.0" top="15.0" />
                      </VBox.margin>
                   </Label>
-                  <Label prefHeight="25.0" prefWidth="395.0">
+                  <Label fx:id="size" prefHeight="25.0" prefWidth="395.0" textFill="#666666">
                      <VBox.margin>
                         <Insets left="30.0" />
                      </VBox.margin>
@@ -70,12 +70,12 @@
             </VBox>
             <VBox layoutX="10.0" layoutY="168.0" prefHeight="80.0" prefWidth="516.0">
                <children>
-                  <Label prefHeight="30.0" prefWidth="153.0" text="HASH">
+                  <Label prefHeight="30.0" prefWidth="153.0" text="HASH" textFill="WHITE">
                      <VBox.margin>
                         <Insets left="30.0" top="15.0" />
                      </VBox.margin>
                   </Label>
-                  <Label prefHeight="25.0" prefWidth="395.0">
+                  <Label fx:id="hash" prefHeight="25.0" prefWidth="395.0" textFill="#666666">
                      <VBox.margin>
                         <Insets left="30.0" />
                      </VBox.margin>
@@ -89,12 +89,12 @@
             </VBox>
             <VBox layoutX="10.0" layoutY="248.0" prefHeight="80.0" prefWidth="516.0">
                <children>
-                  <Label prefHeight="30.0" prefWidth="153.0" text="COMMENTS">
+                  <Label prefHeight="30.0" prefWidth="153.0" text="COMMENTS" textFill="WHITE">
                      <VBox.margin>
                         <Insets left="30.0" top="15.0" />
                      </VBox.margin>
                   </Label>
-                  <Label prefHeight="25.0" prefWidth="395.0">
+                  <Label fx:id="comments" prefHeight="25.0" prefWidth="395.0" textFill="#666666">
                      <VBox.margin>
                         <Insets left="30.0" />
                      </VBox.margin>
