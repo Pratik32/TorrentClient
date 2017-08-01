@@ -1194,3 +1194,212 @@
 [Thread-4] DEBUG peer.PeerConnection  - /185.45.195.196:20114
 [Thread-4] DEBUG peer.PeerConnection  - /185.56.20.36:52639
 [Thread-4] DEBUG peer.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2106blocks per piece32
+[Thread-4] DEBUG peer.PeerConnection  - Crafting tracker request packet
+[Thread-4] DEBUG peer.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[Thread-4] DEBUG peer.PeerConnection  - Received tracker response with response code :200
+[Thread-4] DEBUG peer.PeerConnection  - Successfully decoded tracker responses.
+[Thread-4] DEBUG peer.PeerConnection  - Crafting the response packet.
+[Thread-4] DEBUG peer.PeerConnection  - [Scheduler]: Found following peers.
+[Thread-4] DEBUG peer.PeerConnection  - /94.16.74.59:51413
+[Thread-4] DEBUG peer.PeerConnection  - /96.81.62.177:6881
+[Thread-4] DEBUG peer.PeerConnection  - /136.62.160.39:51413
+[Thread-4] DEBUG peer.PeerConnection  - /188.27.94.12:60300
+[Thread-4] DEBUG peer.PeerConnection  - /201.187.55.227:51413
+[Thread-4] DEBUG peer.PeerConnection  - /91.189.95.21:6883
+[Thread-4] DEBUG peer.PeerConnection  - /90.65.84.223:53413
+[Thread-4] DEBUG peer.PeerConnection  - /213.32.45.161:45000
+[Thread-4] DEBUG peer.PeerConnection  - /65.111.114.207:58028
+[Thread-4] DEBUG peer.PeerConnection  - /151.41.61.151:6882
+[Thread-4] DEBUG peer.PeerConnection  - /80.127.227.202:6881
+[Thread-4] DEBUG peer.PeerConnection  - /88.87.85.248:51413
+[Thread-4] DEBUG peer.PeerConnection  - /2.37.143.156:51413
+[Thread-4] DEBUG peer.PeerConnection  - /188.55.159.239:54321
+[Thread-4] DEBUG peer.PeerConnection  - /79.81.216.96:9000
+[Thread-4] DEBUG peer.PeerConnection  - /47.55.70.1:58465
+[Thread-4] DEBUG peer.PeerConnection  - /91.121.138.25:45000
+[Thread-4] DEBUG peer.PeerConnection  - /153.3.169.132:8859
+[Thread-4] DEBUG peer.PeerConnection  - /109.194.110.76:10002
+[Thread-4] DEBUG peer.PeerConnection  - /103.224.116.250:49538
+[Thread-4] DEBUG peer.PeerConnection  - /136.32.213.237:51413
+[Thread-4] DEBUG peer.PeerConnection  - /99.62.112.135:51413
+[Thread-4] DEBUG peer.PeerConnection  - /5.58.30.20:62404
+[Thread-4] DEBUG peer.PeerConnection  - /2.138.225.165:5001
+[Thread-4] DEBUG peer.PeerConnection  - /192.131.44.88:61000
+[Thread-4] DEBUG peer.PeerConnection  - /88.156.181.147:9062
+[Thread-4] DEBUG peer.PeerConnection  - /75.101.100.46:5141
+[Thread-4] DEBUG peer.PeerConnection  - /206.225.82.161:47780
+[Thread-4] DEBUG peer.PeerConnection  - /104.229.31.179:18201
+[Thread-4] DEBUG peer.PeerConnection  - /95.66.157.157:51600
+[Thread-4] DEBUG peer.PeerConnection  - /67.40.5.49:51413
+[Thread-4] DEBUG peer.PeerConnection  - /24.118.88.123:60125
+[Thread-4] DEBUG peer.PeerConnection  - /72.235.129.122:6881
+[Thread-4] DEBUG peer.PeerConnection  - /62.210.253.27:45000
+[Thread-4] DEBUG peer.PeerConnection  - /198.84.236.198:59296
+[Thread-4] DEBUG peer.PeerConnection  - /89.24.241.85:51413
+[Thread-4] DEBUG peer.PeerConnection  - /158.130.170.97:51413
+[Thread-4] DEBUG peer.PeerConnection  - /185.21.216.195:56544
+[Thread-4] DEBUG peer.PeerConnection  - /151.80.32.81:51413
+[Thread-4] DEBUG peer.PeerConnection  - /2.94.218.9:55327
+[Thread-4] DEBUG peer.PeerConnection  - /190.31.186.196:51413
+[Thread-4] DEBUG peer.PeerConnection  - /91.189.95.21:6898
+[Thread-4] DEBUG peer.PeerConnection  - /37.48.124.178:33112
+[Thread-4] DEBUG peer.PeerConnection  - /59.167.248.189:51413
+[Thread-4] DEBUG peer.PeerConnection  - /79.103.189.169:19754
+[Thread-4] DEBUG peer.PeerConnection  - /209.134.95.37:51413
+[Thread-4] DEBUG peer.PeerConnection  - /88.81.45.78:6881
+[Thread-4] DEBUG peer.PeerConnection  - /78.233.70.179:47395
+[Thread-4] DEBUG peer.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2106blocks per piece32
+[Thread-4] DEBUG peer.PeerConnection  - Crafting tracker request packet
+[Thread-4] DEBUG peer.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[Thread-4] DEBUG peer.PeerConnection  - Received tracker response with response code :200
+[Thread-4] DEBUG peer.PeerConnection  - Successfully decoded tracker responses.
+[Thread-4] DEBUG peer.PeerConnection  - Crafting the response packet.
+[Thread-4] DEBUG peer.PeerConnection  - [Scheduler]: Found following peers.
+[Thread-4] DEBUG peer.PeerConnection  - /133.218.61.70:49301
+[Thread-4] DEBUG peer.PeerConnection  - /51.15.3.216:51413
+[Thread-4] DEBUG peer.PeerConnection  - /136.62.160.39:51413
+[Thread-4] DEBUG peer.PeerConnection  - /75.101.100.46:5141
+[Thread-4] DEBUG peer.PeerConnection  - /79.124.104.34:21400
+[Thread-4] DEBUG peer.PeerConnection  - /203.59.187.155:6881
+[Thread-4] DEBUG peer.PeerConnection  - /68.111.229.128:6881
+[Thread-4] DEBUG peer.PeerConnection  - /76.173.91.19:41350
+[Thread-4] DEBUG peer.PeerConnection  - /88.87.85.248:51413
+[Thread-4] DEBUG peer.PeerConnection  - /213.123.4.141:51413
+[Thread-4] DEBUG peer.PeerConnection  - /91.189.95.21:6930
+[Thread-4] DEBUG peer.PeerConnection  - /185.21.217.21:58903
+[Thread-4] DEBUG peer.PeerConnection  - /80.220.46.71:27200
+[Thread-4] DEBUG peer.PeerConnection  - /89.36.218.186:6881
+[Thread-4] DEBUG peer.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2106blocks per piece32
+[Thread-4] DEBUG peer.PeerConnection  - Crafting tracker request packet
+[Thread-4] DEBUG peer.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[Thread-4] DEBUG peer.PeerConnection  - Received tracker response with response code :200
+[Thread-4] DEBUG peer.PeerConnection  - Successfully decoded tracker responses.
+[Thread-4] DEBUG peer.PeerConnection  - Crafting the response packet.
+[Thread-4] DEBUG peer.PeerConnection  - [Scheduler]: Found following peers.
+[Thread-4] DEBUG peer.PeerConnection  - /96.43.143.156:42864
+[Thread-4] DEBUG peer.PeerConnection  - /99.62.112.135:51413
+[Thread-4] DEBUG peer.PeerConnection  - /185.45.195.192:20170
+[Thread-4] DEBUG peer.PeerConnection  - /82.144.192.7:61678
+[Thread-4] DEBUG peer.PeerConnection  - /128.112.18.21:60000
+[Thread-4] DEBUG peer.PeerConnection  - /79.137.115.152:51413
+[Thread-4] DEBUG peer.PeerConnection  - /81.2.209.10:6881
+[Thread-4] DEBUG peer.PeerConnection  - /62.165.217.200:25252
+[Thread-4] DEBUG peer.PeerConnection  - /185.21.217.60:59869
+[Thread-4] DEBUG peer.PeerConnection  - /163.172.195.211:12011
+[Thread-4] DEBUG peer.PeerConnection  - /51.15.51.231:33071
+[Thread-4] DEBUG peer.PeerConnection  - /190.31.186.196:51413
+[Thread-4] DEBUG peer.PeerConnection  - /213.123.4.141:51413
+[Thread-4] DEBUG peer.PeerConnection  - /209.134.95.37:51413
+[Thread-4] DEBUG peer.PeerConnection  - /89.36.218.186:6881
+[Thread-4] DEBUG peer.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2106blocks per piece32
+[Thread-4] DEBUG peer.PeerConnection  - Crafting tracker request packet
+[Thread-4] DEBUG peer.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[Thread-4] DEBUG peer.PeerConnection  - Received tracker response with response code :200
+[Thread-4] DEBUG peer.PeerConnection  - Successfully decoded tracker responses.
+[Thread-4] DEBUG peer.PeerConnection  - Crafting the response packet.
+[Thread-4] DEBUG peer.PeerConnection  - [Scheduler]: Found following peers.
+[Thread-4] DEBUG peer.PeerConnection  - /37.146.15.123:51413
+[Thread-4] DEBUG peer.PeerConnection  - /195.154.163.119:6881
+[Thread-4] DEBUG peer.PeerConnection  - /136.62.160.39:51413
+[Thread-4] DEBUG peer.PeerConnection  - /201.187.55.227:51413
+[Thread-4] DEBUG peer.PeerConnection  - /128.112.18.21:60000
+[Thread-4] DEBUG peer.PeerConnection  - /146.115.161.94:51413
+[Thread-4] DEBUG peer.PeerConnection  - /85.191.49.97:51413
+[Thread-4] DEBUG peer.PeerConnection  - /62.165.217.200:25252
+[Thread-4] DEBUG peer.PeerConnection  - /65.111.114.207:58028
+[Thread-4] DEBUG peer.PeerConnection  - /185.47.160.149:62184
+[Thread-4] DEBUG peer.PeerConnection  - /77.68.215.187:42000
+[Thread-4] DEBUG peer.PeerConnection  - /103.224.116.250:49844
+[Thread-4] DEBUG peer.PeerConnection  - /185.21.217.60:59869
+[Thread-4] DEBUG peer.PeerConnection  - /92.111.172.106:6995
+[Thread-4] DEBUG peer.PeerConnection  - /208.102.218.66:61426
+[Thread-4] DEBUG peer.PeerConnection  - /46.38.254.99:50000
+[Thread-4] DEBUG peer.PeerConnection  - /194.135.91.252:58785
+[Thread-4] DEBUG peer.PeerConnection  - /178.66.27.135:55443
+[Thread-4] DEBUG peer.PeerConnection  - /31.211.102.129:63947
+[Thread-4] DEBUG peer.PeerConnection  - /178.185.45.75:51413
+[Thread-4] DEBUG peer.PeerConnection  - /154.0.7.134:50005
+[Thread-4] DEBUG peer.PeerConnection  - /96.43.143.156:42864
+[Thread-4] DEBUG peer.PeerConnection  - /46.246.39.59:15963
+[Thread-4] DEBUG peer.PeerConnection  - /51.15.3.216:51413
+[Thread-4] DEBUG peer.PeerConnection  - /62.210.83.117:55100
+[Thread-4] DEBUG peer.PeerConnection  - /77.51.190.230:51051
+[Thread-4] DEBUG peer.PeerConnection  - /75.101.100.46:5141
+[Thread-4] DEBUG peer.PeerConnection  - /79.137.115.152:51413
+[Thread-4] DEBUG peer.PeerConnection  - /206.225.82.161:47780
+[Thread-4] DEBUG peer.PeerConnection  - /81.2.209.10:6881
+[Thread-4] DEBUG peer.PeerConnection  - /195.154.221.27:51413
+[Thread-4] DEBUG peer.PeerConnection  - /176.10.223.151:10000
+[Thread-4] DEBUG peer.PeerConnection  - /91.189.95.21:6907
+[Thread-4] DEBUG peer.PeerConnection  - /188.6.27.84:51413
+[Thread-4] DEBUG peer.PeerConnection  - /96.60.11.62:51413
+[Thread-4] DEBUG peer.PeerConnection  - /91.210.87.205:51413
+[Thread-4] DEBUG peer.PeerConnection  - /185.148.3.186:63853
+[Thread-4] DEBUG peer.PeerConnection  - /24.12.4.215:6881
+[Thread-4] DEBUG peer.PeerConnection  - /89.223.36.18:51415
+[Thread-4] DEBUG peer.PeerConnection  - /151.80.32.81:51413
+[Thread-4] DEBUG peer.PeerConnection  - /2.94.218.9:55327
+[Thread-4] DEBUG peer.PeerConnection  - /5.167.238.10:51413
+[Thread-4] DEBUG peer.PeerConnection  - /82.235.211.63:51413
+[Thread-4] DEBUG peer.PeerConnection  - /137.226.34.232:16883
+[Thread-4] DEBUG peer.PeerConnection  - /195.154.226.249:64808
+[Thread-4] DEBUG peer.PeerConnection  - /171.100.166.34:17661
+[Thread-4] DEBUG peer.PeerConnection  - /185.21.216.188:64175
+[Thread-4] DEBUG peer.PeerConnection  - /88.81.45.78:6881
+[Thread-4] DEBUG peer.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2106blocks per piece32
+[Thread-4] DEBUG peer.PeerConnection  - Crafting tracker request packet
+[Thread-4] DEBUG peer.PeerConnection  - Trakcer url is :http://torrent.ubuntu.com:6969/announce?info_hash=4%93%06t%EF%3B%B91%7F%B5%F2c%CC%A80%F5%26%85%23%5B&peer_id=-TO0042-0ab8e8a31019&port=6881&uploaded=0&downloaded=0&left=1104052224&event=started&compact=1
+[Thread-4] DEBUG peer.PeerConnection  - Received tracker response with response code :200
+[Thread-4] DEBUG peer.PeerConnection  - Successfully decoded tracker responses.
+[Thread-4] DEBUG peer.PeerConnection  - Crafting the response packet.
+[Thread-4] DEBUG peer.PeerConnection  - [Scheduler]: Found following peers.
+[Thread-4] DEBUG peer.PeerConnection  - /133.218.61.70:49301
+[Thread-4] DEBUG peer.PeerConnection  - /5.79.78.5:61006
+[Thread-4] DEBUG peer.PeerConnection  - /188.27.94.12:60300
+[Thread-4] DEBUG peer.PeerConnection  - /185.21.216.149:52477
+[Thread-4] DEBUG peer.PeerConnection  - /185.148.3.172:61926
+[Thread-4] DEBUG peer.PeerConnection  - /62.176.19.146:64932
+[Thread-4] DEBUG peer.PeerConnection  - /96.236.37.3:6881
+[Thread-4] DEBUG peer.PeerConnection  - /188.213.49.218:38018
+[Thread-4] DEBUG peer.PeerConnection  - /77.68.215.187:42000
+[Thread-4] DEBUG peer.PeerConnection  - /202.174.185.166:28057
+[Thread-4] DEBUG peer.PeerConnection  - /76.119.135.44:43068
+[Thread-4] DEBUG peer.PeerConnection  - /68.111.229.128:6881
+[Thread-4] DEBUG peer.PeerConnection  - /37.133.34.188:51413
+[Thread-4] DEBUG peer.PeerConnection  - /90.127.207.64:51413
+[Thread-4] DEBUG peer.PeerConnection  - /107.188.237.43:61434
+[Thread-4] DEBUG peer.PeerConnection  - /188.55.159.239:54321
+[Thread-4] DEBUG peer.PeerConnection  - /176.124.255.15:51413
+[Thread-4] DEBUG peer.PeerConnection  - /91.144.105.116:19991
+[Thread-4] DEBUG peer.PeerConnection  - /94.209.41.236:6881
+[Thread-4] DEBUG peer.PeerConnection  - /103.224.116.250:49538
+[Thread-4] DEBUG peer.PeerConnection  - /96.43.143.156:42864
+[Thread-4] DEBUG peer.PeerConnection  - /185.45.195.192:20170
+[Thread-4] DEBUG peer.PeerConnection  - /75.101.100.46:5141
+[Thread-4] DEBUG peer.PeerConnection  - /85.145.139.101:51413
+[Thread-4] DEBUG peer.PeerConnection  - /96.60.11.62:51413
+[Thread-4] DEBUG peer.PeerConnection  - /188.6.27.84:51413
+[Thread-4] DEBUG peer.PeerConnection  - /72.235.129.122:6881
+[Thread-4] DEBUG peer.PeerConnection  - /63.210.25.139:6884
+[Thread-4] DEBUG peer.PeerConnection  - /72.49.236.87:12700
+[Thread-4] DEBUG peer.PeerConnection  - /195.154.163.119:6881
+[Thread-4] DEBUG peer.PeerConnection  - /96.81.62.177:6881
+[Thread-4] DEBUG peer.PeerConnection  - /90.65.84.223:53413
+[Thread-4] DEBUG peer.PeerConnection  - /146.115.161.94:51413
+[Thread-4] DEBUG peer.PeerConnection  - /62.165.217.200:25252
+[Thread-4] DEBUG peer.PeerConnection  - /68.39.64.15:51413
+[Thread-4] DEBUG peer.PeerConnection  - /192.171.47.33:8151
+[Thread-4] DEBUG peer.PeerConnection  - /92.207.69.172:51419
+[Thread-4] DEBUG peer.PeerConnection  - /178.66.27.135:55443
+[Thread-4] DEBUG peer.PeerConnection  - /136.32.213.237:51413
+[Thread-4] DEBUG peer.PeerConnection  - /82.144.192.7:61678
+[Thread-4] DEBUG peer.PeerConnection  - /88.156.181.147:9062
+[Thread-4] DEBUG peer.PeerConnection  - /95.42.19.145:39355
+[Thread-4] DEBUG peer.PeerConnection  - /79.137.115.152:51413
+[Thread-4] DEBUG peer.PeerConnection  - /195.154.222.46:6848
+[Thread-4] DEBUG peer.PeerConnection  - /163.172.128.52:8999
+[Thread-4] DEBUG peer.PeerConnection  - /185.45.195.196:20114
+[Thread-4] DEBUG peer.PeerConnection  - /171.100.166.34:17661
+[Thread-4] DEBUG peer.PeerConnection  - /62.210.192.180:53496
+[Thread-4] DEBUG peer.PeerConnection  - /85.57.55.112:51413
+[Thread-4] DEBUG peer.PeerConnection  - Init Params: piece length :524288blockLength :16384TotalSize :1104052224pieces:2106blocks per piece32

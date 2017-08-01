@@ -53,6 +53,7 @@ public class MainWindow extends Application implements Initializable{
     public Tab detailstab;
     public Tab statustab;
     public StatusTabController statusTabController;
+    public DetailsTabController detailsTabController;
 
 
     public void start(Stage primaryStage) throws Exception {
@@ -87,6 +88,7 @@ public class MainWindow extends Application implements Initializable{
             e.printStackTrace();
         }
         statusTabController=new StatusTabController();
+        detailsTabController=new DetailsTabController();
 
 
     }
@@ -173,7 +175,8 @@ public class MainWindow extends Application implements Initializable{
     private void initializeTabPane(TorrentMeta meta,PeerController controller){
         AnchorPane pane=statusTabController.setupStatusTab(meta);
         statustab.setContent(pane);
-        setupDetailsTab(meta);
+        AnchorPane pane1=detailsTabController.setupDetailsTab(meta,"/usr/temp/local");
+        detailstab.setContent(pane1);
         setupFilesTab(meta);
         setupTrackerTab(meta);
         setupPeersTab(meta,controller);
