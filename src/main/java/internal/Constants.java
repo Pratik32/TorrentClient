@@ -1,6 +1,5 @@
 package internal;
 
-import org.apache.log4j.Logger;
 
 /**
  * Created by ps on 26/3/17.

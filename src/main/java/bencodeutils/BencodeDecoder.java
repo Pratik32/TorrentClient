@@ -10,7 +10,7 @@ import java.util.Map;
  * Created by ps on 24/3/17.
  *
  * This class is used for decoding torrent-file.
- * As torrent file does not have any encoding(UTF,ASCII)
+ * As torrent file/(torrent meta deta) has special type of encoding known as bencoding.
  * Parsing is done at byte level.
  * Refer : https://wiki.theory.org/index.php/BitTorrentSpecification#Bencoding.
  */

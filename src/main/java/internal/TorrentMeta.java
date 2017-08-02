@@ -11,7 +11,7 @@ import java.util.*;
 
 /**
  * Created by ps on 17/3/17.
- * Class representation of .torrent file.
+ * Class representation of .torrent file/magnet url.
  * Note:(added on 18/07)->Two torrent metas are equal
  * only if they have same info_hash values.because a torrent
  * file represents a torrent swarm while a torrent swarm is

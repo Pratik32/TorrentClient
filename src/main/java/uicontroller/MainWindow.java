@@ -35,6 +35,12 @@ import java.util.ResourceBundle;
 
 /**
  * Created by ps on 15/6/17.
+ * This class represents the front-end of the application.
+ * All the sub-components that includes (tabs on tabpane) have there
+ * own controllers and are loaded from seperate fxml files.
+ *
+ * This class takes the actual user-input i.e .torrent file or
+ * magnet url and assigns it to scheduler for scheduling.
  */
 public class MainWindow extends Application implements Initializable{
 

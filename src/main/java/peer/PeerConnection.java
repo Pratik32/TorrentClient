@@ -18,11 +18,12 @@ import static internal.Constants.*;
 /**
  * Created by ps on 6/4/17.
  *
+ * This is where magic happens!.
  * This class represents an interface for connecting a peer
  * Right now Peer class is just a POJO for storing peer related information.
  * The actual handling of message flow is done by this class.
  * This class has different methods for sending different types of messages to peer.
- * Ideally it should extend Thread/Runnable and run independently(and it is.)
+ * Extends Thread/Runnable and run independently.
  *
  * NOTE : When a PeerConnection is assigned with a piece,It will download all of it's blocks.
  *        once all the blocks are downloaded PeerController may assign it with new piece based

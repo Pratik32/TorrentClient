@@ -13,12 +13,14 @@ import java.io.IOException;
 /**
  * Created by ps on 25/7/17.
  * Represents the content of status-tab in tabpane.
- * When no torrent session is scheduled the status-tab
- * will show 'No Content' when a download is scheduled
+ * When no torrent session is scheduled, the status-tab
+ * will show No Content message.When a download is scheduled
  * or when item on session list is clicked the status-tab
- * is loaded from statustab.fxml with this class as controller.
+ * is updated with given torrent session's data.
  */
 public class StatusTabController {
+
+    public static final String FXML_FILE ="/status.fxml";
     @FXML
     public Label title;
     public Label downloadinglabel;
@@ -35,7 +37,7 @@ public class StatusTabController {
     FXMLLoader loader;
     public AnchorPane setupStatusTab(TorrentMeta meta){
         if (loader==null) {
-            loader = new FXMLLoader(getClass().getResource("/statustab.fxml"));
+            loader = new FXMLLoader(getClass().getResource(FXML_FILE));
             loader.setController(this);
         }
         try {

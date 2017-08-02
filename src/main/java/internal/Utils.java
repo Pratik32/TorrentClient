@@ -17,9 +17,9 @@ import java.util.Random;
 
 /**
  * Created by ps on 6/4/17.
- * This class has been created with an intention that,it will contain general
- * purpose methods like crafting different packets(tracker:request,response,DHT queries)
- * parsing bencoded responses,writing bytes to files.
+ * This class  contain generalpurpose methods like crafting different
+ * packets(tracker:request,response,DHT queries)
+ * parsing bencoded responses,writing bytes to files and many more.
  */
 public class Utils {
 
@@ -101,6 +101,9 @@ public class Utils {
         return random.nextInt();
     }
 
+    /*
+        Convert bytes to human readable format(String).
+     */
     public static String getConvertedBytes(long bytes){
         if (bytes<1024){
             return bytes+"B";

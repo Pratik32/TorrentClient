@@ -9,8 +9,11 @@ import java.io.IOException;
 
 /**
  * Created by ps on 2/8/17.
+ * This controller class handles UI updates related to DetailsTabController.
+ * most of the Labels are static and won't require any timely updates.
  */
 public class DetailsTabController {
+    public static final String FXML_FILE="/detailstab.fxml";
     public Label name;
     public Label path;
     public Label size;
@@ -22,7 +25,7 @@ public class DetailsTabController {
 
     public AnchorPane setupDetailsTab(TorrentMeta meta,String storagePath){
         if (loader==null) {
-            loader = new FXMLLoader(getClass().getResource("/detailstab.fxml"));
+            loader = new FXMLLoader(getClass().getResource(FXML_FILE));
             loader.setController(this);
         }
         try {
