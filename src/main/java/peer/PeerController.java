@@ -70,7 +70,7 @@ public class PeerController implements UIController {
         starts the peer controller.
      */
     public void start(){
-        try {
+        //try {
             logger.debug("PeerController started");
             byte[] piece_data = new byte[(int) pieceLength];
             activePeerList = getActivePeerList();
@@ -81,12 +81,12 @@ public class PeerController implements UIController {
                 peerConnections.add(connection);
                 connection.start();
             }
-            for (PeerConnection p:peerConnections){
+          /*  for (PeerConnection p:peerConnections){
                 p.join();
-            }
+
         }catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 
@@ -145,7 +145,7 @@ public class PeerController implements UIController {
     private List<Peer> getActivePeerList(){
         List<Peer> active=new ArrayList<Peer>(5);
         System.out.println(peerList.size());
-        for(int i=0;i<5;i++){
+        for(int i=0;i<7;i++){
             //Peer p=peerList.remove(i);
             active.add(peerList.get(i));
         }

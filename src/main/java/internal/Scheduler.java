@@ -24,7 +24,9 @@ import static internal.Constants.UDP;
  * All the pre-computation required to start a PeerController
  * are done by Scheduler which includes bencode decoding,initial
  * tracker request.
- *
+ * Single instance of scheduler is maintained for all sessions.
+ * Once the session has started,MainWindow can directly talk to
+ * respective PeerController instance for UI updates and user Inputs.
  */
 public class Scheduler{
 

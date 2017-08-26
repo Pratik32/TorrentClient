@@ -163,7 +163,6 @@ public class PeerConnection extends Thread{
             if (verifyHandshake()) {
                 System.out.println(threadID+" Peer id verified.");
                 logger.debug(threadID+" Peer id verified.");
-                keepRunning=false;
                 while (keepRunning) {
                     len=inputStream.readInt();
                     code=inputStream.readByte();
@@ -553,8 +552,8 @@ public class PeerConnection extends Thread{
     private void receiveHave(){
         try {
             int pieceIndex=inputStream.readInt();
-            System.out.println(threadID+" received have from piece index :"+pieceIndex);
-            logger.debug(threadID+" received have from piece index :"+pieceIndex);
+            System.out.println(threadID+" received have for piece index :"+pieceIndex);
+            logger.debug(threadID+" received have for piece index :"+pieceIndex);
             localBitField.set(pieceIndex,true);
             peerController.updateGlobalBitField(pieceIndex);
         } catch (IOException e) {

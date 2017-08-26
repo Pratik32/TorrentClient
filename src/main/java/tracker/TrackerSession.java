@@ -153,6 +153,7 @@ public  abstract class TrackerSession {
             }
             //special case for handling Timeout related errors.
         }else if(getStatus()==STATUSCODE.TIMOUT.getStatus()){
+            System.out.println("response is null");
             responsePacket.setStatusCode(0);
         }else{
             responsePacket.setStatusCode(-1);

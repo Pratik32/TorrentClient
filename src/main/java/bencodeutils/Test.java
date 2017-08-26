@@ -23,12 +23,10 @@ import static internal.Constants.RESOURCE_DIR;
  * Created by ps on 24/3/17.
  */
 public class Test {
-     static Logger logger= CustomLogger.getInstance();
+    static Logger logger= CustomLogger.getInstance();
     public static void main(String[] args) throws InterruptedException, IOException {
-        DHTConnection connection=new DHTConnection();
-        connection.connect();
         initialize();
-         File file=new File(RESOURCE_DIR+"music.torrent");
+        File file=new File(RESOURCE_DIR+"stub.torrent");
         byte[] data;
         try {
             /*
@@ -47,6 +45,7 @@ public class Test {
             PeerController controller=new PeerController(meta,peerList);
             controller.start();
 
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -55,10 +54,10 @@ public class Test {
     private static void printPeerInfo(Set<InetSocketAddress> addresses){
         System.out.println("Found peer :");
         logger.debug("Found following peers.");
-       for(InetSocketAddress ip:addresses ){
-           logger.debug(ip.toString());
-           System.out.println(ip.toString());
-       }
+        for(InetSocketAddress ip:addresses ){
+            logger.debug(ip.toString());
+            System.out.println(ip.toString());
+        }
     }
     /*
         This method is intended to setup environment for
@@ -76,7 +75,7 @@ public class Test {
 
      */
     public  static void individualPeerTest(TorrentMeta meta) throws IOException, InterruptedException {
-       List<Peer> peerList=getInitialPeerList(meta);
+        List<Peer> peerList=getInitialPeerList(meta);
         PeerConnection connection=new PeerConnection(peerList.get(1),meta,null,null);
         connection.connect();
     }
@@ -95,29 +94,26 @@ public class Test {
         TrakcerResponsePacket response=null;
         List<Peer> peerList=new ArrayList<Peer>();
         Set<Peer> peers=new HashSet<Peer>();
-        for(String str:trackerUrls){
-            if(str.startsWith("http")){
-                session=new HttpTrackerSession(meta,str);
-            }
-            else if(str.startsWith("udp")){
-                session=new UdpTrackerSession(meta,str);
-            }
-            else {
-                System.out.println("Invalid tracker url :"+ str);
-                logger.error("Invalid tracker url :"+ str);
+        for(String str:trackerUrls) {
+            if (str.startsWith("http")) {
+                session = new HttpTrackerSession(meta, str);
+            } else if (str.startsWith("udp")) {
+                session = new UdpTrackerSession(meta, str);
+            } else {
+                System.out.println("Invalid tracker url :" + str);
+                logger.error("Invalid tracker url :" + str);
                 continue;
             }
-            response=session.sendRequest(packet);
-            if(response==null){
-                System.out.println("Connection time out from :"+ str);
-                logger.error("Connection time out from :"+str);
+            response = session.sendRequest(packet);
+            if (response == null || response.getStatusCode()==0 || response.getStatusCode()==-1) {
+                System.out.println("Connection time out from :" + str);
+                logger.error("Connection time out from :" + str);
                 continue;
             }
-            Map<InetSocketAddress,byte[]> peer_info=response.getPeer_info();//for debugging purpose.
+            Map<InetSocketAddress, byte[]> peer_info = response.getPeer_info();//for debugging purpose.
             printPeerInfo(peer_info.keySet());//for debugging purpose
-            List<Peer> temp=Utils.getPeerList(response);
+            List<Peer> temp = Utils.getPeerList(response);
             peerList.addAll(temp);
-            break;
             //peers.addAll(temp);
         }
         //System.out.println("Peer set is :");

@@ -39,7 +39,7 @@ public class UdpTrackerSession extends TrackerSession {
             InetSocketAddress address=new InetSocketAddress(uri.getHost(),uri.getPort());
             System.out.println("InetAddress is: "+address.toString());
             socket=new DatagramSocket();
-            //socket.setSoTimeout(TIMEOUT);
+            socket.setSoTimeout(TIMEOUT);
             socket.connect(address);
 
             //send a connection request first with given transaction id.
@@ -48,12 +48,18 @@ public class UdpTrackerSession extends TrackerSession {
             DatagramPacket datagramPacket=new DatagramPacket(data,data.length,address);
             socket.send(datagramPacket);
             ByteBuffer buffer=receive(socket);
+            if (buffer==null){
+                return;
+            }
             long connectionId=parse(buffer);
             logger.debug("Received connectionId :"+connectionId+" "+"sending announce request.");
             byte[] announceRequest=craftAnnounceRequest(connectionId,packet);
             DatagramPacket announcePacket=new DatagramPacket(announceRequest,announceRequest.length,address);
             socket.send(announcePacket);
             response=receive(socket);
+            if (response==null){
+                return;
+            }
             System.out.println(response.getInt());
             System.out.println("transactionId "+response.getInt()+" Interval "+response.getInt()+" leechers "+response.getInt()+" seeders "+response.getInt());
             status=STATUSCODE.OK.getStatus();
@@ -84,7 +90,9 @@ public class UdpTrackerSession extends TrackerSession {
         try {
             socket.receive(packet);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Received null response from "+tracker_url);
+            status=STATUSCODE.TIMOUT.getStatus();
+            return null;
         }
         System.out.println("Received response from socket :"+packet.getLength());
         return ByteBuffer.wrap(packet.getData(),0,packet.getLength());

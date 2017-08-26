@@ -76,5 +76,5 @@ public class Constants {
     public static final int UDP_ANNOUNCE_MESSAGE_LEN=98;
 
     //Logger.
-    public static final String RESOURCE_DIR="resources/";
+    public static final String RESOURCE_DIR="src/main/resources/testtorrents/";
 }
