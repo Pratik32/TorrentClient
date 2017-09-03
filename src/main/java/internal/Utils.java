@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 import java.io.*;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
 import java.util.List;
@@ -134,5 +135,19 @@ public class Utils {
     public static String getETAString(double time){
         String timeString=null;
         return timeString;
+    }
+    /*
+        Does a basic ping test to ensure that remote peer is alive.
+        This is also applicable to trackers.
+     */
+    public boolean doPingTest(InetAddress address){
+        boolean result=false;
+
+        try {
+            result=address.isReachable(10000);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }
