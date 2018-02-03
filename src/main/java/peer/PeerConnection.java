@@ -121,7 +121,8 @@ public class PeerConnection extends Thread{
         test(stream,stream1,1);
     }
 
-
+    //This method is only for testing purpose.Called by connect() for testing peer connection.
+    //Will be removed later.
     public void test(DataOutputStream stream,DataInputStream stream1,int block) throws IOException, InterruptedException {
         int len=0;
         int code=0;
@@ -143,7 +144,10 @@ public class PeerConnection extends Thread{
         System.out.println("Length :"+len+"Type is :"+code);
         logger.debug("Length :"+len+"Type is :"+code);
     }
-
+    
+    /* Entry point for a 'PeerConnection' Thread.This threads keeps on running until
+    *  there are no pieces to download.
+    */
     public void run() {
         this.threadID="["+Thread.currentThread().getName()+"]";
         //setup a connection with remote peer.
